@@ -1,0 +1,61 @@
+<jxb:bindings version="1.0"
+	xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc"
+	xmlns:jxb="http://java.sun.com/xml/ns/jaxb"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:com.fnf="http://www.fnf.com/xes">
+    
+    <jxb:bindings schemaLocation="../xsd/xsd.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.tipprunde.model.xml.tr"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+    <jxb:bindings schemaLocation="../xsd/tg/community.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.tipprunde.model.xml.community"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+	<jxb:bindings schemaLocation="../xsd/tg/liga.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.tipprunde.model.xml.liga"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+	<jxb:bindings schemaLocation="../xsd/tg/ligads.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.tipprunde.model.xml.ds"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+	<jxb:bindings schemaLocation="../xsd/tg/user.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.tipprunde.model.xml.user"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+	<jxb:bindings schemaLocation="../../../../../ahtutils/xml/src/main/xsd/aht/mail.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="net.sf.ahtutils.xml.mail"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+	<jxb:bindings schemaLocation="../../../../../ahtutils/xml/src/main/xsd/aht/status.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="net.sf.ahtutils.xml.status"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>    
+
+	<jxb:bindings schemaLocation="../../../../../exlp/xml/src/main/xsd/util/net.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="net.sf.exlp.xml.net"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+	<jxb:bindings schemaLocation="../xsd/tg/stats.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.tipprunde.model.xml.statistic"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+   
+</jxb:bindings>

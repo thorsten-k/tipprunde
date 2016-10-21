@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">	
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>org.tipprunde</groupId>
+	<artifactId>tipprunde</artifactId>
+	<name>Tipprunde</name>
+	<version>0.2.3-SNAPSHOT</version> <!-- Update version in ArqHelper -->
+    <packaging>pom</packaging>
+ 
+	<modules>
+<!--		<module>api</module> -->
+		<module>xml</module> 
+	</modules>
+	
+	<prerequisites>
+		<maven>3.0.3</maven>
+	</prerequisites>
+  
+	<properties>
+		<my.build.directory>target</my.build.directory>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<maven.javadoc.version>2.8</maven.javadoc.version>
+	</properties>
+		
+	<dependencyManagement>
+		<dependencies>
+<!--  			
+			<dependency>
+				<groupId>org.tipprunde.server</groupId>
+				<artifactId>tr-api</artifactId>
+				<version>${project.version}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>org.tipprunde.server</groupId>
+				<artifactId>tr-xml</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+-->			
+			<dependency>
+				<groupId>org.jeesl</groupId>
+				<artifactId>jeesl-bom</artifactId>
+				<version>0.2.6-SNAPSHOT</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+					
+		</dependencies>
+	</dependencyManagement>
+	
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+			        <groupId>org.jeesl</groupId>
+			        <artifactId>jeesl-maven</artifactId>
+			        <version>0.2.6-SNAPSHOT</version>
+			    </plugin>
+			    <plugin>
+			    	<artifactId>maven-resources-plugin</artifactId>
+        			<version>2.7</version>
+        		</plugin>
+        		<plugin>
+	            	<artifactId>maven-war-plugin</artifactId>
+	            	<version>2.6</version>
+            	</plugin>
+            	<plugin>
+		            <groupId>org.apache.maven.plugins</groupId>
+		            <artifactId>maven-ear-plugin</artifactId>
+		            <version>2.10.1</version>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-pmd-plugin</artifactId>
+					<version>3.6</version>
+					<configuration>
+						<linkXRef>false</linkXRef>
+					</configuration>
+				</plugin>
+			    <plugin>
+	               <groupId>org.jboss.as.plugins</groupId>
+	               <artifactId>jboss-as-maven-plugin</artifactId>
+	               <version>7.1.0.Final</version>
+	               <inherited>true</inherited>
+	               <configuration>
+	                  <skip>true</skip>
+	               </configuration>
+	            </plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.2</version>
+				<inherited>true</inherited>
+				<configuration>
+					<source>1.7</source>
+					<target>1.7</target>
+					<encoding>UTF-8</encoding>
+				</configuration>
+			</plugin>
+			<plugin>
+        		<groupId>org.apache.maven.plugins</groupId>
+        		<artifactId>maven-javadoc-plugin</artifactId>
+        		<version>${maven.javadoc.version}</version>
+        		<configuration />
+      		</plugin>
+      		<plugin>
+        		<groupId>org.apache.maven.plugins</groupId>
+        		<artifactId>maven-enforcer-plugin</artifactId>
+        		<version>1.0.1</version>
+        		<executions>
+          			<execution>
+            			<id>enforce-banned-dependencies</id>
+            			<goals><goal>enforce</goal></goals>
+            			<configuration>
+              				<rules>
+                				<bannedDependencies>
+                  					<excludes>
+                    					<exclude>commons-logging:commons-logging</exclude>
+                  					</excludes>
+                				</bannedDependencies>
+              				</rules>
+              				<fail>true</fail>
+            			</configuration>
+          			</execution>
+        		</executions>
+			</plugin>
+		</plugins>
+	</build>
+  
+	<repositories>
+		<repository>
+			<id>sonatype.snapshot</id>
+			<name>Sonatype Snapshot Repository</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+			<releases><enabled>false</enabled></releases>
+			<snapshots><enabled>true</enabled></snapshots>
+		</repository>
+		<repository>
+			<id>jboss.public</id>
+			<name>JBoss Repository</name>
+			<url>http://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+			<releases><enabled>true</enabled></releases>
+			<snapshots><enabled>false</enabled></snapshots>
+		</repository>
+	</repositories>
+	
+	<pluginRepositories>
+		<pluginRepository>
+			<id>sonatype.snapshot</id>
+			<name>Sonatype Snapshot Repository</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+			<releases><enabled>false</enabled></releases>
+			<snapshots><enabled>true</enabled></snapshots>
+		</pluginRepository>
+	</pluginRepositories>
+	
+	<scm>
+		<connection>scm:svn:https://www.aht-group.com/svn/tg/trunk/tg</connection>
+		<developerConnection>scm:svn:https://www.aht-group.com/svn/tg/trunk/tg</developerConnection>
+		<url>https://www.aht-group.com/svn/tg/trunk/tg/</url>
+	</scm>
+  
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+	
+	<profiles>
+    	<profile>
+       		<id>ram</id>
+       		<build>
+       			<directory>${my.build.directory}</directory>
+       		</build>
+   		</profile>
+		<profile>
+			<id>only-eclipse</id>
+			<activation><property><name>m2e.version</name></property></activation>
+			<build>
+				<pluginManagement>
+		      	<plugins>
+						<plugin>
+				        	<groupId>org.eclipse.m2e</groupId>
+				        	<artifactId>lifecycle-mapping</artifactId>
+				        	<version>1.0.0</version>
+				        	<configuration>
+								<lifecycleMappingMetadata>
+				            	<pluginExecutions>
+				              		<pluginExecution>
+				                		<pluginExecutionFilter>
+						                  <groupId>org.apache.maven.plugins</groupId>
+						                  <artifactId>maven-enforcer-plugin</artifactId>
+						                  <versionRange>[1.0.0,)</versionRange>
+						                  <goals><goal>enforce</goal></goals>
+				                		</pluginExecutionFilter>
+				                		<action><ignore /></action>
+				              		</pluginExecution>
+				              		<pluginExecution>
+											<pluginExecutionFilter>
+												<groupId>org.jeesl</groupId>
+												<artifactId>jeesl-maven</artifactId>
+												<versionRange>[0.2.6-SNAPSHOT,)</versionRange>
+												<goals><goal>createSeamSecurity</goal><goal>msgBundle</goal></goals>
+											</pluginExecutionFilter>
+											<action><ignore></ignore></action>
+										</pluginExecution>
+				            	</pluginExecutions>
+			          		</lifecycleMappingMetadata>
+			        		</configuration>
+						</plugin>         	
+					</plugins>
+				</pluginManagement>
+		  </build>
+		</profile>
+	</profiles>
+</project>
