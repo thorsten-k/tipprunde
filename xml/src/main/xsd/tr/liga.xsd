@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.tipprunde.org/liga"
+    xmlns:tgl="http://www.tipprunde.org/liga"
+    xmlns:tglds="http://www.tipprunde.org/liga/datasource"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.tipprunde.org/liga/datasource" schemaLocation="ligads.xsd"/>
+    <xsd:element name="disciplines">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:discipline" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="discipline">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:dataSource" maxOccurs="1"/>
+                <xsd:element ref="tgl:visible" maxOccurs="1"/>
+                <xsd:element ref="tgl:events" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="name" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="events">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:event" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="event">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:discipline" maxOccurs="1"/>
+                <xsd:element ref="tgl:dataSource" maxOccurs="1"/>
+                <xsd:element ref="tgl:visible" maxOccurs="1"/>
+                <xsd:element ref="tgl:rounds" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="name" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="rounds">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:round" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="round">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:events" maxOccurs="1"/>
+                <xsd:element ref="tgl:dataSource" maxOccurs="1"/>
+                <xsd:element ref="tgl:visible" maxOccurs="1"/>
+                <xsd:element ref="tgl:match" maxOccurs="unbounded"/>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="name" type="xsd:string"/>
+            <xsd:attribute name="nr" type="xsd:int"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="dataSource">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:updatePolicy" maxOccurs="1"/>
+                <xsd:element ref="tglds:openliga" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="lastChange" type="xsd:dateTime"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="updatePolicy">
+        <xsd:complexType>
+            <xsd:attribute name="id" type="xsd:int"/>
+            <xsd:attribute name="type">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="never"/>
+                        <xsd:enumeration value="once"/>
+                        <xsd:enumeration value="regulary"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+            <xsd:attribute name="updateLast" type="xsd:dateTime"/>
+            <xsd:attribute name="updateNext" type="xsd:dateTime"/>
+            <xsd:attribute name="updateQueue" type="xsd:dateTime"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="visible">
+        <xsd:complexType>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="name" type="xsd:string"/>
+            <xsd:attribute name="code">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="new"/>
+                        <xsd:enumeration value="visible"/>
+                        <xsd:enumeration value="invisible"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="match">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:rounds" maxOccurs="1"/>
+                <xsd:element ref="tgl:dataSource" maxOccurs="1"/>
+                <xsd:element ref="tgl:location" maxOccurs="1"/>
+                <xsd:element ref="tgl:result" maxOccurs="1"/>
+                <xsd:element ref="tgl:left" maxOccurs="1"/>
+                <xsd:element ref="tgl:right" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="finished" type="xsd:boolean"/>
+            <xsd:attribute name="ongoing" type="xsd:boolean"/>
+            <xsd:attribute name="kickOff" type="xsd:dateTime"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="left">
+       <xsd:complexType>
+           <xsd:sequence>
+               <xsd:element ref="tgl:opponent" maxOccurs="1"/>
+           </xsd:sequence>
+       </xsd:complexType>
+   </xsd:element>
+    <xsd:element name="right">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:opponent" maxOccurs="1"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="location">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:dataSource" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="city" type="xsd:string"/>
+            <xsd:attribute name="stadium" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="result">
+        <xsd:complexType>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="scoreLeft" type="xsd:int"/>
+            <xsd:attribute name="scoreRight" type="xsd:int"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="opponents">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:opponent" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="opponent">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:dataSource" maxOccurs="1"/>
+                <xsd:element name="type" maxOccurs="1">
+                    <xsd:complexType>
+                        <xsd:attribute name="name" type="xsd:string"/>
+                        <xsd:attribute name="code">
+                            <xsd:simpleType>
+                                <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="individual"/>
+                                    <xsd:enumeration value="team"/>
+                                    <xsd:enumeration value="country"/>
+                                </xsd:restriction>
+                            </xsd:simpleType>
+                        </xsd:attribute>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="name" type="xsd:string"/>
+            <xsd:attribute name="nameLegal" type="xsd:string"/>
+            <xsd:attribute name="name3" type="xsd:string"/>
+            <xsd:attribute name="icon" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

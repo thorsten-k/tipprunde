@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.tipprunde.org/stats"
+    xmlns:tgs="http://www.tipprunde.org/stats"
+    xmlns:tgl="http://www.tipprunde.org/liga"
+    xmlns:tgc="http://www.tipprunde.org/community"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.tipprunde.org/community"		schemaLocation="community.xsd"/>
+    <xsd:import namespace="http://www.tipprunde.org/liga"			schemaLocation="liga.xsd"/>
+    <xsd:element name="statRound">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:round" maxOccurs="1"/>
+                <xsd:element ref="tgs:statMatch" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="statMatch">
+        <xsd:complexType>
+            <xsd:sequence>
+            	<xsd:element ref="tgl:match" maxOccurs="1"/>
+                <xsd:element ref="tgs:statTipp" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="statTipp">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:result" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="ratio" type="xsd:double"/>
+        </xsd:complexType>
+    </xsd:element>
+	<xsd:element name="updateWorker">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:updatePolicy" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="name" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

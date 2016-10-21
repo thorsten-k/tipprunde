@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.tipprunde.org/community"
+    xmlns:tgc="http://www.tipprunde.org/community"
+   	xmlns:tgl="http://www.tipprunde.org/liga"
+    xmlns:tgu="http://www.tipprunde.org/user"
+    xmlns:us="http://ahtutils.aht-group.com/status"
+    xmlns:n="http://exlp.sf.net/net"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+   	<xsd:import namespace="http://www.tipprunde.org/user"			schemaLocation="user.xsd"/>
+   	<xsd:import namespace="http://www.tipprunde.org/liga"			schemaLocation="liga.xsd"/>
+	<xsd:import namespace="http://ahtutils.aht-group.com/status"	schemaLocation="../../../../../../jeesl/xml/src/main/xsd/aht/status.xsd"/>
+	<xsd:import namespace="http://exlp.sf.net/net"						schemaLocation="../../../../../../exlp/xml/src/main/xsd/util/net.xsd"/>
+    <xsd:element name="community">
+        <xsd:complexType>
+            <xsd:sequence>
+            	<xsd:element ref="tgc:participants" maxOccurs="1"/>
+                <xsd:element ref="tgc:subscription" maxOccurs="1"/>
+                <xsd:element ref="tgc:rules" maxOccurs="1"/>
+                <xsd:element ref="tgc:definitionEvent" maxOccurs="1"/>
+                <xsd:element ref="n:urls" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="name" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="subscription">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="type" maxOccurs="1">
+					<xsd:complexType>
+						<xsd:attribute name="name" type="xsd:string"/>
+						<xsd:attribute name="code">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:enumeration value="auto"/>
+									<xsd:enumeration value="verify"/>
+									<xsd:enumeration value="invitation"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:int"/>
+			<xsd:attribute name="deadline" type="xsd:dateTime"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="rules">
+		<xsd:complexType>
+			<xsd:attribute name="id" type="xsd:int"/>
+			<xsd:attribute name="excact" type="xsd:int"/>
+			<xsd:attribute name="difference" type="xsd:int"/>
+			<xsd:attribute name="tendence" type="xsd:int"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="scoreDetails">
+		<xsd:complexType>
+			<xsd:attribute name="excact" type="xsd:boolean"/>
+			<xsd:attribute name="difference" type="xsd:boolean"/>
+			<xsd:attribute name="tendence" type="xsd:boolean"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="participants">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tgc:participant" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="size" type="xsd:int"/>
+		</xsd:complexType>
+	</xsd:element>
+    <xsd:element name="participant">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgc:community" maxOccurs="1"/>
+                <xsd:element ref="tgu:identity" maxOccurs="1"/>
+                <xsd:element ref="tgc:bet" maxOccurs="1"/>
+                <xsd:element ref="tgc:pointsEvent" maxOccurs="1"/>
+     <!--            <xsd:element ref="tg:participantCommunication" maxOccurs="1"/>
+                 -->
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="bet">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tgc:participant" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:long"/>
+			<xsd:attribute name="amount" type="xsd:double"/>
+			<xsd:attribute name="record" type="xsd:dateTime"/>
+			<xsd:attribute name="paid" type="xsd:boolean"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="pointsEvent">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tgl:event" maxOccurs="1"/>
+				<xsd:element ref="tgc:pointsRound" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:long"/>
+			<xsd:attribute name="score" type="xsd:int"/>
+			<xsd:attribute name="rank" type="xsd:int"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="pointsRound">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tgc:pointsEvent" maxOccurs="1"/>
+				<xsd:element ref="tgl:round" maxOccurs="1"/>
+				<xsd:element ref="tgc:pointsMatch" maxOccurs="unbounded"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:long"/>
+			<xsd:attribute name="score" type="xsd:int"/>
+			<xsd:attribute name="rank" type="xsd:int"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="pointsMatch">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tgc:pointsRound" maxOccurs="1"/>
+				<xsd:element ref="tgc:tipp" maxOccurs="unbounded"/>
+				<xsd:element ref="tgc:scoreDetails" maxOccurs="1"/>
+				<!-- <xsd:element ref="tgl:match" maxOccurs="1"/>  -->
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:long"/>
+			<xsd:attribute name="score" type="xsd:int"/>
+		</xsd:complexType>
+	</xsd:element>
+    <xsd:element name="definitionEvent">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tgc:deadlinePolicy" maxOccurs="1"/>
+				<xsd:element ref="tgc:community" maxOccurs="1"/>
+			  	<xsd:element ref="tgl:event" maxOccurs="1"/>
+				<xsd:element ref="tgc:definitionRound" maxOccurs="unbounded"/>
+				</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:long"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="definitionRound">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tgc:definitionEvent" maxOccurs="1"/>
+			  	<xsd:element ref="tgl:round" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:long"/>
+			<xsd:attribute name="deadline" type="xsd:dateTime"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="deadlinePolicy">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="type" maxOccurs="1">
+					<xsd:complexType>
+						<xsd:attribute name="name" type="xsd:string"/>
+						<xsd:attribute name="code">
+							<xsd:simpleType>
+								<xsd:restriction base="xsd:string">
+									<xsd:enumeration value="round"/>
+									<xsd:enumeration value="match"/>
+									<xsd:enumeration value="individual"/>
+								</xsd:restriction>
+							</xsd:simpleType>
+						</xsd:attribute>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:int"/>
+			<xsd:attribute name="minutes" type="xsd:int"/>
+			<xsd:attribute name="hours" type="xsd:int"/>
+			<xsd:attribute name="days" type="xsd:int"/>
+			<xsd:attribute name="weeks" type="xsd:int"/>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="tipps">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tgc:tipp" maxOccurs="unbounded"/>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+	<xsd:element name="tipp">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="tgu:identity" maxOccurs="1"/>
+				<xsd:element ref="tgl:match" maxOccurs="1"/>
+				<xsd:element ref="us:status" maxOccurs="1"/>
+			</xsd:sequence>
+			<xsd:attribute name="id" type="xsd:long"/>
+			<xsd:attribute name="left" type="xsd:int"/>
+			<xsd:attribute name="right" type="xsd:int"/>
+			<xsd:attribute name="record" type="xsd:dateTime"/>
+			<xsd:attribute name="deadline" type="xsd:dateTime"/>
+			<xsd:attribute name="sync" type="xsd:string"/>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

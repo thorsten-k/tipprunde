@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.tipprunde.org"
+    xmlns:tg="http://www.tipprunde.org"
+    xmlns:tgc="http://www.tipprunde.org/community"
+    xmlns:tgl="http://www.tipprunde.org/liga"
+    xmlns:tglds="http://www.tipprunde.org/liga/datasource"
+    xmlns:tgs="http://www.tipprunde.org/stats"
+    xmlns:u="http://www.tipprunde.org/user" 
+    xmlns:m="http://ahtutils.aht-group.com/mail"
+    xmlns:us="http://ahtutils.aht-group.com/status"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
+    xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:extensionBindingPrefixes="xjc"
+    jaxb:version="2.0">
+    <xsd:import namespace="http://www.tipprunde.org/community"				schemaLocation="tr/community.xsd"/>
+    <xsd:import namespace="http://www.tipprunde.org/liga"					schemaLocation="tr/liga.xsd"/>
+    <xsd:import namespace="http://www.tipprunde.org/liga/datasource"		schemaLocation="tr/ligads.xsd"/>
+    <xsd:import namespace="http://www.tipprunde.org/user"					schemaLocation="tr/user.xsd"/>
+    <xsd:import namespace="http://www.tipprunde.org/stats"					schemaLocation="tr/stats.xsd"/>
+    <xsd:import namespace="http://ahtutils.aht-group.com/mail"				schemaLocation="../../../../../jeesl/xml/src/main/xsd/aht/mail.xsd"/>
+    <xsd:import namespace="http://ahtutils.aht-group.com/status"			schemaLocation="../../../../../jeesl/xml/src/main/xsd/aht/status.xsd"/>
+    <xsd:annotation>
+        <xsd:appinfo>
+            <jaxb:globalBindings generateIsSetMethod="true">
+                <xjc:serializable uid="1"/>
+            </jaxb:globalBindings>
+        </xsd:appinfo>
+    </xsd:annotation>
+    <xsd:element name="query">
+        <xsd:complexType>
+            <xsd:sequence>
+            	<xsd:element ref="tgc:community" maxOccurs="1"/>
+            	<xsd:element ref="tgc:pointsEvent" maxOccurs="1"/>
+            	<xsd:element ref="tgc:pointsRound" maxOccurs="1"/>
+            	<xsd:element ref="tgc:pointsMatch" maxOccurs="1"/>
+                <xsd:element ref="tgc:definitionEvent" maxOccurs="1"/>
+                <xsd:element ref="tgc:definitionRound" maxOccurs="1"/>
+            	<xsd:element ref="tgc:participant" maxOccurs="1"/>
+            	<xsd:element ref="tgc:bet" maxOccurs="1"/>
+            	<xsd:element ref="tgc:tipp" maxOccurs="1"/>
+                <xsd:element ref="tgl:discipline" maxOccurs="1"/>
+                <xsd:element ref="tgl:event" maxOccurs="1"/>
+                <xsd:element ref="tgl:round" maxOccurs="1"/>
+                <xsd:element ref="tgl:match" maxOccurs="1"/>
+                <xsd:element ref="tgl:result" maxOccurs="1"/>
+                <xsd:element ref="tgl:visible" maxOccurs="1"/>
+                <xsd:element ref="tgl:opponent" maxOccurs="1"/>
+                <xsd:element ref="tgl:dataSource" maxOccurs="1"/>
+                <xsd:element ref="tglds:openliga" maxOccurs="1"/>
+                <xsd:element ref="u:user" maxOccurs="1"/>
+                <xsd:element ref="u:identity" maxOccurs="1"/>     
+            </xsd:sequence>
+            <xsd:attribute name="lang" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="tg">
+        <xsd:complexType>
+            <xsd:sequence>
+            	<xsd:element ref="tgc:community" maxOccurs="unbounded"/>
+            	<xsd:element ref="tgc:tipps" maxOccurs="unbounded"/>
+                <xsd:element ref="tgc:definitionRound" maxOccurs="unbounded"/>
+            	<xsd:element ref="tgl:discipline" maxOccurs="unbounded"/>
+            	<xsd:element ref="tgl:event" maxOccurs="unbounded"/>
+                <xsd:element ref="tgl:round" maxOccurs="unbounded"/>
+                <xsd:element ref="tgl:match" maxOccurs="unbounded"/>
+                <xsd:element ref="tgc:participant" maxOccurs="unbounded"/>
+                <xsd:element ref="u:identity" maxOccurs="unbounded"/>
+                <xsd:element ref="tgs:updateWorker" maxOccurs="unbounded"/>
+                <xsd:element ref="m:link" maxOccurs="1"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="report">
+        <xsd:complexType>
+            <xsd:sequence>
+            	<xsd:element ref="tg:tg" maxOccurs="1"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="mails">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tg:mail" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="mail">
+        <xsd:complexType>
+        	<xsd:sequence>
+        		<xsd:element ref="m:mail" maxOccurs="1"/>
+                <xsd:element ref="tg:tg" maxOccurs="1"/>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

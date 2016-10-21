@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 
-<project name="Tippsiel-XML"  basedir="../../..">
+<project name="Tipprunde-XML"  basedir="../../..">
 
 	<property name="src.dir" location="${basedir}/src/main/java" />
 	<property name="xsd.dir" location="${basedir}/src/main/xsd" />

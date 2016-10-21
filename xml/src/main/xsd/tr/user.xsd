@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.tipprunde.org/user"
+    xmlns:u="http://www.tipprunde.org/user"
+    xmlns:tgc="http://www.tipprunde.org/community"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:import namespace="http://www.tipprunde.org/community"		schemaLocation="community.xsd"/>
+    <xsd:element name="user">
+        <xsd:complexType>
+            <xsd:sequence>
+            	<xsd:element ref="u:identity" maxOccurs="unbounded"/>
+            	<xsd:element ref="tgc:community" maxOccurs="unbounded"/>
+            	<xsd:element ref="u:settings" maxOccurs="1"/>
+                <!--
+                <xsd:element ref="tg:participantCommunication" maxOccurs="1"/>
+                <xsd:element ref="tg:tippEvent" maxOccurs="1"/> -->
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="firstName" type="xsd:string"/>
+            <xsd:attribute name="lastName" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="identity">
+        <xsd:complexType>
+        	<xsd:sequence>
+            	<xsd:element ref="u:idFacebook" maxOccurs="1"/>
+            	<xsd:element ref="u:idPassword" maxOccurs="1"/>
+            	<xsd:element ref="u:idEnterprise" maxOccurs="1"/>
+            	<xsd:element ref="u:user" maxOccurs="1"/> 
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="preferred" type="xsd:boolean"/>
+            <xsd:attribute name="email" type="xsd:string"/>
+            <xsd:attribute name="emailVerified" type="xsd:boolean"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="idFacebook">
+        <xsd:complexType>
+            <xsd:attribute name="fbId" type="xsd:string"/>
+            <xsd:attribute name="appAuhtCode" type="xsd:string"/>
+            <xsd:attribute name="accessToken" type="xsd:string"/>
+            <xsd:attribute name="expiresToken" type="xsd:dateTime"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="idPassword">
+        <xsd:complexType>
+            <xsd:attribute name="password" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="idEnterprise">
+        <xsd:complexType>
+            <xsd:attribute name="company" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="settings">
+        <xsd:complexType>
+        	<xsd:sequence>
+            	<xsd:element ref="u:notification" maxOccurs="unbounded"/>
+            </xsd:sequence>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="lang" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="notification">
+        <xsd:complexType>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="lang" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema targetNamespace="http://www.tipprunde.org/liga/datasource"
+    xmlns:tglds="http://www.tipprunde.org/liga/datasource"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="openliga">
+        <xsd:complexType>
+            <xsd:attribute name="id" type="xsd:long"/>
+            <xsd:attribute name="refId" type="xsd:int"/>
+            <xsd:attribute name="saison" type="xsd:string"/>
+            <xsd:attribute name="shortcut" type="xsd:string"/>
+            <xsd:attribute name="type">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="sport"/>
+                        <xsd:enumeration value="league"/>
+                        <xsd:enumeration value="group"/>
+                        <xsd:enumeration value="match"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+</xsd:schema>
