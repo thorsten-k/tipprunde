@@ -38,14 +38,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link StatTipp }
-     * 
-     */
-    public StatTipp createStatTipp() {
-        return new StatTipp();
-    }
-
-    /**
      * Create an instance of {@link StatRound }
      * 
      */
@@ -59,6 +51,14 @@ public class ObjectFactory {
      */
     public StatMatch createStatMatch() {
         return new StatMatch();
+    }
+
+    /**
+     * Create an instance of {@link StatTipp }
+     * 
+     */
+    public StatTipp createStatTipp() {
+        return new StatTipp();
     }
 
 }

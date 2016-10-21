@@ -30,6 +30,30 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Query }
+     * 
+     */
+    public Query createQuery() {
+        return new Query();
+    }
+
+    /**
+     * Create an instance of {@link Tg }
+     * 
+     */
+    public Tg createTg() {
+        return new Tg();
+    }
+
+    /**
+     * Create an instance of {@link Report }
+     * 
+     */
+    public Report createReport() {
+        return new Report();
+    }
+
+    /**
      * Create an instance of {@link Mails }
      * 
      */
@@ -43,30 +67,6 @@ public class ObjectFactory {
      */
     public Mail createMail() {
         return new Mail();
-    }
-
-    /**
-     * Create an instance of {@link Tg }
-     * 
-     */
-    public Tg createTg() {
-        return new Tg();
-    }
-
-    /**
-     * Create an instance of {@link Query }
-     * 
-     */
-    public Query createQuery() {
-        return new Query();
-    }
-
-    /**
-     * Create an instance of {@link Report }
-     * 
-     */
-    public Report createReport() {
-        return new Report();
     }
 
 }

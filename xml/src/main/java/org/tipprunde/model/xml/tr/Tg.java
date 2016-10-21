@@ -28,25 +28,25 @@ import org.tipprunde.model.xml.user.Identity;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://www.tipprunde.org/community}community" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}tipps" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}definitionRound" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}discipline" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}event" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}round" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}match" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}participant" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://www.tipprunde.org/user}identity" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://www.tipprunde.org/stats}updateWorker" maxOccurs="unbounded"/>
- *         &lt;element ref="{http://ahtutils.aht-group.com/mail}link"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}community" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}tipps" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}definitionRound" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}discipline" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}event" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}round" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}match" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}participant" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/user}identity" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/stats}updateWorker" maxOccurs="unbounded"/&gt;
+ *         &lt;element ref="{http://ahtutils.aht-group.com/mail}link"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

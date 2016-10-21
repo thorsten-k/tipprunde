@@ -36,35 +36,35 @@ import org.tipprunde.model.xml.user.User;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://www.tipprunde.org/community}community"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}pointsEvent"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}pointsRound"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}pointsMatch"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}definitionEvent"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}definitionRound"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}participant"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}bet"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}tipp"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}discipline"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}event"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}round"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}match"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}result"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}visible"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}opponent"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}dataSource"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga/datasource}openliga"/>
- *         &lt;element ref="{http://www.tipprunde.org/user}user"/>
- *         &lt;element ref="{http://www.tipprunde.org/user}identity"/>
- *       &lt;/sequence>
- *       &lt;attribute name="lang" type="{http://www.w3.org/2001/XMLSchema}string" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}community"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}pointsEvent"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}pointsRound"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}pointsMatch"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}definitionEvent"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}definitionRound"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}participant"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}bet"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}tipp"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}discipline"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}event"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}round"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}match"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}result"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}visible"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}opponent"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}dataSource"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga/datasource}openliga"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/user}user"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/user}identity"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="lang" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

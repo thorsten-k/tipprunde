@@ -15,26 +15,26 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}long" />
- *       &lt;attribute name="refId" type="{http://www.w3.org/2001/XMLSchema}int" />
- *       &lt;attribute name="saison" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="shortcut" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="type">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="sport"/>
- *             &lt;enumeration value="league"/>
- *             &lt;enumeration value="group"/>
- *             &lt;enumeration value="match"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}long" /&gt;
+ *       &lt;attribute name="refId" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *       &lt;attribute name="saison" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="shortcut" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="type"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="sport"/&gt;
+ *             &lt;enumeration value="league"/&gt;
+ *             &lt;enumeration value="group"/&gt;
+ *             &lt;enumeration value="match"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

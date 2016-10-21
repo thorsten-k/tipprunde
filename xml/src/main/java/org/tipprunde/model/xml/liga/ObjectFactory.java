@@ -150,19 +150,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Opponents }
-     * 
-     */
-    public Opponents createOpponents() {
-        return new Opponents();
-    }
-
-    /**
      * Create an instance of {@link Disciplines }
      * 
      */
     public Disciplines createDisciplines() {
         return new Disciplines();
+    }
+
+    /**
+     * Create an instance of {@link Opponents }
+     * 
+     */
+    public Opponents createOpponents() {
+        return new Opponents();
     }
 
 }

@@ -19,20 +19,20 @@ import org.tipprunde.model.xml.liga.Round;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://www.tipprunde.org/community}pointsEvent"/>
- *         &lt;element ref="{http://www.tipprunde.org/liga}round"/>
- *         &lt;element ref="{http://www.tipprunde.org/community}pointsMatch" maxOccurs="unbounded"/>
- *       &lt;/sequence>
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}long" />
- *       &lt;attribute name="score" type="{http://www.w3.org/2001/XMLSchema}int" />
- *       &lt;attribute name="rank" type="{http://www.w3.org/2001/XMLSchema}int" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}pointsEvent"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/liga}round"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/community}pointsMatch" maxOccurs="unbounded"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}long" /&gt;
+ *       &lt;attribute name="score" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *       &lt;attribute name="rank" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

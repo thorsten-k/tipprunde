@@ -16,22 +16,22 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element ref="{http://www.tipprunde.org/user}idFacebook"/>
- *         &lt;element ref="{http://www.tipprunde.org/user}idPassword"/>
- *         &lt;element ref="{http://www.tipprunde.org/user}idEnterprise"/>
- *         &lt;element ref="{http://www.tipprunde.org/user}user"/>
- *       &lt;/sequence>
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}long" />
- *       &lt;attribute name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="email" type="{http://www.w3.org/2001/XMLSchema}string" />
- *       &lt;attribute name="emailVerified" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/user}idFacebook"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/user}idPassword"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/user}idEnterprise"/&gt;
+ *         &lt;element ref="{http://www.tipprunde.org/user}user"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}long" /&gt;
+ *       &lt;attribute name="preferred" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="email" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *       &lt;attribute name="emailVerified" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

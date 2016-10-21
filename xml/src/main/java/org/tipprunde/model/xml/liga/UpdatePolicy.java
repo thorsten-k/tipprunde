@@ -17,25 +17,25 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}int" />
- *       &lt;attribute name="type">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *             &lt;enumeration value="never"/>
- *             &lt;enumeration value="once"/>
- *             &lt;enumeration value="regulary"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="updateLast" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *       &lt;attribute name="updateNext" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *       &lt;attribute name="updateQueue" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}int" /&gt;
+ *       &lt;attribute name="type"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *             &lt;enumeration value="never"/&gt;
+ *             &lt;enumeration value="once"/&gt;
+ *             &lt;enumeration value="regulary"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="updateLast" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *       &lt;attribute name="updateNext" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *       &lt;attribute name="updateQueue" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
