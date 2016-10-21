@@ -9,13 +9,38 @@
     <packaging>pom</packaging>
  
 	<modules>
-<!--		<module>api</module> -->
+		<module>api</module>
 		<module>xml</module> 
 	</modules>
 	
 	<prerequisites>
 		<maven>3.0.3</maven>
 	</prerequisites>
+	
+	<licenses>
+		<license>
+			<name>GNU General Public License</name>
+			<url>http://www.gnu.org/licenses/gpl-3.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+	
+	<scm>
+		<url>https://github.com/thorsten-k/tipprunde.git</url>
+		<connection>scm:git:git://github.com/thorsten-k/tipprunde.git</connection>
+		<developerConnection>scm:git:git@github.com/thorsten-k/tipprunde.git</developerConnection>
+	</scm>
+	
+	<developers>
+		<developer>
+			<id>1</id>
+			<name>Thorsten Kisner</name>
+			<email>t.kisner@web.de</email>
+		</developer>
+	</developers>
+	
+	<issueManagement>
+	</issueManagement>
   
 	<properties>
 		<my.build.directory>target</my.build.directory>
@@ -157,12 +182,6 @@
 			<snapshots><enabled>true</enabled></snapshots>
 		</pluginRepository>
 	</pluginRepositories>
-	
-	<scm>
-		<connection>scm:svn:https://www.aht-group.com/svn/tg/trunk/tg</connection>
-		<developerConnection>scm:svn:https://www.aht-group.com/svn/tg/trunk/tg</developerConnection>
-		<url>https://www.aht-group.com/svn/tg/trunk/tg/</url>
-	</scm>
   
 	<reporting>
 		<plugins>
@@ -175,6 +194,17 @@
 			</plugin>
 		</plugins>
 	</reporting>
+	
+	<distributionManagement>
+		<snapshotRepository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+		</snapshotRepository>
+		<repository>
+			<id>ossrh</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+		</repository>
+	</distributionManagement>
 	
 	<profiles>
     	<profile>
