@@ -9,12 +9,12 @@ import net.sf.ahtutils.test.AbstractAhtUtilsXmlTest;
 import net.sf.exlp.util.io.LoggerInit;
 import net.sf.exlp.util.xml.JaxbUtil;
 
-public class AbstractTrXmlTest <T extends Object> extends AbstractAhtUtilsXmlTest<T>
+public class AbstractTrXmlTst <T extends Object> extends AbstractAhtUtilsXmlTest<T>
 {
-	final static Logger logger = LoggerFactory.getLogger(AbstractTrXmlTest.class);	
+	final static Logger logger = LoggerFactory.getLogger(AbstractTrXmlTst.class);	
 	
-	public AbstractTrXmlTest(){this(null,null);}
-	public AbstractTrXmlTest(Class<T> cXml,String xmlDirSuffix)
+	public AbstractTrXmlTst(){this(null,null);}
+	public AbstractTrXmlTst(Class<T> cXml,String xmlDirSuffix)
 	{
 		super(cXml,xmlDirSuffix);
 	}
