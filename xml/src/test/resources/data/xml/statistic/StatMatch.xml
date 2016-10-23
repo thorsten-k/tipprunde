@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<s:statMatch xmlns:l="http://www.tipprunde.org/liga" xmlns:ds="http://www.tipprunde.org/liga/datasource" xmlns:s="http://www.tipprunde.org/stats">
+    <s:statTipp ratio="0.33"/>
+    <s:statTipp ratio="0.33"/>
+</s:statMatch>

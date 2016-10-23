@@ -11,15 +11,15 @@ public class TestXmlStatRound extends AbstractXmlStatTest<StatRound>
 	public TestXmlStatRound(){super(StatRound.class);}
 	public static StatRound create(boolean withChildren){return (new TestXmlStatRound()).build(withChildren);}
     
-    public static StatRound createStatRound(boolean withChilds)
+    public StatRound build(boolean withChilds)
     {
     	StatRound xml = new StatRound();
     	
     	if(withChilds)
     	{
-        	xml.setRound(TestXmlRound.createRound(false));
-        	xml.getStatMatch().add(TestXmlStatMatch.createStatMatch(false));
-        	xml.getStatMatch().add(TestXmlStatMatch.createStatMatch(false));
+ //       	xml.setRound(TestXmlRound.createRound(false));
+        	xml.getStatMatch().add(TestXmlStatMatch.create(false));
+        	xml.getStatMatch().add(TestXmlStatMatch.create(false));
     	}
 
     	return xml;

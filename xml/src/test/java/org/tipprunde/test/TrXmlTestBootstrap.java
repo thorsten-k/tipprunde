@@ -14,7 +14,7 @@ public class TrXmlTestBootstrap
 	public static void init()
 	{
 		LoggerInit loggerInit = new LoggerInit("log4j.xml");	
-		loggerInit.addAltPath("src/test/resources/tr-xml.test/config");
+		loggerInit.addAltPath("config");
 		loggerInit.init();
 		JaxbUtil.setNsPrefixMapper(new TrNsPrefixMapper());
 	}
