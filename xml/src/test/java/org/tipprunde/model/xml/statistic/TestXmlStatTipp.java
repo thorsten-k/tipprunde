@@ -18,6 +18,7 @@ public class TestXmlStatTipp extends AbstractXmlStatTest<StatTipp>
     	
     	if(withChilds)
     	{
+    		logger.error("NYI");
  //   		xml.setResult(TestXmlResult.createResult(false));
     	}
     	

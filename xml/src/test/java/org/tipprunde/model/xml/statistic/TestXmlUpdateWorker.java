@@ -19,6 +19,7 @@ public class TestXmlUpdateWorker extends AbstractXmlStatTest<UpdateWorker>
     	
     	if(withChilds)
     	{
+    		logger.error("NYI");
 //    		xml.setUpdatePolicy(TestXmlUpdatePolicy.createUpdatePolicy(false));
     	}
     	

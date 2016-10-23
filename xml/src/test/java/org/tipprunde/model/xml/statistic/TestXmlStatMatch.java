@@ -16,6 +16,7 @@ public class TestXmlStatMatch extends AbstractXmlStatTest<StatMatch>
     	StatMatch xml = new StatMatch();
     	if(withChilds)
     	{
+    		logger.error("NYI");
 //    		xml.setMatch(TestXmlMatch.create(false));
         	xml.getStatTipp().add(TestXmlStatTipp.create(false));
         	xml.getStatTipp().add(TestXmlStatTipp.create(false));

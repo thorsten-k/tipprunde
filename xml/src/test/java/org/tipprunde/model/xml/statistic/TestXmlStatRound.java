@@ -17,6 +17,7 @@ public class TestXmlStatRound extends AbstractXmlStatTest<StatRound>
     	
     	if(withChilds)
     	{
+    		logger.error("NYI");
  //       	xml.setRound(TestXmlRound.createRound(false));
         	xml.getStatMatch().add(TestXmlStatMatch.create(false));
         	xml.getStatMatch().add(TestXmlStatMatch.create(false));
