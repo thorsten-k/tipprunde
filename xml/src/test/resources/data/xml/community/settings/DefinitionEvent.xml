@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<c:definitionEvent xmlns:c="http://www.tipprunde.org/community" xmlns:u="http://www.tipprunde.org/user" xmlns:l="http://www.tipprunde.org/liga" xmlns:ds="http://www.tipprunde.org/liga/datasource" xmlns:us="http://ahtutils.aht-group.com/status" xmlns:ns7="http://ahtutils.aht-group.com/security" xmlns:ns8="http://ahtutils.aht-group.com/navigation" xmlns:net="http://exlp.sf.net/net" id="1">
+    <c:deadlinePolicy id="1" minutes="30" hours="5" days="2" weeks="1">
+        <type name="XX" code="individual"/>
+    </c:deadlinePolicy>
+    <c:community id="1" name="Test Community"/>
+    <l:event id="1" name="testName"/>
+    <c:definitionRound id="1" deadline="2011-11-11T11:11:11"/>
+    <c:definitionRound id="1" deadline="2011-11-11T11:11:11"/>
+</c:definitionEvent>

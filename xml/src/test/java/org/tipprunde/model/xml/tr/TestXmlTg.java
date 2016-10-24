@@ -27,7 +27,7 @@ public class TestXmlTg extends AbstractXmlTgTest<Tg>
     	{
     		xml.getTipps().add(TestXmlTipps.create(false));
     		xml.getParticipant().add(TestXmlParticipant.create(false));
-    		xml.getDefinitionRound().add(TestXmlDefinitionRound.createDefinitionRound(false));
+    		xml.getDefinitionRound().add(TestXmlDefinitionRound.create(false));
     		xml.getIdentity().add(TestXmlIdentity.create(false));
     		xml.getMatch().add(TestXmlMatch.create(false));
     		xml.getUpdateWorker().add(TestXmlUpdateWorker.create(false));

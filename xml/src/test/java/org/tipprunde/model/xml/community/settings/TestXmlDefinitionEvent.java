@@ -1,10 +1,5 @@
 package org.tipprunde.model.xml.community.settings;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-
-import net.sf.exlp.util.xml.JaxbUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.community.DefinitionEvent;
@@ -12,29 +7,15 @@ import org.tipprunde.model.xml.community.TestXmlCommunity;
 import org.tipprunde.model.xml.community.TestXmlDeadlinePolicy;
 import org.tipprunde.model.xml.liga.TestXmlEvent;
 import org.tipprunde.test.TrXmlTestBootstrap;
-import org.junit.BeforeClass;
-import org.junit.Test;
 
-public class TestXmlDefinitionEvent extends AbstractXmlDefinitionTest
+public class TestXmlDefinitionEvent extends AbstractXmlDefinitionTest<DefinitionEvent>
 {
 	final static Logger logger = LoggerFactory.getLogger(TestXmlDefinitionEvent.class);
 	
-	@BeforeClass
-	public static void initFiles()
-	{
-		fXml = new File(rootDir,"DefinitionEvent.xml");
-	}
+	public TestXmlDefinitionEvent(){super(DefinitionEvent.class);}
+	public static DefinitionEvent create(boolean withChildren){return (new TestXmlDefinitionEvent()).build(withChildren);}
     
-    @Test
-    public void testXml() throws FileNotFoundException
-    {
-    	DefinitionEvent actual = createDefinitionEvent();
-    	DefinitionEvent expected = (DefinitionEvent)JaxbUtil.loadJAXB(fXml.getAbsolutePath(), DefinitionEvent.class);
-    	assertJaxbEquals(expected, actual);
-    }
-    
-    private static DefinitionEvent createDefinitionEvent() {return createDefinitionEvent(true);}
-    public static DefinitionEvent createDefinitionEvent(boolean withChilds)
+    public DefinitionEvent build(boolean withChilds)
     {
     	DefinitionEvent xml = new DefinitionEvent();
     	xml.setId(1);
@@ -43,20 +24,16 @@ public class TestXmlDefinitionEvent extends AbstractXmlDefinitionTest
     	{
     		xml.setDeadlinePolicy(TestXmlDeadlinePolicy.createDeadlinePolicy(false));
     		xml.setCommunity(TestXmlCommunity.createCommunity(false));
-    		xml.setEvent(TestXmlEvent.createEvent(false));
-    		xml.getDefinitionRound().addAll(TestXmlDefinitionRound.createRounds(false));
+    		xml.setEvent(TestXmlEvent.create(false));
+    		xml.getDefinitionRound().add(TestXmlDefinitionRound.create(false));xml.getDefinitionRound().add(TestXmlDefinitionRound.create(false));
     	}
     	return xml;
     }
-    
-    public void save() {save(createDefinitionEvent(), fXml);}
-	
+
 	public static void main(String[] args)
     {
 		TrXmlTestBootstrap.init();	
-			
-		TestXmlDefinitionEvent.initFiles();	
 		TestXmlDefinitionEvent test = new TestXmlDefinitionEvent();
-		test.save();
+		test.saveReferenceXml();
     }
 }

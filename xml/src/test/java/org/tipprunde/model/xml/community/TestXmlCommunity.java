@@ -42,7 +42,7 @@ public class TestXmlCommunity extends AbstractXmlCommunityTest
     	{
     		xml.setParticipants(TestXmlParticipant.createParticipants(false));
     		xml.setSubscription(TestXmlSubscription.createSubscription(false));
-    		xml.setDefinitionEvent(TestXmlDefinitionEvent.createDefinitionEvent(false));
+    		xml.setDefinitionEvent(TestXmlDefinitionEvent.create(false));
     		xml.setRules(TestRules.createRules(false));
     		xml.setUrls(new Urls());
     	}

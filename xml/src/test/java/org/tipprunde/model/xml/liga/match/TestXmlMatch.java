@@ -4,17 +4,17 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Date;
 
-import net.sf.exlp.util.DateUtil;
-import net.sf.exlp.util.xml.JaxbUtil;
-
+import org.junit.BeforeClass;
+import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.liga.Match;
-import org.tipprunde.model.xml.liga.TestXmlRound;
+import org.tipprunde.model.xml.liga.TestXmlRounds;
 import org.tipprunde.model.xml.liga.ds.TestXmlDataSource;
 import org.tipprunde.test.TrXmlTestBootstrap;
-import org.junit.BeforeClass;
-import org.junit.Test;
+
+import net.sf.exlp.util.DateUtil;
+import net.sf.exlp.util.xml.JaxbUtil;
 
 public class TestXmlMatch extends AbstractXmlMatchTest
 {
@@ -50,7 +50,7 @@ public class TestXmlMatch extends AbstractXmlMatchTest
     		xml.setResult(TestXmlResult.createResult(false));
     		xml.setLocation(TestXmlLocation.createLocation(false));
     		xml.setDataSource(TestXmlDataSource.createDataSource(false));
-    		xml.setRounds(TestXmlRound.createRounds(false));
+    		xml.setRounds(TestXmlRounds.create(false));
     	}
     	return xml;
     }

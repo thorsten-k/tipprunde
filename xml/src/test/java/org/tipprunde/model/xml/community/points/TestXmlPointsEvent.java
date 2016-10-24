@@ -41,7 +41,7 @@ public class TestXmlPointsEvent extends AbstractXmlPointsTest
     	
     	if(withChilds)
     	{
-    		xml.setEvent(TestXmlEvent.createEvent(false));
+    		xml.setEvent(TestXmlEvent.create(false));
     		xml.getPointsRound().add(TestXmlPointsRound.create(false));
     	}
     	return xml;

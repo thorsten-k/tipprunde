@@ -1,15 +1,16 @@
 package org.tipprunde.model.xml.community.settings;
 
-import java.io.File;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.tipprunde.model.xml.statistic.AbstractXmlStatTest;
 import org.tipprunde.test.AbstractTrXmlTst;
 
-public abstract class AbstractXmlDefinitionTest extends AbstractTrXmlTst
+public abstract class AbstractXmlDefinitionTest<T extends Object> extends AbstractTrXmlTst<T>
 {
-	final static Logger logger = LoggerFactory.getLogger(AbstractXmlDefinitionTest.class);	
+	final static Logger logger = LoggerFactory.getLogger(AbstractXmlStatTest.class);	
 	
-	protected static final String rootDir = "src/test/resources/data/xml/community/settings";
-	protected static File fXml;
+	public AbstractXmlDefinitionTest(Class<T> cXml)
+	{
+		super(cXml,"community/settings");
+	}
 }
