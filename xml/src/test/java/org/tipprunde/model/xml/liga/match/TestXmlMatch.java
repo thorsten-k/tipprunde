@@ -1,15 +1,11 @@
 package org.tipprunde.model.xml.liga.match;
 
-import java.util.Date;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.liga.Match;
 import org.tipprunde.model.xml.liga.TestXmlRounds;
 import org.tipprunde.model.xml.liga.ds.TestXmlDataSource;
 import org.tipprunde.test.TrXmlTestBootstrap;
-
-import net.sf.exlp.util.DateUtil;
 
 public class TestXmlMatch extends AbstractXmlMatchTest<Match>
 {
@@ -20,12 +16,11 @@ public class TestXmlMatch extends AbstractXmlMatchTest<Match>
     
     public Match build(boolean withChilds)
     {
-    	Date date = DateUtil.getDateFromInt(2011, 11, 11, 11, 11, 11);
     	Match xml = new Match();
     	xml.setId(1);
     	xml.setFinished(true);
     	xml.setOngoing(false);
-    	xml.setKickOff(DateUtil.getXmlGc4D(date));
+    	xml.setKickOff(AbstractXmlMatchTest.getDefaultXmlDate());
     	
     	if(withChilds)
     	{
@@ -33,7 +28,7 @@ public class TestXmlMatch extends AbstractXmlMatchTest<Match>
     		xml.setRight(TestXmlRight.create(false));
     		xml.setResult(TestXmlResult.create(false));
     		xml.setLocation(TestXmlLocation.create(false));
-    		xml.setDataSource(TestXmlDataSource.createDataSource(false));
+    		xml.setDataSource(TestXmlDataSource.create(false));
     		xml.setRounds(TestXmlRounds.create(false));
     	}
     	return xml;

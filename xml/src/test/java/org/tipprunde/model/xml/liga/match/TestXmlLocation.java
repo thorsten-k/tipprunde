@@ -22,7 +22,7 @@ public class TestXmlLocation extends AbstractXmlMatchTest<Location>
     	
     	if(withChilds)
     	{
-    		xml.setDataSource(TestXmlDataSource.createDataSource(false));
+    		xml.setDataSource(TestXmlDataSource.create(false));
     	}
     	return xml;
     }

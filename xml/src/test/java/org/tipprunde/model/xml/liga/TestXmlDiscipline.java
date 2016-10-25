@@ -22,7 +22,7 @@ public class TestXmlDiscipline extends AbstractXmlLigaTest<Discipline>
     	{
     		xml.setEvents(TestXmlEvents.create(false));
     		xml.setVisible(TestXmlVisible.create(false));
-    		xml.setDataSource(TestXmlDataSource.createDataSource(false));
+    		xml.setDataSource(TestXmlDataSource.create(false));
     	}
     	return xml;
     }

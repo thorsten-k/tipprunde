@@ -23,7 +23,7 @@ public class TestXmlRound extends AbstractXmlLigaTest<Round>
     	if(withChilds)
     	{
     		xml.setEvents(TestXmlEvents.create(false));
-    		xml.setDataSource(TestXmlDataSource.createDataSource(false));
+    		xml.setDataSource(TestXmlDataSource.create(false));
     		xml.getMatch().add(TestXmlMatch.create(false));
     		xml.setVisible(TestXmlVisible.create(false));
     	}

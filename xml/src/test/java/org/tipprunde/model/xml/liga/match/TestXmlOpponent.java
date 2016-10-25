@@ -24,7 +24,7 @@ public class TestXmlOpponent extends AbstractXmlMatchTest<Opponent>
     	
     	if(withChilds)
     	{
-        	xml.setDataSource(TestXmlDataSource.createDataSource(false));
+        	xml.setDataSource(TestXmlDataSource.create(false));
         	xml.setType(createOpponentType());
     	}
     	return xml;

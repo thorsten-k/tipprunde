@@ -1,39 +1,22 @@
 package org.tipprunde.model.xml.liga.ds;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Date;
-
-import net.sf.exlp.util.DateUtil;
-import net.sf.exlp.util.xml.JaxbUtil;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.liga.UpdatePolicy;
 import org.tipprunde.test.TrXmlTestBootstrap;
-import org.junit.BeforeClass;
-import org.junit.Test;
 
-public class TestXmlUpdatePolicy extends AbstractXmlLigaDsTest
+import net.sf.exlp.util.DateUtil;
+
+public class TestXmlUpdatePolicy extends AbstractXmlLigaDsTest<UpdatePolicy>
 {
 	final static Logger logger = LoggerFactory.getLogger(TestXmlUpdatePolicy.class);
 	
-	@BeforeClass
-	public static void initFiles()
-	{
-		fXml = new File(rootDir,"updatePolicy2.xml");
-	}
+	public TestXmlUpdatePolicy(){super(UpdatePolicy.class);}
+	public static UpdatePolicy create(boolean withChildren){return (new TestXmlUpdatePolicy()).build(withChildren);}
     
-    @Test
-    public void testPlain() throws FileNotFoundException
-    {
-    	UpdatePolicy actual = createUpdatePolicy();
-    	UpdatePolicy expected = (UpdatePolicy)JaxbUtil.loadJAXB(fXml.getAbsolutePath(), UpdatePolicy.class);
-    	assertJaxbEquals(expected, actual);
-    }
-    
-    private static UpdatePolicy createUpdatePolicy() {return createUpdatePolicy(true);}
-    public static UpdatePolicy createUpdatePolicy(boolean withChilds)
+    public UpdatePolicy build(boolean withChilds)
     {
     	Date dLast = DateUtil.getDateFromInt(2011, 11, 11, 11, 11, 11);
     	Date dNext = DateUtil.getDateFromInt(2012, 12, 12, 12, 12, 12);
@@ -47,15 +30,11 @@ public class TestXmlUpdatePolicy extends AbstractXmlLigaDsTest
     	p.setType("once");
     	return p;
     }
-	
-    public void save() {save(createUpdatePolicy(), fXml);}
-    
+	 
 	public static void main(String[] args)
     {
 		TrXmlTestBootstrap.init();	
-			
-		TestXmlUpdatePolicy.initFiles();	
 		TestXmlUpdatePolicy test = new TestXmlUpdatePolicy();
-		test.save();
+		test.saveReferenceXml();
     }
 }
