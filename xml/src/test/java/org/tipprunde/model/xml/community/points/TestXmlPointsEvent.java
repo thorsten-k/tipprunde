@@ -1,38 +1,19 @@
 package org.tipprunde.model.xml.community.points;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-
-import net.sf.exlp.util.xml.JaxbUtil;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.community.PointsEvent;
 import org.tipprunde.model.xml.liga.TestXmlEvent;
 import org.tipprunde.test.TrXmlTestBootstrap;
-import org.junit.BeforeClass;
-import org.junit.Test;
 
-public class TestXmlPointsEvent extends AbstractXmlPointsTest
+public class TestXmlPointsEvent extends AbstractXmlPointsTest<PointsEvent>
 {
 	final static Logger logger = LoggerFactory.getLogger(TestXmlPointsEvent.class);
 	
-	@BeforeClass
-	public static void initFiles()
-	{
-		fXml = new File(rootDir,"pointsEvent2.xml");
-	}
+	public TestXmlPointsEvent(){super(PointsEvent.class);}
+	public static PointsEvent create(boolean withChildren){return (new TestXmlPointsEvent()).build(withChildren);}
     
-    @Test
-    public void test() throws FileNotFoundException
-    {
-    	PointsEvent actual = create();
-    	PointsEvent expected = JaxbUtil.loadJAXB(fXml.getAbsolutePath(), PointsEvent.class);
-    	assertJaxbEquals(expected, actual);
-    }
-    
-    private static PointsEvent create() {return create(true);}
-    public static PointsEvent create(boolean withChilds)
+    public PointsEvent build(boolean withChilds)
     {
     	PointsEvent xml = new PointsEvent();
     	xml.setId(1);
@@ -47,14 +28,10 @@ public class TestXmlPointsEvent extends AbstractXmlPointsTest
     	return xml;
     }
     
-    public void save() {save(create(), fXml);}
-	
 	public static void main(String[] args)
     {
-		TrXmlTestBootstrap.init();	
-			
-		TestXmlPointsEvent.initFiles();	
+		TrXmlTestBootstrap.init();		
 		TestXmlPointsEvent test = new TestXmlPointsEvent();
-		test.save();
+		test.saveReferenceXml();
     }
 }

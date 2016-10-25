@@ -1,36 +1,17 @@
 package org.tipprunde.model.xml.community;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.test.TrXmlTestBootstrap;
 
-import net.sf.exlp.util.xml.JaxbUtil;
-
-public class TestXmlDeadlinePolicy extends AbstractXmlCommunityTest
+public class TestXmlDeadlinePolicy extends AbstractXmlCommunityTest<DeadlinePolicy>
 {
 	final static Logger logger = LoggerFactory.getLogger(TestXmlDeadlinePolicy.class);
 
-	@BeforeClass
-	public static void initFiles()
-	{
-		fXml = new File(rootDir,"deadlinePolicy2.xml");
-	}
+	public TestXmlDeadlinePolicy(){super(DeadlinePolicy.class);}
+	public static DeadlinePolicy create(boolean withChildren){return (new TestXmlDeadlinePolicy()).build(withChildren);}
     
-    @Test
-    public void testPlain() throws FileNotFoundException
-    {
-    	DeadlinePolicy actual = createDeadlinePolicy();
-    	DeadlinePolicy expected = (DeadlinePolicy)JaxbUtil.loadJAXB(fXml.getAbsolutePath(), DeadlinePolicy.class);
-    	assertJaxbEquals(expected, actual);
-    }
-    
-    private static DeadlinePolicy createDeadlinePolicy() {return createDeadlinePolicy(true);}
-    public static DeadlinePolicy createDeadlinePolicy(boolean withChilds)
+	public DeadlinePolicy build(boolean withChilds)
     {
     	DeadlinePolicy xml = new DeadlinePolicy();
     	xml.setId(1);
@@ -49,15 +30,11 @@ public class TestXmlDeadlinePolicy extends AbstractXmlCommunityTest
     	xml.setName("XX");
     	return xml;
     }
-    
-    public void save() {save(createDeadlinePolicy(), fXml);}
-    
+  
 	public static void main(String[] args)
     {
 		TrXmlTestBootstrap.init();
-			
-		TestXmlDeadlinePolicy.initFiles();	
 		TestXmlDeadlinePolicy test = new TestXmlDeadlinePolicy();
-		test.save();
+		test.saveReferenceXml();
     }
 }

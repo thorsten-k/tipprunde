@@ -1,38 +1,20 @@
 package org.tipprunde.model.xml.community;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-
-import net.sf.exlp.util.xml.JaxbUtil;
-import net.sf.exlp.xml.net.Urls;
-
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.community.settings.TestXmlDefinitionEvent;
 import org.tipprunde.test.TrXmlTestBootstrap;
 
-public class TestXmlCommunity extends AbstractXmlCommunityTest
+import net.sf.exlp.xml.net.Urls;
+
+public class TestXmlCommunity extends AbstractXmlCommunityTest<Community>
 {
 	final static Logger logger = LoggerFactory.getLogger(TestXmlCommunity.class);
 	
-	@BeforeClass
-	public static void initFiles()
-	{
-		fXml = new File(rootDir,"community2.xml");
-	}
+	public TestXmlCommunity(){super(Community.class);}
+	public static Community create(boolean withChildren){return (new TestXmlCommunity()).build(withChildren);}
     
-    @Test
-    public void testXml() throws FileNotFoundException
-    {
-    	Community actual = createCommunity();
-    	Community expected = (Community)JaxbUtil.loadJAXB(fXml.getAbsolutePath(), Community.class);
-    	assertJaxbEquals(expected, actual);
-    }
-    
-    private static Community createCommunity() {return createCommunity(true);}
-    public static Community createCommunity(boolean withChilds)
+    public Community build(boolean withChilds)
     {
     	Community xml = new Community();
     	xml.setId(1);
@@ -40,23 +22,19 @@ public class TestXmlCommunity extends AbstractXmlCommunityTest
     	
     	if(withChilds)
     	{
-    		xml.setParticipants(TestXmlParticipant.createParticipants(false));
-    		xml.setSubscription(TestXmlSubscription.createSubscription(false));
+    		xml.setParticipants(TestXmlParticipants.create(false));
+    		xml.setSubscription(TestXmlSubscription.create(false));
     		xml.setDefinitionEvent(TestXmlDefinitionEvent.create(false));
-    		xml.setRules(TestRules.createRules(false));
+    		xml.setRules(TestRules.create(false));
     		xml.setUrls(new Urls());
     	}
     	return xml;
     }
-    
-    public void save(){save(createCommunity(), fXml);}
-	
+
 	public static void main(String[] args)
     {
-		TrXmlTestBootstrap.init();	
-			
-		TestXmlCommunity.initFiles();	
+		TrXmlTestBootstrap.init();		
 		TestXmlCommunity test = new TestXmlCommunity();
-		test.save();
+		test.saveReferenceXml();
     }
 }

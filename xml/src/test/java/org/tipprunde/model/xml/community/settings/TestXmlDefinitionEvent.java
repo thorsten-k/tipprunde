@@ -22,8 +22,8 @@ public class TestXmlDefinitionEvent extends AbstractXmlDefinitionTest<Definition
     	
     	if(withChilds)
     	{
-    		xml.setDeadlinePolicy(TestXmlDeadlinePolicy.createDeadlinePolicy(false));
-    		xml.setCommunity(TestXmlCommunity.createCommunity(false));
+    		xml.setDeadlinePolicy(TestXmlDeadlinePolicy.create(false));
+    		xml.setCommunity(TestXmlCommunity.create(false));
     		xml.setEvent(TestXmlEvent.create(false));
     		xml.getDefinitionRound().add(TestXmlDefinitionRound.create(false));xml.getDefinitionRound().add(TestXmlDefinitionRound.create(false));
     	}
