@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <s:statRound xmlns:l="http://www.tipprunde.org/liga" xmlns:ds="http://www.tipprunde.org/liga/datasource" xmlns:s="http://www.tipprunde.org/stats">
+    <l:round id="1" name="myName" nr="7"/>
     <s:statMatch/>
     <s:statMatch/>
 </s:statRound>

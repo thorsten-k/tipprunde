@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<l:round xmlns:l="http://www.tipprunde.org/liga" xmlns:ds="http://www.tipprunde.org/liga/datasource" id="1" name="myName" nr="7">
+    <l:events/>
+    <l:dataSource id="1" lastChange="2011-11-11T11:11:11"/>
+    <l:visible id="1" name="Test Community" code="visible"/>
+    <l:match id="1" finished="true" ongoing="false" kickOff="2011-11-11T11:11:11"/>
+</l:round>

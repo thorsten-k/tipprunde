@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<c:pointsRound xmlns:l="http://www.tipprunde.org/liga" xmlns:ds="http://www.tipprunde.org/liga/datasource" xmlns:c="http://www.tipprunde.org/community" xmlns:u="http://www.tipprunde.org/user" xmlns:net="http://exlp.sf.net/net" xmlns:us="http://ahtutils.aht-group.com/status" xmlns:ns8="http://ahtutils.aht-group.com/security" xmlns:ns9="http://ahtutils.aht-group.com/navigation" id="1" score="5" rank="2">
+    <c:pointsEvent id="1" score="5" rank="2"/>
+    <l:round id="1" name="myName" nr="7"/>
+    <c:pointsMatch id="1" score="5"/>
+</c:pointsRound>

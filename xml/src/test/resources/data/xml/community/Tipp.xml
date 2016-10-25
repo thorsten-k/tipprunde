@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<c:tipp xmlns:u="http://www.tipprunde.org/user" xmlns:c="http://www.tipprunde.org/community" xmlns:l="http://www.tipprunde.org/liga" xmlns:ds="http://www.tipprunde.org/liga/datasource" xmlns:net="http://exlp.sf.net/net" xmlns:us="http://ahtutils.aht-group.com/status" xmlns:ns8="http://ahtutils.aht-group.com/security" xmlns:ns9="http://ahtutils.aht-group.com/navigation" id="1" left="1" record="2012-02-23T12:42:12" deadline="2012-02-23T12:42:12" sync="sync">
+    <u:identity id="1" preferred="true" email="myEmail" emailVerified="true"/>
+    <l:match id="1" finished="true" ongoing="false" kickOff="2011-11-11T11:11:11"/>
+    <us:status/>
+</c:tipp>

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<c:bet xmlns:c="http://www.tipprunde.org/community" xmlns:l="http://www.tipprunde.org/liga" xmlns:ds="http://www.tipprunde.org/liga/datasource" xmlns:net="http://exlp.sf.net/net" xmlns:u="http://www.tipprunde.org/user" xmlns:us="http://ahtutils.aht-group.com/status" xmlns:ns8="http://ahtutils.aht-group.com/security" xmlns:ns9="http://ahtutils.aht-group.com/navigation" id="1" amount="25.0" record="2011-11-11T11:11:11">
+    <c:participant id="1"/>
+</c:bet>

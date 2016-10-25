@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<c:deadlinePolicy xmlns:c="http://www.tipprunde.org/community" id="1" minutes="30" hours="5" days="2" weeks="1">
+    <type name="XX" code="individual"/>
+</c:deadlinePolicy>

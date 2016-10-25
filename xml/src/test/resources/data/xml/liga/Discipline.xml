@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<l:discipline xmlns:l="http://www.tipprunde.org/liga" xmlns:ds="http://www.tipprunde.org/liga/datasource" id="1" name="Test Community">
+    <l:dataSource id="1" lastChange="2011-11-11T11:11:11"/>
+    <l:visible id="1" name="Test Community" code="visible"/>
+    <l:events/>
+</l:discipline>

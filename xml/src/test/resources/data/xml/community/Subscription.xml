@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<c:subscription xmlns:c="http://www.tipprunde.org/community" id="1" deadline="2011-11-11T00:00:00">
+    <type name="Automatisch" code="auto"/>
+</c:subscription>

@@ -2,6 +2,7 @@ package org.tipprunde.model.xml.statistic;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.tipprunde.model.xml.liga.match.TestXmlResult;
 import org.tipprunde.test.TrXmlTestBootstrap;
 
 public class TestXmlStatTipp extends AbstractXmlStatTest<StatTipp>
@@ -18,8 +19,7 @@ public class TestXmlStatTipp extends AbstractXmlStatTest<StatTipp>
     	
     	if(withChilds)
     	{
-    		logger.error("NYI");
- //   		xml.setResult(TestXmlResult.createResult(false));
+    		xml.setResult(TestXmlResult.create(false));
     	}
     	
     	return xml;

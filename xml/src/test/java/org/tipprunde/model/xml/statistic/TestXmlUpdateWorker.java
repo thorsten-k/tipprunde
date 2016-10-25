@@ -2,6 +2,7 @@ package org.tipprunde.model.xml.statistic;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.tipprunde.model.xml.liga.ds.TestXmlUpdatePolicy;
 import org.tipprunde.test.TrXmlTestBootstrap;
 
 public class TestXmlUpdateWorker extends AbstractXmlStatTest<UpdateWorker>
@@ -19,8 +20,7 @@ public class TestXmlUpdateWorker extends AbstractXmlStatTest<UpdateWorker>
     	
     	if(withChilds)
     	{
-    		logger.error("NYI");
-//    		xml.setUpdatePolicy(TestXmlUpdatePolicy.createUpdatePolicy(false));
+    		xml.setUpdatePolicy(TestXmlUpdatePolicy.create(false));
     	}
     	
     	return xml;

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<l:left xmlns:l="http://www.tipprunde.org/liga" xmlns:ds="http://www.tipprunde.org/liga/datasource">
+    <l:opponent id="1" name="myName" nameLegal="myLegalName" name3="ABC" icon="myIcon"/>
+</l:left>

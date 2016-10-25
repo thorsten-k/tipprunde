@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<c:pointsMatch xmlns:l="http://www.tipprunde.org/liga" xmlns:ds="http://www.tipprunde.org/liga/datasource" xmlns:c="http://www.tipprunde.org/community" xmlns:u="http://www.tipprunde.org/user" xmlns:net="http://exlp.sf.net/net" xmlns:us="http://ahtutils.aht-group.com/status" xmlns:ns8="http://ahtutils.aht-group.com/security" xmlns:ns9="http://ahtutils.aht-group.com/navigation" id="1" score="5">
+    <c:pointsRound id="1" score="5" rank="2"/>
+    <c:tipp id="1" left="1" record="2012-02-23T12:42:12" deadline="2012-02-23T12:42:12" sync="sync">
+        <us:status/>
+    </c:tipp>
+    <c:scoreDetails excact="true" difference="true" tendence="true"/>
+</c:pointsMatch>
