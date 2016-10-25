@@ -1,11 +1,7 @@
 package org.tipprunde.model.xml.liga.match;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.Date;
 
-import org.junit.BeforeClass;
-import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.liga.Match;
@@ -14,27 +10,15 @@ import org.tipprunde.model.xml.liga.ds.TestXmlDataSource;
 import org.tipprunde.test.TrXmlTestBootstrap;
 
 import net.sf.exlp.util.DateUtil;
-import net.sf.exlp.util.xml.JaxbUtil;
 
-public class TestXmlMatch extends AbstractXmlMatchTest
+public class TestXmlMatch extends AbstractXmlMatchTest<Match>
 {
 	final static Logger logger = LoggerFactory.getLogger(TestXmlMatch.class);
 	
-	@BeforeClass
-	public static void initFiles()
-	{
-		fXml = new File(rootDir,"match2.xml");
-	}
+	public TestXmlMatch(){super(Match.class);}
+	public static Match create(boolean withChildren){return (new TestXmlMatch()).build(withChildren);}
     
-    @Test
-    public void testPlain() throws FileNotFoundException
-    {
-    	Match actual = create(true);
-    	Match expected = JaxbUtil.loadJAXB(fXml.getAbsolutePath(), Match.class);
-    	assertJaxbEquals(expected, actual);
-    }
-    
-    public static Match create(boolean withChilds)
+    public Match build(boolean withChilds)
     {
     	Date date = DateUtil.getDateFromInt(2011, 11, 11, 11, 11, 11);
     	Match xml = new Match();
@@ -47,22 +31,18 @@ public class TestXmlMatch extends AbstractXmlMatchTest
     	{
     		xml.setLeft(TestXmlLeft.create(false));
     		xml.setRight(TestXmlRight.create(false));
-    		xml.setResult(TestXmlResult.createResult(false));
-    		xml.setLocation(TestXmlLocation.createLocation(false));
+    		xml.setResult(TestXmlResult.create(false));
+    		xml.setLocation(TestXmlLocation.create(false));
     		xml.setDataSource(TestXmlDataSource.createDataSource(false));
     		xml.setRounds(TestXmlRounds.create(false));
     	}
     	return xml;
     }
     
-    public void save() {save(create(true), fXml);}
-   
 	public static void main(String[] args)
     {
 		TrXmlTestBootstrap.init();	
-			
-		TestXmlMatch.initFiles();	
 		TestXmlMatch test = new TestXmlMatch();
-		test.save();
+		test.saveReferenceXml();
     }
 }
