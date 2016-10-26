@@ -1,6 +1,7 @@
 package org.tipprunde.test;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.TrNsPrefixMapper;
@@ -9,12 +10,13 @@ import net.sf.ahtutils.test.AbstractAhtUtilsXmlTest;
 import net.sf.exlp.util.io.LoggerInit;
 import net.sf.exlp.util.xml.JaxbUtil;
 
-public class AbstractTrXmlTst <T extends Object> extends AbstractAhtUtilsXmlTest<T>
+@Ignore
+public class AbstractTrXmlTest <T extends Object> extends AbstractAhtUtilsXmlTest<T>
 {
-	final static Logger logger = LoggerFactory.getLogger(AbstractTrXmlTst.class);	
+	final static Logger logger = LoggerFactory.getLogger(AbstractTrXmlTest.class);	
 	
-	public AbstractTrXmlTst(){this(null,null);}
-	public AbstractTrXmlTst(Class<T> cXml,String xmlDirSuffix)
+	public AbstractTrXmlTest(){this(null,null);}
+	public AbstractTrXmlTest(Class<T> cXml,String xmlDirSuffix)
 	{
 		super(cXml,xmlDirSuffix);
 	}
