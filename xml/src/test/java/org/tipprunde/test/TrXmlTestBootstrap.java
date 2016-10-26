@@ -14,7 +14,7 @@ public class TrXmlTestBootstrap
 	public static void init()
 	{
 		LoggerInit loggerInit = new LoggerInit("log4j.xml");	
-		loggerInit.addAltPath("config");
+		loggerInit.addAltPath("tipprunde-xml.test/config");
 		loggerInit.init();
 		JaxbUtil.setNsPrefixMapper(new TrNsPrefixMapper());
 	}
