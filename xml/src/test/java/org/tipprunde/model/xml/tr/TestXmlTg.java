@@ -1,5 +1,6 @@
 package org.tipprunde.model.xml.tr;
 
+import org.jeesl.model.xml.system.io.mail.Link;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.community.TestXmlParticipant;
@@ -9,8 +10,6 @@ import org.tipprunde.model.xml.liga.match.TestXmlMatch;
 import org.tipprunde.model.xml.statistic.TestXmlUpdateWorker;
 import org.tipprunde.model.xml.user.identity.TestXmlIdentity;
 import org.tipprunde.test.TrXmlTestBootstrap;
-
-import net.sf.ahtutils.xml.mail.Link;
 
 public class TestXmlTg extends AbstractXmlTgTest<Tg>
 {

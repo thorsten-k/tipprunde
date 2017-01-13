@@ -43,7 +43,7 @@ public class Mail
 
     private final static long serialVersionUID = 1L;
     @XmlElement(namespace = "http://ahtutils.aht-group.com/mail", required = true)
-    protected net.sf.ahtutils.xml.mail.Mail mail;
+    protected org.jeesl.model.xml.system.io.mail.Mail mail;
     @XmlElement(required = true)
     protected Tg tg;
     @XmlAttribute(name = "id")
@@ -54,10 +54,10 @@ public class Mail
      * 
      * @return
      *     possible object is
-     *     {@link net.sf.ahtutils.xml.mail.Mail }
+     *     {@link org.jeesl.model.xml.system.io.mail.Mail }
      *     
      */
-    public net.sf.ahtutils.xml.mail.Mail getMail() {
+    public org.jeesl.model.xml.system.io.mail.Mail getMail() {
         return mail;
     }
 
@@ -66,10 +66,10 @@ public class Mail
      * 
      * @param value
      *     allowed object is
-     *     {@link net.sf.ahtutils.xml.mail.Mail }
+     *     {@link org.jeesl.model.xml.system.io.mail.Mail }
      *     
      */
-    public void setMail(net.sf.ahtutils.xml.mail.Mail value) {
+    public void setMail(org.jeesl.model.xml.system.io.mail.Mail value) {
         this.mail = value;
     }
 
