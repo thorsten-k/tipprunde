@@ -20,7 +20,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element ref="{http://ahtutils.aht-group.com/mail}mail"/&gt;
+ *         &lt;element ref="{http://www.jeesl.org/io/mail}mail"/&gt;
  *         &lt;element ref="{http://www.tipprunde.org}tg"/&gt;
  *       &lt;/sequence&gt;
  *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}long" /&gt;
@@ -42,7 +42,7 @@ public class Mail
 {
 
     private final static long serialVersionUID = 1L;
-    @XmlElement(namespace = "http://ahtutils.aht-group.com/mail", required = true)
+    @XmlElement(namespace = "http://www.jeesl.org/io/mail", required = true)
     protected org.jeesl.model.xml.system.io.mail.Mail mail;
     @XmlElement(required = true)
     protected Tg tg;

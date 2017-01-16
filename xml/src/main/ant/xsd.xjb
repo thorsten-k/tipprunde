@@ -34,9 +34,9 @@
         </jxb:schemaBindings>
     </jxb:bindings>
     
-	<jxb:bindings schemaLocation="../../../../../jeesl/xml/src/main/xsd/aht/mail.xsd" node="/xsd:schema">
+	<jxb:bindings schemaLocation="../../../../../jeesl/xml/src/main/xsd/jeesl/io/mail.xsd" node="/xsd:schema">
         <jxb:schemaBindings>
-            <jxb:package name="net.sf.ahtutils.xml.mail"/>
+            <jxb:package name="org.jeesl.model.xml.system.io.mail"/>
         </jxb:schemaBindings>
     </jxb:bindings>
     

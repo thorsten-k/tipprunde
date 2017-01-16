@@ -9,7 +9,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-
 import org.jeesl.model.xml.system.io.mail.Link;
 import org.tipprunde.model.xml.community.Community;
 import org.tipprunde.model.xml.community.DefinitionRound;
@@ -43,7 +42,7 @@ import org.tipprunde.model.xml.user.Identity;
  *         &lt;element ref="{http://www.tipprunde.org/community}participant" maxOccurs="unbounded"/&gt;
  *         &lt;element ref="{http://www.tipprunde.org/user}identity" maxOccurs="unbounded"/&gt;
  *         &lt;element ref="{http://www.tipprunde.org/stats}updateWorker" maxOccurs="unbounded"/&gt;
- *         &lt;element ref="{http://ahtutils.aht-group.com/mail}link"/&gt;
+ *         &lt;element ref="{http://www.jeesl.org/io/mail}link"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -92,7 +91,7 @@ public class Tg
     protected List<Identity> identity;
     @XmlElement(namespace = "http://www.tipprunde.org/stats", required = true)
     protected List<UpdateWorker> updateWorker;
-    @XmlElement(namespace = "http://ahtutils.aht-group.com/mail", required = true)
+    @XmlElement(namespace = "http://www.jeesl.org/io/mail", required = true)
     protected Link link;
 
     /**
