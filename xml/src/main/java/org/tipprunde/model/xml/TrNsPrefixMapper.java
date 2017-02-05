@@ -2,10 +2,19 @@ package org.tipprunde.model.xml;
 
 import net.sf.exlp.xml.ns.NsPrefixMapperInterface;
 
+import org.jeesl.model.xml.JeeslNsPrefixMapper;
+
 import com.sun.xml.bind.marshaller.NamespacePrefixMapper;
 
 public class TrNsPrefixMapper extends NamespacePrefixMapper implements NsPrefixMapperInterface
 {
+	private JeeslNsPrefixMapper npmJeesl;
+	
+	public TrNsPrefixMapper()
+	{
+		npmJeesl = new JeeslNsPrefixMapper();
+	}
+	
     public String getPreferredPrefix(String namespaceUri, String suggestion, boolean requirePrefix)
     {
     	if("http://www.tipprunde.org".equals(namespaceUri) ){return "tr";}
@@ -21,6 +30,9 @@ public class TrNsPrefixMapper extends NamespacePrefixMapper implements NsPrefixM
     	
     	if("http://www.openfuxml.org".equals(namespaceUri) ){return "ofx";}
     	if("http://www.openfuxml.org/table".equals(namespaceUri) ){return "table";}
+    	
+    	String result = npmJeesl.getPreferredPrefix(namespaceUri, null, requirePrefix);	
+    	if(result!=null){return result;}
     	
         return suggestion;
     }
