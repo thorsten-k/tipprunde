@@ -18,6 +18,19 @@
 			<artifactId>tipprunde-xml</artifactId>
 			<type>jar</type>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.jeesl</groupId>
+			<artifactId>jeesl-api</artifactId>
+			<type>jar</type>
+		</dependency>
+		
+		<dependency>
+		   <groupId>org.jboss.spec</groupId>
+		   <artifactId>jboss-javaee-6.0</artifactId>
+		   <type>pom</type>
+		   <scope>provided</scope>
+		</dependency>
 	</dependencies>
 	
 	<build>
