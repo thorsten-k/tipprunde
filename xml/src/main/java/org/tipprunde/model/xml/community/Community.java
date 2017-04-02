@@ -2,12 +2,15 @@
 package org.tipprunde.model.xml.community;
 
 import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+
+import net.sf.ahtutils.model.interfaces.with.EjbWithId;
 import net.sf.exlp.xml.net.Urls;
 
 
@@ -46,7 +49,7 @@ import net.sf.exlp.xml.net.Urls;
 })
 @XmlRootElement(name = "community")
 public class Community
-    implements Serializable
+    implements Serializable,EjbWithId
 {
 
     private final static long serialVersionUID = 1L;
