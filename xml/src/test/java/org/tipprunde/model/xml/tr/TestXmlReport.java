@@ -14,7 +14,7 @@ public class TestXmlReport extends AbstractXmlTgTest<Report>
     @Override public Report build(boolean withChilds)
     {
     	Report xml = new Report();
-    	xml.setTg(TestXmlTg.create(false));
+    	xml.setTg(TestXmlTr.create(false));
     	return xml;
     }
 	

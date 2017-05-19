@@ -11,12 +11,12 @@ import org.tipprunde.model.xml.statistic.TestXmlUpdateWorker;
 import org.tipprunde.model.xml.user.identity.TestXmlIdentity;
 import org.tipprunde.test.TrXmlTestBootstrap;
 
-public class TestXmlTg extends AbstractXmlTgTest<Tg>
+public class TestXmlTr extends AbstractXmlTgTest<Tg>
 {
-	final static Logger logger = LoggerFactory.getLogger(TestXmlTg.class);
+	final static Logger logger = LoggerFactory.getLogger(TestXmlTr.class);
 	
-	public TestXmlTg(){super(Tg.class);}
-	public static Tg create(boolean withChildren){return (new TestXmlTg()).build(withChildren);}
+	public TestXmlTr(){super(Tg.class);}
+	public static Tg create(boolean withChildren){return (new TestXmlTr()).build(withChildren);}
     
     @Override public Tg build(boolean withChilds)
     {
@@ -39,7 +39,7 @@ public class TestXmlTg extends AbstractXmlTgTest<Tg>
 	public static void main(String[] args)
     {
 		TrXmlTestBootstrap.init();
-		TestXmlTg test = new TestXmlTg();
+		TestXmlTr test = new TestXmlTr();
 		test.saveReferenceXml();
     }
 }
