@@ -10,6 +10,7 @@
  
 	<modules>
 		<module>api</module>
+		<module>util</module>
 		<module>xml</module> 
 	</modules>
 	
@@ -60,6 +61,11 @@
 			<dependency>
 				<groupId>org.tipprunde</groupId>
 				<artifactId>tipprunde-xml</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.tipprunde</groupId>
+				<artifactId>tipprunde-util</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 		

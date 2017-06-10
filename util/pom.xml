@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<parent>
+		<groupId>org.tipprunde</groupId>
+		<artifactId>tipprunde</artifactId>
+		<version>0.2.3-SNAPSHOT</version>
+	</parent>
+	
+    <artifactId>tipprunde-util</artifactId>
+    <packaging>jar</packaging> 
+    <name>TR - Util</name>
+	
+	<dependencies>
+		<dependency>
+			<groupId>org.tipprunde</groupId>
+			<artifactId>tipprunde-xml</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+	</dependencies>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>org/tipprunde/model/xml/community/*.java</exclude>
+						<exclude>org/tipprunde/model/xml/ds/*.java</exclude>
+						<exclude>org/tipprunde/model/xml/liga/*.java</exclude>
+						<exclude>org/tipprunde/model/xml/statistic/*.java</exclude>
+						<exclude>org/tipprunde/model/xml/tr/*.java</exclude>
+						<exclude>org/tipprunde/model/xml/user/*.java</exclude>
+					</excludes>
+	        </configuration>
+	      </plugin>
+        </plugins>
+	</build>
+</project>
