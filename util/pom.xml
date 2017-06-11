@@ -15,8 +15,11 @@
 	<dependencies>
 		<dependency>
 			<groupId>org.tipprunde</groupId>
+			<artifactId>tipprunde-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.tipprunde</groupId>
 			<artifactId>tipprunde-xml</artifactId>
-			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 	
