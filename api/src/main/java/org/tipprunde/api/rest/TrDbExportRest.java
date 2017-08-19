@@ -2,10 +2,10 @@ package org.tipprunde.api.rest;
 
 import javax.ws.rs.Path;
 
-import net.sf.ahtutils.interfaces.rest.security.UtilsSecurityRestExport;
+import org.jeesl.api.rest.system.security.JeeslSecurityRestExport;
 
 @Path("/rest/db/export")
-public interface TrDbExportRest extends UtilsSecurityRestExport
+public interface TrDbExportRest extends JeeslSecurityRestExport
 {	
 
 }
