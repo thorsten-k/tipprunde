@@ -13,6 +13,26 @@
     <name>TR - XML</name>
 	
 	<dependencies>
+		<dependency>
+   	   		<groupId>org.jeesl</groupId>
+   	   		<artifactId>jeesl-interfaces</artifactId>
+   	   	</dependency>
+		<dependency>
+   	   		<groupId>org.jeesl</groupId>
+   	   		<artifactId>jeesl-xml</artifactId>
+   	   	</dependency>
+ <!--   	   	<dependency>
+   	   		<groupId>net.sf.exlp</groupId>
+   	   		<artifactId>exlp-xml</artifactId>
+   	   		<scope>provided</scope>
+   	   	</dependency>
+		
+ 	
+		<dependency>
+   	   		<groupId>org.slf4j</groupId>
+   	   		<artifactId>slf4j-api</artifactId>
+   	   	</dependency>
+-->	
 	
 		<dependency>
 			<groupId>net.sf.exlp</groupId>
@@ -51,6 +71,7 @@
    	   		</exclusions>
    	   	</dependency>
 	
+		<!-- XML -->
 		<dependency>
 			<groupId>com.sun.xml.bind</groupId>
 			<artifactId>jaxb-xjc</artifactId>
@@ -66,7 +87,11 @@
    	   		<artifactId>jaxb-impl</artifactId>
    	   		<scope>provided</scope>
    	   	</dependency>
-   	   	
+   	   	<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom</artifactId>
+			<scope>provided</scope>
+		</dependency>
    	   	
    	   	<dependency>
    	   		<groupId>junit</groupId>
@@ -74,37 +99,16 @@
    	   		<type>jar</type>
    	   		<scope>test</scope>
    	   	</dependency>
-   	   	<dependency>
-   	   		<groupId>net.sf.exlp</groupId>
-   	   		<artifactId>exlp-xml</artifactId>
-   	   		<scope>provided</scope>
-   	   	</dependency>
+   	   	
    	   	<dependency>
    	   		<groupId>log4j</groupId>
    	   		<artifactId>log4j</artifactId>
    	   		<scope>test</scope>
    	   	</dependency>
    	   	<dependency>
-   	   		<groupId>org.jeesl</groupId>
-   	   		<artifactId>jeesl-xml</artifactId>
-   	   	</dependency>
-   	   	<dependency>
-			<groupId>org.jdom</groupId>
-			<artifactId>jdom</artifactId>
-			<scope>provided</scope>
-		</dependency>
-   	   	<dependency>
-   	   		<groupId>org.slf4j</groupId>
-   	   		<artifactId>slf4j-api</artifactId>
-   	   	</dependency>
-   	   	<dependency>
    	   		<groupId>org.slf4j</groupId>
    	   		<artifactId>slf4j-log4j12</artifactId>
    	   		<scope>test</scope>
-   	   	</dependency>
-   	   	<dependency>
-   	   		<groupId>org.jeesl</groupId>
-   	   		<artifactId>jeesl-interfaces</artifactId>
    	   	</dependency>
    	   	<dependency>
    	   		<groupId>org.jeesl</groupId>
