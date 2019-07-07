@@ -1,4 +1,4 @@
-package org.tipprunde.factory.xml.community;
+package org.tipprunde.factory.xml.community.member;
 
 import org.tipprunde.model.xml.community.Community;
 import org.tipprunde.model.xml.community.Participant;

@@ -1,5 +1,6 @@
-package org.tipprunde.factory.xml.community;
+package org.tipprunde.factory.xml.community.member;
 
+import org.tipprunde.model.xml.community.Participant;
 import org.tipprunde.model.xml.community.Participants;
 
 public class XmlParticipantsFactory
@@ -13,11 +14,12 @@ public class XmlParticipantsFactory
 		this.localeCode=localeCode;
 		this.q=q;
 	}
+	public static Participants build() {return new Participants();}
 	
-	public static Participants build()
+	public static Participants build(Participant participant)
 	{
-		Participants xml = new Participants();
-
+		Participants xml = build();
+		xml.getParticipant().add(participant);
 		return xml;
 	}
 }
