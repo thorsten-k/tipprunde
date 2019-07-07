@@ -1,4 +1,4 @@
-package org.tipprunde.factory.xml.community.points;
+package org.tipprunde.factory.xml.community;
 
 import org.tipprunde.model.xml.community.Community;
 import org.tipprunde.model.xml.community.Participant;
@@ -14,7 +14,7 @@ public class XmlParticipantFactory
 		return xml;
 	}
 	
-	public static Participant createParticipant(String firstName, String lastName, String email)
+	public static Participant build(String firstName, String lastName, String email)
 	{
 		User user = new User();
 		user.setFirstName(firstName);

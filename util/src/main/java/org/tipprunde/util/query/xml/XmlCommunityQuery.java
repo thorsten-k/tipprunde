@@ -7,16 +7,19 @@ import java.util.Map;
 import org.tipprunde.model.xml.community.Community;
 import org.tipprunde.model.xml.community.DefinitionEvent;
 import org.tipprunde.model.xml.community.DefinitionRound;
+import org.tipprunde.model.xml.community.Participant;
+import org.tipprunde.model.xml.community.Participants;
 import org.tipprunde.model.xml.community.Subscription;
 import org.tipprunde.model.xml.liga.Round;
 import org.tipprunde.model.xml.tr.Query;
+import org.tipprunde.model.xml.user.Identity;
+import org.tipprunde.model.xml.user.User;
 
 import net.sf.exlp.util.DateUtil;
 
-
 public class XmlCommunityQuery
 {
-	public static enum Key {event}
+	public static enum Key {event,community}
 	
 	private static Map<Key,Query> mQueries;
 	
@@ -30,6 +33,7 @@ public class XmlCommunityQuery
 			switch(key)
 			{
 				case event: q.setDefinitionEvent(event());break;
+				case community: q.setCommunity(createComWithParticipant());break;
 
 			}
 			mQueries.put(key, q);
@@ -62,5 +66,27 @@ public class XmlCommunityQuery
 		qDe.getDefinitionRound().add(qDr);
 		qDe.setCommunity(qC);
 		return qDe;
+	}
+	
+	private static Community createComWithParticipant()
+	{
+		User qUser = new User();
+		qUser.setFirstName("");
+		qUser.setLastName("");
+		
+		Identity qId = new Identity();
+		qId.setUser(qUser);
+		
+		Participant qParticipant = new Participant();
+    	qParticipant.setId(0);
+    	qParticipant.setIdentity(qId);
+    	
+    	Community qCommunity = new Community();
+    	qCommunity.setName("test");
+    	qCommunity.setId(0);
+    	qCommunity.setParticipants(new Participants());
+    	qCommunity.getParticipants().getParticipant().add(qParticipant);
+    	
+    	return qCommunity;
 	}
 }
