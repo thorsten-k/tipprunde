@@ -6,6 +6,8 @@ import org.tipprunde.model.xml.liga.Opponent;
 import org.tipprunde.model.xml.liga.ds.TestXmlDataSource;
 import org.tipprunde.test.TrXmlTestBootstrap;
 
+import net.sf.ahtutils.xml.status.Type;
+
 public class TestXmlOpponent extends AbstractXmlMatchTest<Opponent>
 {
 	final static Logger logger = LoggerFactory.getLogger(TestXmlOpponent.class);
@@ -25,16 +27,8 @@ public class TestXmlOpponent extends AbstractXmlMatchTest<Opponent>
     	if(withChilds)
     	{
         	xml.setDataSource(TestXmlDataSource.create(false));
-        	xml.setType(createOpponentType());
+        	xml.setType(new Type());
     	}
-    	return xml;
-    }
-    
-    private static Opponent.Type createOpponentType()
-    {
-    	Opponent.Type xml = new Opponent.Type();
-    	xml.setCode("myCode");
-    	xml.setName("myName");
     	return xml;
     }
   

@@ -8,6 +8,7 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import net.sf.ahtutils.xml.status.Type;
 
 
 /**
@@ -21,24 +22,7 @@ import javax.xml.bind.annotation.XmlType;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element ref="{http://www.tipprunde.org/liga}dataSource"/&gt;
- *         &lt;element name="type"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *                 &lt;attribute name="code"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                       &lt;enumeration value="individual"/&gt;
- *                       &lt;enumeration value="team"/&gt;
- *                       &lt;enumeration value="country"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
+ *         &lt;element ref="{http://ahtutils.aht-group.com/status}type"/&gt;
  *       &lt;/sequence&gt;
  *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}long" /&gt;
  *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
@@ -65,8 +49,8 @@ public class Opponent
     private final static long serialVersionUID = 1L;
     @XmlElement(required = true)
     protected DataSource dataSource;
-    @XmlElement(namespace = "", required = true)
-    protected Opponent.Type type;
+    @XmlElement(namespace = "http://ahtutils.aht-group.com/status", required = true)
+    protected Type type;
     @XmlAttribute(name = "id")
     protected Long id;
     @XmlAttribute(name = "name")
@@ -111,10 +95,10 @@ public class Opponent
      * 
      * @return
      *     possible object is
-     *     {@link Opponent.Type }
+     *     {@link Type }
      *     
      */
-    public Opponent.Type getType() {
+    public Type getType() {
         return type;
     }
 
@@ -123,10 +107,10 @@ public class Opponent
      * 
      * @param value
      *     allowed object is
-     *     {@link Opponent.Type }
+     *     {@link Type }
      *     
      */
-    public void setType(Opponent.Type value) {
+    public void setType(Type value) {
         this.type = value;
     }
 
@@ -276,103 +260,6 @@ public class Opponent
 
     public boolean isSetIcon() {
         return (this.icon!= null);
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attribute name="name" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-     *       &lt;attribute name="code"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *             &lt;enumeration value="individual"/&gt;
-     *             &lt;enumeration value="team"/&gt;
-     *             &lt;enumeration value="country"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "")
-    public static class Type
-        implements Serializable
-    {
-
-        private final static long serialVersionUID = 1L;
-        @XmlAttribute(name = "name")
-        protected String name;
-        @XmlAttribute(name = "code")
-        protected String code;
-
-        /**
-         * Gets the value of the name property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getName() {
-            return name;
-        }
-
-        /**
-         * Sets the value of the name property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setName(String value) {
-            this.name = value;
-        }
-
-        public boolean isSetName() {
-            return (this.name!= null);
-        }
-
-        /**
-         * Gets the value of the code property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getCode() {
-            return code;
-        }
-
-        /**
-         * Sets the value of the code property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setCode(String value) {
-            this.code = value;
-        }
-
-        public boolean isSetCode() {
-            return (this.code!= null);
-        }
-
     }
 
 }

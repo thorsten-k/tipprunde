@@ -30,14 +30,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Opponent }
-     * 
-     */
-    public Opponent createOpponent() {
-        return new Opponent();
-    }
-
-    /**
      * Create an instance of {@link Event }
      * 
      */
@@ -134,11 +126,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Opponent.Type }
+     * Create an instance of {@link Opponent }
      * 
      */
-    public Opponent.Type createOpponentType() {
-        return new Opponent.Type();
+    public Opponent createOpponent() {
+        return new Opponent();
     }
 
     /**
