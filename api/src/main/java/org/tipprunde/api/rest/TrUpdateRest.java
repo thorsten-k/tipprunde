@@ -12,7 +12,7 @@ import org.tipprunde.model.xml.liga.UpdatePolicy;
 import org.tipprunde.model.xml.tr.Tg;
 
 @Path("/rest/update")
-public interface UpdateRest
+public interface TrUpdateRest
 {
     @GET @Path("/next") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)

@@ -23,7 +23,7 @@ import org.tipprunde.model.xml.tr.Tg;
 import net.sf.ahtutils.exception.ejb.UtilsNotFoundException;
 
 @Path("/rest/enterprise")
-public interface EnterpriseRest
+public interface TrEnterpriseRest
 {
     @GET @Path("/community/members/{id:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
