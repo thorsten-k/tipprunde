@@ -9,7 +9,7 @@ import org.jeesl.interfaces.util.qualifier.JeeslRestSecured;
 import org.tipprunde.model.xml.liga.Events;
 
 @Path("/rest/personal")
-public interface TrPersonalRest
+public interface PersonalRest
 {
     @GET @Path("/events") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
