@@ -25,7 +25,6 @@ public class TrNsPrefixMapper extends NamespacePrefixMapper implements NsPrefixM
     	if("http://www.tipprunde.org/stats".equals(namespaceUri) ){return "s";}
     	
     	if("http://ahtutils.aht-group.com/mail".equals(namespaceUri) ){return "m";}
-    	if("http://ahtutils.aht-group.com/status".equals(namespaceUri) ){return "us";}
     	if("http://exlp.sf.net/net".equals(namespaceUri) ){return "net";}
     	
     	if("http://www.openfuxml.org".equals(namespaceUri) ){return "ofx";}
