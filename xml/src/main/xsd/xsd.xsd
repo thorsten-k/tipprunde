@@ -7,7 +7,6 @@
     xmlns:tgs="http://www.tipprunde.org/stats"
     xmlns:u="http://www.tipprunde.org/user" 
     xmlns:m="http://www.jeesl.org/io/mail"
-    xmlns:us="http://ahtutils.aht-group.com/status"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema"
     xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
     xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:extensionBindingPrefixes="xjc"
@@ -17,8 +16,7 @@
     <xsd:import namespace="http://www.tipprunde.org/liga/datasource"		schemaLocation="tr/ligads.xsd"/>
     <xsd:import namespace="http://www.tipprunde.org/user"					schemaLocation="tr/user.xsd"/>
     <xsd:import namespace="http://www.tipprunde.org/stats"					schemaLocation="tr/stats.xsd"/>
-    <xsd:import namespace="http://www.jeesl.org/io/mail"					schemaLocation="../../../../../jeesl/xml/src/main/xsd/jeesl/io/mail.xsd"/>
-    <xsd:import namespace="http://ahtutils.aht-group.com/status"			schemaLocation="../../../../../jeesl/xml/src/main/xsd/aht/status.xsd"/>
+    <xsd:import namespace="http://www.jeesl.org/io/mail"						schemaLocation="../../../../../jeesl/xml/src/main/xsd/jeesl/io/mail.xsd"/>
     <xsd:annotation>
         <xsd:appinfo>
             <jaxb:globalBindings generateIsSetMethod="true">

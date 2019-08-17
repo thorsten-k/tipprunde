@@ -3,21 +3,21 @@
 	xmlns:tgc="http://www.tipprunde.org/community"
 	xmlns:tgl="http://www.tipprunde.org/liga"
 	xmlns:tgu="http://www.tipprunde.org/user"
-	xmlns:us="http://ahtutils.aht-group.com/status"
+	xmlns:js="http://ahtutils.aht-group.com/status"
 	xmlns:n="http://exlp.sf.net/net"
 	xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-	<xsd:import namespace="http://www.tipprunde.org/user"			schemaLocation="user.xsd"/>
-	<xsd:import namespace="http://www.tipprunde.org/liga"			schemaLocation="liga.xsd"/>
-	<xsd:import namespace="http://ahtutils.aht-group.com/status"	schemaLocation="../../../../../../jeesl/xml/src/main/xsd/aht/status.xsd"/>
+	<xsd:import namespace="http://www.tipprunde.org/user"				schemaLocation="user.xsd"/>
+	<xsd:import namespace="http://www.tipprunde.org/liga"				schemaLocation="liga.xsd"/>
+	<xsd:import namespace="http://ahtutils.aht-group.com/status"	schemaLocation="../../../../../../jeesl/xml/src/main/xsd/jeesl/status.xsd"/>
 	<xsd:import namespace="http://exlp.sf.net/net"						schemaLocation="../../../../../../exlp/xml/src/main/xsd/util/net.xsd"/>
 	<xsd:element name="community">
         <xsd:complexType>
             <xsd:sequence>
-            	<xsd:element ref="tgc:participants" maxOccurs="1"/>
-                <xsd:element ref="tgc:subscription" maxOccurs="1"/>
-                <xsd:element ref="tgc:rules" maxOccurs="1"/>
-                <xsd:element ref="tgc:definitionEvent" maxOccurs="1"/>
-                <xsd:element ref="n:urls" maxOccurs="1"/>
+					<xsd:element ref="tgc:participants" maxOccurs="1"/>
+					<xsd:element ref="tgc:subscription" maxOccurs="1"/>
+					<xsd:element ref="tgc:rules" maxOccurs="1"/>
+					<xsd:element ref="tgc:definitionEvent" maxOccurs="1"/>
+					<xsd:element ref="n:urls" maxOccurs="1"/>
             </xsd:sequence>
             <xsd:attribute name="id" type="xsd:long"/>
             <xsd:attribute name="name" type="xsd:string"/>
@@ -185,7 +185,7 @@
 			<xsd:sequence>
 				<xsd:element ref="tgu:identity" maxOccurs="1"/>
 				<xsd:element ref="tgl:match" maxOccurs="1"/>
-				<xsd:element ref="us:status" maxOccurs="1"/>
+				<xsd:element ref="js:status" maxOccurs="1"/>
 			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:long"/>
 			<xsd:attribute name="left" type="xsd:int"/>
