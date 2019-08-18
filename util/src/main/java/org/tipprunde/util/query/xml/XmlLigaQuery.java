@@ -1,17 +1,23 @@
 package org.tipprunde.util.query.xml;
 
+import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
 
 import org.tipprunde.factory.xml.liga.event.XmlRoundsFactory;
+import org.tipprunde.factory.xml.liga.match.XmlLeftFactory;
+import org.tipprunde.factory.xml.liga.match.XmlRightFactory;
 import org.tipprunde.model.xml.liga.Event;
+import org.tipprunde.model.xml.liga.Match;
 import org.tipprunde.model.xml.liga.Opponent;
 import org.tipprunde.model.xml.liga.Round;
 import org.tipprunde.model.xml.tr.Query;
 
+import net.sf.exlp.util.DateUtil;
+
 public class XmlLigaQuery
 {
-	public static enum Key {opponent,events,event}
+	public static enum Key {opponent,events,event,round}
 	
 	public static Map<Key,Query> mQueries;
 	
@@ -26,6 +32,7 @@ public class XmlLigaQuery
 				case opponent: q.setOpponent(opponent());break;
 				case events: q.setEvent(events());break;
 				case event: q.setEvent(event());break;
+				case round: q.setRound(round());break;
 			}
 			mQueries.put(key, q);;
 		}
@@ -67,6 +74,24 @@ public class XmlLigaQuery
 		xml.setId(0);
 		xml.setName("");
 		xml.setRounds(XmlRoundsFactory.build(round));
+		
+		return xml;
+	}
+	
+	private static Round round()
+	{	
+		Match match = new Match();
+		match.setId(0);
+		match.setKickOff(DateUtil.toXmlGc(new Date()));
+		match.setLeft(XmlLeftFactory.build(opponent()));
+		match.setRight(XmlRightFactory.build(opponent()));
+
+		Round xml = new Round();
+		xml.setId(0);
+		xml.setNr(0);
+		xml.setName("");
+		
+		xml.getMatch().add(match);
 		
 		return xml;
 	}

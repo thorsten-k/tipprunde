@@ -9,6 +9,7 @@ import javax.ws.rs.core.MediaType;
 import org.jeesl.interfaces.util.qualifier.JeeslRestSecured;
 import org.tipprunde.model.xml.liga.Event;
 import org.tipprunde.model.xml.liga.Events;
+import org.tipprunde.model.xml.liga.Round;
 
 @Path("/rest/personal")
 public interface PersonalRest
@@ -19,5 +20,9 @@ public interface PersonalRest
     
     @GET @Path("/event/{id:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
-    Event event(@PathParam("id") long eventId);
+    Event event(@PathParam("id") long id);
+    
+    @GET @Path("/round/{id:[1-9][0-9]*}") @JeeslRestSecured
+    @Produces(MediaType.APPLICATION_XML)
+    Round round(@PathParam("id") long id);
 }
