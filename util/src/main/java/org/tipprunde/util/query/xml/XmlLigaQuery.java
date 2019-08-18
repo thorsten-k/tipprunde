@@ -3,12 +3,13 @@ package org.tipprunde.util.query.xml;
 import java.util.Hashtable;
 import java.util.Map;
 
+import org.tipprunde.model.xml.liga.Event;
 import org.tipprunde.model.xml.liga.Opponent;
 import org.tipprunde.model.xml.tr.Query;
 
 public class XmlLigaQuery
 {
-	public static enum Key {opponent}
+	public static enum Key {opponent,event}
 	
 	public static Map<Key,Query> mQueries;
 	
@@ -21,6 +22,7 @@ public class XmlLigaQuery
 			switch(key)
 			{
 				case opponent: q.setOpponent(opponent());break;
+				case event: q.setEvent(event());break;
 			}
 			mQueries.put(key, q);;
 		}
@@ -37,6 +39,16 @@ public class XmlLigaQuery
 		xml.setIcon("");
 		xml.setName3("");
 		xml.setNameLegal("");
+		
+		return xml;
+	}
+	
+	public static Event event()
+	{		
+		Event xml = new Event();
+		xml.setId(0);
+		xml.setName("");
+		
 		
 		return xml;
 	}
