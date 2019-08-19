@@ -12,6 +12,8 @@ import org.tipprunde.model.xml.community.DefinitionRound;
 import org.tipprunde.model.xml.community.Participant;
 import org.tipprunde.model.xml.community.Participants;
 import org.tipprunde.model.xml.community.Subscription;
+import org.tipprunde.model.xml.community.Tipp;
+import org.tipprunde.model.xml.liga.Match;
 import org.tipprunde.model.xml.liga.Round;
 import org.tipprunde.model.xml.tr.Query;
 import org.tipprunde.model.xml.user.Identity;
@@ -21,12 +23,12 @@ import net.sf.exlp.util.DateUtil;
 
 public class XmlCommunityQuery
 {
-	public static enum Key {event,community,bet}
+	public static enum Key {event,community,bet,tipp}
 	
 	private static Map<Key,Query> mQueries;
 	
-	public static Query get(Key key){return get(key,null);}
-	public static Query get(Key key,String localeCode)
+	public static Query get(Key key){return get(null,key);}
+	public static Query get(String localeCode, Key key)
 	{
 		if(mQueries==null){mQueries = new Hashtable<Key,Query>();}
 		if(!mQueries.containsKey(key))
@@ -37,6 +39,7 @@ public class XmlCommunityQuery
 				case event: q.setDefinitionEvent(event());break;
 				case community: q.setCommunity(createComWithParticipant());break;
 				case bet: q.setBet(bet());break;
+				case tipp: q.setTipp(tipp());break;
 			}
 			mQueries.put(key, q);
 		}
@@ -103,6 +106,20 @@ public class XmlCommunityQuery
 		xml.setAmount(0);
 		xml.setPaid(true);
 		xml.setRecord(DateUtil.getXmlGc4D(new Date()));
+		return xml;
+	}
+	
+	private static Tipp tipp()
+	{	
+		Match match = new Match();
+		match.setId(0);
+		
+		Tipp xml = new Tipp();
+		xml.setLeft(0);
+		xml.setRight(0);
+		xml.setMatch(match);
+		
+		
 		return xml;
 	}
 }

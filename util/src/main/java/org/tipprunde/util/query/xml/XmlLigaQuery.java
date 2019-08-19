@@ -33,6 +33,7 @@ public class XmlLigaQuery
 				case events: q.setEvent(events());break;
 				case event: q.setEvent(event());break;
 				case round: q.setRound(round());break;
+				
 			}
 			mQueries.put(key, q);;
 		}
