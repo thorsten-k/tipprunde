@@ -1,5 +1,6 @@
 package org.tipprunde.api.rest;
 
+import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
@@ -30,4 +31,8 @@ public interface PersonalRest
     @GET @Path("/tipps/round/{id:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
     Tipps tipps(@PathParam("id") long id);
+    
+    @GET @Path("/upload/tipps") @JeeslRestSecured
+    @Produces(MediaType.APPLICATION_XML)  @Consumes(MediaType.APPLICATION_XML)
+    Tipps upload(Tipps tipps);
 }
