@@ -1,4 +1,4 @@
-package org.tipprunde.interfaces;
+package org.tipprunde.interfaces.ejb.system.io.mail;
 
 public interface TrMail
 {

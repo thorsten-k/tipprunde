@@ -17,7 +17,7 @@ import net.sf.exlp.util.DateUtil;
 
 public class XmlLigaQuery
 {
-	public static enum Key {opponent,events,event,round}
+	public static enum Key {opponent,events,event,round,match}
 	
 	public static Map<Key,Query> mQueries;
 	
@@ -33,7 +33,7 @@ public class XmlLigaQuery
 				case events: q.setEvent(events());break;
 				case event: q.setEvent(event());break;
 				case round: q.setRound(round());break;
-				
+				case match: q.setMatch(match());break;
 			}
 			mQueries.put(key, q);;
 		}
@@ -93,6 +93,17 @@ public class XmlLigaQuery
 		xml.setName("");
 		
 		xml.getMatch().add(match);
+		
+		return xml;
+	}
+	
+	private static Match match()
+	{	
+		Match xml = new Match();
+		xml.setId(0);
+		xml.setKickOff(DateUtil.toXmlGc(new Date()));
+		xml.setLeft(XmlLeftFactory.build(opponent()));
+		xml.setRight(XmlRightFactory.build(opponent()));
 		
 		return xml;
 	}
