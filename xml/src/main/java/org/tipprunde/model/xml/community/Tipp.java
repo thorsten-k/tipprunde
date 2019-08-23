@@ -2,7 +2,6 @@
 package org.tipprunde.model.xml.community;
 
 import java.io.Serializable;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -12,11 +11,10 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-import org.tipprunde.model.xml.liga.Match;
-import org.tipprunde.model.xml.user.Identity;
-
 import net.sf.ahtutils.model.interfaces.with.EjbWithId;
 import net.sf.ahtutils.xml.status.Status;
+import org.tipprunde.model.xml.liga.Match;
+import org.tipprunde.model.xml.user.Identity;
 
 
 /**

@@ -105,6 +105,13 @@
             </xsd:attribute>
         </xsd:complexType>
     </xsd:element>
+    <xsd:element name="matches">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="tgl:match" maxOccurs="unbounded"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
     <xsd:element name="match">
         <xsd:complexType>
             <xsd:sequence>

@@ -150,6 +150,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link Matches }
+     * 
+     */
+    public Matches createMatches() {
+        return new Matches();
+    }
+
+    /**
      * Create an instance of {@link Opponents }
      * 
      */
