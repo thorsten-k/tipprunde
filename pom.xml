@@ -61,6 +61,12 @@
 			</dependency>
 			<dependency>
 				<groupId>org.tipprunde</groupId>
+				<artifactId>tipprunde-interfaces</artifactId>
+				<version>${project.version}</version>
+				<type>jar</type>
+			</dependency>
+			<dependency>
+				<groupId>org.tipprunde</groupId>
 				<artifactId>tipprunde-xml</artifactId>
 				<version>${project.version}</version>
 			</dependency>

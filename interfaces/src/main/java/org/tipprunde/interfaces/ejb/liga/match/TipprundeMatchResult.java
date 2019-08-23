@@ -6,5 +6,5 @@ import net.sf.ahtutils.model.interfaces.with.EjbWithId;
 
 public interface TipprundeMatchResult extends Serializable,EjbWithId
 {
-	public static enum Result {won,draw,lost}
+	public static enum Status {won,draw,lost}
 }

@@ -10,6 +10,7 @@ import org.tipprunde.factory.xml.liga.match.XmlRightFactory;
 import org.tipprunde.model.xml.liga.Event;
 import org.tipprunde.model.xml.liga.Match;
 import org.tipprunde.model.xml.liga.Opponent;
+import org.tipprunde.model.xml.liga.Result;
 import org.tipprunde.model.xml.liga.Round;
 import org.tipprunde.model.xml.tr.Query;
 
@@ -17,7 +18,7 @@ import net.sf.exlp.util.DateUtil;
 
 public class XmlLigaQuery
 {
-	public static enum Key {opponent,events,event,round,match}
+	public static enum Key {opponent,events,event,round,match,matchResult}
 	
 	public static Map<Key,Query> mQueries;
 	
@@ -34,6 +35,7 @@ public class XmlLigaQuery
 				case event: q.setEvent(event());break;
 				case round: q.setRound(round());break;
 				case match: q.setMatch(match());break;
+				case matchResult: q.setMatch(matchResult());break;
 			}
 			mQueries.put(key, q);;
 		}
@@ -104,6 +106,22 @@ public class XmlLigaQuery
 		xml.setKickOff(DateUtil.toXmlGc(new Date()));
 		xml.setLeft(XmlLeftFactory.build(opponent()));
 		xml.setRight(XmlRightFactory.build(opponent()));
+		
+		return xml;
+	}
+	
+	private static Match matchResult()
+	{	
+		Result result = new Result();
+		result.setScoreLeft(0);
+		result.setScoreRight(0);
+		
+		Match xml = match();
+		xml.setId(0);
+		xml.setKickOff(DateUtil.toXmlGc(new Date()));
+		xml.setLeft(XmlLeftFactory.build(opponent()));
+		xml.setRight(XmlRightFactory.build(opponent()));
+		xml.setResult(result);
 		
 		return xml;
 	}
