@@ -12,6 +12,10 @@ import org.tipprunde.model.xml.liga.Matches;
 @Path("/rest/statistic")
 public interface StatisticRest
 {
+    @GET @Path("/matches/{id:[1-9][0-9]*}") @JeeslRestSecured
+    @Produces(MediaType.APPLICATION_XML)
+    Matches matches(@PathParam("id") long id);
+    
     @GET @Path("/matches/direct/{lId:[1-9][0-9]*}/{rId:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
     Matches matches(@PathParam("lId") long lId, @PathParam("rId") long rId);
