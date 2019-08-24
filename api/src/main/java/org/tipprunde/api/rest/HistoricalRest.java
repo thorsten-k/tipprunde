@@ -9,8 +9,8 @@ import javax.ws.rs.core.MediaType;
 import org.jeesl.interfaces.util.qualifier.JeeslRestSecured;
 import org.tipprunde.model.xml.liga.Matches;
 
-@Path("/rest/statistic")
-public interface StatisticRest
+@Path("/rest/historical")
+public interface HistoricalRest
 {
     @GET @Path("/matches/{id:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
