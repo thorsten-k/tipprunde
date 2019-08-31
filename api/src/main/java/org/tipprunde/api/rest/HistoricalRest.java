@@ -12,11 +12,11 @@ import org.tipprunde.model.xml.liga.Matches;
 @Path("/rest/historical")
 public interface HistoricalRest
 {
-    @GET @Path("/matches/{id:[1-9][0-9]*}") @JeeslRestSecured
+    @GET @Path("/matches/{opponentId:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
-    Matches matches(@PathParam("id") long id);
+    Matches matches(@PathParam("opponentId") long opponentId);
     
-    @GET @Path("/matches/direct/{lId:[1-9][0-9]*}/{rId:[1-9][0-9]*}") @JeeslRestSecured
+    @GET @Path("/matches/direct/{oLeftId:[1-9][0-9]*}/{oRightId:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
-    Matches matches(@PathParam("lId") long lId, @PathParam("rId") long rId);
+    Matches matches(@PathParam("oLeftId") long oLeftId, @PathParam("oRightId") long oRightId);
 }

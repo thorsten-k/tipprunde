@@ -30,6 +30,22 @@ public class MatchResultProcessor
 		}
 	}
 	
+	public static int differnece(Match match, Opponent reference) throws UtilsProcessingException
+	{
+		checkXmlStructure(match);
+		
+		if(match.getResult().getScoreLeft()==match.getResult().getScoreRight()) {return 0;}
+		
+		if(reference.getId()==match.getLeft().getOpponent().getId())
+		{
+			return match.getResult().getScoreLeft()-match.getResult().getScoreRight();
+		}
+		else
+		{
+			return match.getResult().getScoreRight()-match.getResult().getScoreLeft();
+		}
+	}
+	
 	
 	private static void checkXmlStructure(Match match) throws UtilsProcessingException
 	{
