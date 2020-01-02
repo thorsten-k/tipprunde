@@ -148,8 +148,13 @@
 						<exclude>org/tipprunde/model/xml/tr/*.java</exclude>
 						<exclude>org/tipprunde/model/xml/user/*.java</exclude>
 					</excludes>
-	        </configuration>
-	      </plugin>
-        </plugins>
+				</configuration>
+			</plugin>
+			<plugin>
+		        <groupId>org.codehaus.mojo</groupId>
+		        <artifactId>versions-maven-plugin</artifactId>
+		        <configuration><rulesUri>${maven.ignore.versions}</rulesUri></configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>

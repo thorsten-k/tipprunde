@@ -22,10 +22,6 @@
 			<artifactId>tipprunde-xml</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.tipprunde</groupId>
-			<artifactId>tipprunde-xml</artifactId>
-		</dependency>
-		<dependency>
             <groupId>net.sf.exlp</groupId>
             <artifactId>exlp-util</artifactId>
             <type>jar</type>
@@ -41,7 +37,7 @@
 		<dependency>
 			<groupId>org.encog</groupId>
 			<artifactId>encog-core</artifactId>
-			<version>3.3.0</version>
+			<version>3.4</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
@@ -60,8 +56,33 @@
 						<exclude>org/tipprunde/model/xml/tr/*.java</exclude>
 						<exclude>org/tipprunde/model/xml/user/*.java</exclude>
 					</excludes>
-	        </configuration>
-	      </plugin>
-        </plugins>
+				</configuration>
+			</plugin>
+			<plugin>
+		        <groupId>org.codehaus.mojo</groupId>
+		        <artifactId>versions-maven-plugin</artifactId>
+		        <configuration><rulesUri>${maven.ignore.versions}</rulesUri></configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jeesl</groupId>
+        		<artifactId>jeesl-maven</artifactId>
+				<executions>
+ 					<execution>
+						<id>create-merged-maven-ignore</id>
+						<phase>process-resources</phase> 
+						<goals><goal>mvnVersionIgnore</goal></goals>
+						<configuration>
+							<log>WARN</log>
+							<files>
+								<param>exlp/maven/exlp-versions.xml</param>
+								<param>jeesl/maven/jeesl-versions.xml</param>
+								<param>jeesl/maven/jboss-spec-versions.xml</param>
+							</files>
+							<saveTo>${basedir}/src/main/resources/tipprunde/util/maven/ignore-versions.xml</saveTo>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 </project>
