@@ -9,6 +9,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.jeesl.api.exception.xml.JeeslXmlStructureException;
+import org.jeesl.exception.ejb.JeeslNotFoundException;
 import org.jeesl.interfaces.util.qualifier.JeeslRestSecured;
 import org.tipprunde.model.xml.community.Bet;
 import org.tipprunde.model.xml.community.Community;
@@ -19,8 +20,6 @@ import org.tipprunde.model.xml.liga.Opponents;
 import org.tipprunde.model.xml.tr.Mails;
 import org.tipprunde.model.xml.tr.Report;
 import org.tipprunde.model.xml.tr.Tg;
-
-import net.sf.ahtutils.exception.ejb.UtilsNotFoundException;
 
 @Path("/rest/enterprise")
 public interface EnterpriseRest
@@ -59,7 +58,7 @@ public interface EnterpriseRest
     
     @POST @Path("/update") @JeeslRestSecured
     @Consumes(MediaType.APPLICATION_XML) @Produces(MediaType.APPLICATION_XML)
-    Tipps update(Tipps tipps) throws JeeslXmlStructureException, UtilsNotFoundException;
+    Tipps update(Tipps tipps) throws JeeslXmlStructureException, JeeslNotFoundException;
 
     @GET @Path("/update/worker") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
