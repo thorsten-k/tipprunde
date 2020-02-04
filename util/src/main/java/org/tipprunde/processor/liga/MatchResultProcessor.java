@@ -1,12 +1,11 @@
 package org.tipprunde.processor.liga;
 
+import org.jeesl.exception.processing.UtilsProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.interfaces.ejb.liga.match.TipprundeMatchResult;
 import org.tipprunde.model.xml.liga.Match;
 import org.tipprunde.model.xml.liga.Opponent;
-
-import net.sf.ahtutils.exception.processing.UtilsProcessingException;
 
 public class MatchResultProcessor
 {

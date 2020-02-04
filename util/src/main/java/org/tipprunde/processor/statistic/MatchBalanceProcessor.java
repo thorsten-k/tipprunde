@@ -2,14 +2,13 @@ package org.tipprunde.processor.statistic;
 
 import java.util.List;
 
+import org.jeesl.exception.processing.UtilsProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.interfaces.ejb.liga.match.TipprundeMatchResult;
 import org.tipprunde.model.xml.liga.Match;
 import org.tipprunde.model.xml.liga.Opponent;
 import org.tipprunde.processor.liga.MatchResultProcessor;
-
-import net.sf.ahtutils.exception.processing.UtilsProcessingException;
 
 public class MatchBalanceProcessor
 {
