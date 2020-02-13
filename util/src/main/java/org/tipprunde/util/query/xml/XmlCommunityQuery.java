@@ -103,9 +103,13 @@ public class XmlCommunityQuery
 	{
 		Bet xml = new Bet();
 		xml.setId(0);
-		xml.setAmount(0);
-		xml.setPaid(true);
 		xml.setRecord(DateUtil.getXmlGc4D(new Date()));
+		xml.setFee(0);
+    	xml.setPaid(0);
+    	xml.setWin(0);
+    	xml.setBalance(0);
+    	xml.setFlag(false);
+		
 		return xml;
 	}
 	

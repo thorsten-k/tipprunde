@@ -25,9 +25,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element ref="{http://www.tipprunde.org/community}participant"/&gt;
  *       &lt;/sequence&gt;
  *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}long" /&gt;
- *       &lt;attribute name="amount" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
  *       &lt;attribute name="record" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
- *       &lt;attribute name="paid" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="fee" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="paid" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="win" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="balance" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="flag" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
@@ -49,13 +52,19 @@ public class Bet
     protected Participant participant;
     @XmlAttribute(name = "id")
     protected Long id;
-    @XmlAttribute(name = "amount")
-    protected Double amount;
     @XmlAttribute(name = "record")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar record;
+    @XmlAttribute(name = "fee")
+    protected Double fee;
     @XmlAttribute(name = "paid")
-    protected Boolean paid;
+    protected Double paid;
+    @XmlAttribute(name = "win")
+    protected Double win;
+    @XmlAttribute(name = "balance")
+    protected Double balance;
+    @XmlAttribute(name = "flag")
+    protected Boolean flag;
 
     /**
      * Gets the value of the participant property.
@@ -118,38 +127,6 @@ public class Bet
     }
 
     /**
-     * Gets the value of the amount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Double }
-     *     
-     */
-    public double getAmount() {
-        return amount;
-    }
-
-    /**
-     * Sets the value of the amount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Double }
-     *     
-     */
-    public void setAmount(double value) {
-        this.amount = value;
-    }
-
-    public boolean isSetAmount() {
-        return (this.amount!= null);
-    }
-
-    public void unsetAmount() {
-        this.amount = null;
-    }
-
-    /**
      * Gets the value of the record property.
      * 
      * @return
@@ -178,14 +155,46 @@ public class Bet
     }
 
     /**
+     * Gets the value of the fee property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
+     */
+    public double getFee() {
+        return fee;
+    }
+
+    /**
+     * Sets the value of the fee property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
+     */
+    public void setFee(double value) {
+        this.fee = value;
+    }
+
+    public boolean isSetFee() {
+        return (this.fee!= null);
+    }
+
+    public void unsetFee() {
+        this.fee = null;
+    }
+
+    /**
      * Gets the value of the paid property.
      * 
      * @return
      *     possible object is
-     *     {@link Boolean }
+     *     {@link Double }
      *     
      */
-    public boolean isPaid() {
+    public double getPaid() {
         return paid;
     }
 
@@ -194,10 +203,10 @@ public class Bet
      * 
      * @param value
      *     allowed object is
-     *     {@link Boolean }
+     *     {@link Double }
      *     
      */
-    public void setPaid(boolean value) {
+    public void setPaid(double value) {
         this.paid = value;
     }
 
@@ -207,6 +216,102 @@ public class Bet
 
     public void unsetPaid() {
         this.paid = null;
+    }
+
+    /**
+     * Gets the value of the win property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
+     */
+    public double getWin() {
+        return win;
+    }
+
+    /**
+     * Sets the value of the win property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
+     */
+    public void setWin(double value) {
+        this.win = value;
+    }
+
+    public boolean isSetWin() {
+        return (this.win!= null);
+    }
+
+    public void unsetWin() {
+        this.win = null;
+    }
+
+    /**
+     * Gets the value of the balance property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
+     */
+    public double getBalance() {
+        return balance;
+    }
+
+    /**
+     * Sets the value of the balance property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
+     */
+    public void setBalance(double value) {
+        this.balance = value;
+    }
+
+    public boolean isSetBalance() {
+        return (this.balance!= null);
+    }
+
+    public void unsetBalance() {
+        this.balance = null;
+    }
+
+    /**
+     * Gets the value of the flag property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public boolean isFlag() {
+        return flag;
+    }
+
+    /**
+     * Sets the value of the flag property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setFlag(boolean value) {
+        this.flag = value;
+    }
+
+    public boolean isSetFlag() {
+        return (this.flag!= null);
+    }
+
+    public void unsetFlag() {
+        this.flag = null;
     }
 
 }
