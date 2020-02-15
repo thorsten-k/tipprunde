@@ -88,11 +88,12 @@
 			</xsd:sequence>
 			<xsd:attribute name="id" type="xsd:long"/>
 			<xsd:attribute name="record" type="xsd:dateTime"/>
+			<xsd:attribute name="carryover" type="xsd:double"/>
 			<xsd:attribute name="fee" type="xsd:double"/>
 			<xsd:attribute name="paid" type="xsd:double"/>
 			<xsd:attribute name="win" type="xsd:double"/>
+			<xsd:attribute name="out" type="xsd:double"/>
 			<xsd:attribute name="balance" type="xsd:double"/>
-			<xsd:attribute name="flag" type="xsd:boolean"/>
 		</xsd:complexType>
 	</xsd:element>
 	<xsd:element name="pointsEvent">

@@ -26,11 +26,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *       &lt;/sequence&gt;
  *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}long" /&gt;
  *       &lt;attribute name="record" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *       &lt;attribute name="carryover" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
  *       &lt;attribute name="fee" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
  *       &lt;attribute name="paid" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
  *       &lt;attribute name="win" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
+ *       &lt;attribute name="out" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
  *       &lt;attribute name="balance" type="{http://www.w3.org/2001/XMLSchema}double" /&gt;
- *       &lt;attribute name="flag" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
  * &lt;/complexType&gt;
@@ -55,16 +56,18 @@ public class Bet
     @XmlAttribute(name = "record")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar record;
+    @XmlAttribute(name = "carryover")
+    protected Double carryover;
     @XmlAttribute(name = "fee")
     protected Double fee;
     @XmlAttribute(name = "paid")
     protected Double paid;
     @XmlAttribute(name = "win")
     protected Double win;
+    @XmlAttribute(name = "out")
+    protected Double out;
     @XmlAttribute(name = "balance")
     protected Double balance;
-    @XmlAttribute(name = "flag")
-    protected Boolean flag;
 
     /**
      * Gets the value of the participant property.
@@ -152,6 +155,38 @@ public class Bet
 
     public boolean isSetRecord() {
         return (this.record!= null);
+    }
+
+    /**
+     * Gets the value of the carryover property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
+     */
+    public double getCarryover() {
+        return carryover;
+    }
+
+    /**
+     * Sets the value of the carryover property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
+     */
+    public void setCarryover(double value) {
+        this.carryover = value;
+    }
+
+    public boolean isSetCarryover() {
+        return (this.carryover!= null);
+    }
+
+    public void unsetCarryover() {
+        this.carryover = null;
     }
 
     /**
@@ -251,6 +286,38 @@ public class Bet
     }
 
     /**
+     * Gets the value of the out property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Double }
+     *     
+     */
+    public double getOut() {
+        return out;
+    }
+
+    /**
+     * Sets the value of the out property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Double }
+     *     
+     */
+    public void setOut(double value) {
+        this.out = value;
+    }
+
+    public boolean isSetOut() {
+        return (this.out!= null);
+    }
+
+    public void unsetOut() {
+        this.out = null;
+    }
+
+    /**
      * Gets the value of the balance property.
      * 
      * @return
@@ -280,38 +347,6 @@ public class Bet
 
     public void unsetBalance() {
         this.balance = null;
-    }
-
-    /**
-     * Gets the value of the flag property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public boolean isFlag() {
-        return flag;
-    }
-
-    /**
-     * Sets the value of the flag property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setFlag(boolean value) {
-        this.flag = value;
-    }
-
-    public boolean isSetFlag() {
-        return (this.flag!= null);
-    }
-
-    public void unsetFlag() {
-        this.flag = null;
     }
 
 }

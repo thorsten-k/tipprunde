@@ -8,22 +8,23 @@ import net.sf.exlp.util.DateUtil;
 
 public class XmlBetFactory
 {
-	public static Bet build(double fee, double paid, double win, double balance, boolean ok, long participantId)
+	public static Bet build(double carryover, double fee, double paid, double win, double out, double balance, long participantId)
 	{
-		Bet bet = build(fee,paid,win,balance,ok);
+		Bet bet = build(carryover,fee,paid,win,out,balance);
 		bet.setParticipant(XmlParticipantFactory.build(participantId));
 		return bet;
 	}
 	
-	public static Bet build(double fee, double paid, double win, double balance, boolean flag)
+	public static Bet build(double carryover, double fee, double paid, double win, double out, double balance)
 	{
 		Bet xml = new Bet();
 		xml.setRecord(DateUtil.getXmlGc4D(new Date()));
+		xml.setCarryover(carryover);
 		xml.setFee(fee);
     	xml.setPaid(paid);
     	xml.setWin(win);
+    	xml.setOut(out);
     	xml.setBalance(balance);
-    	xml.setFlag(flag);
 		return xml;
 	}
 }

@@ -37,7 +37,7 @@ public class XmlCommunityQuery
 			switch(key)
 			{
 				case event: q.setDefinitionEvent(event());break;
-				case community: q.setCommunity(createComWithParticipant());break;
+				case community: q.setCommunity(community());break;
 				case bet: q.setBet(bet());break;
 				case tipp: q.setTipp(tipp());break;
 			}
@@ -73,7 +73,7 @@ public class XmlCommunityQuery
 		return qDe;
 	}
 	
-	private static Community createComWithParticipant()
+	private static Community community()
 	{
 		User qUser = new User();
 		qUser.setFirstName("");
@@ -104,12 +104,12 @@ public class XmlCommunityQuery
 		Bet xml = new Bet();
 		xml.setId(0);
 		xml.setRecord(DateUtil.getXmlGc4D(new Date()));
+		xml.setCarryover(0);
 		xml.setFee(0);
     	xml.setPaid(0);
     	xml.setWin(0);
+    	xml.setOut(0);
     	xml.setBalance(0);
-    	xml.setFlag(false);
-		
 		return xml;
 	}
 	

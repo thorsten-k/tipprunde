@@ -15,11 +15,13 @@ public class TestXmlBet extends AbstractXmlCommunityTest<Bet>
     {
     	Bet xml = new Bet();
     	xml.setId(1);
+    	xml.setCarryover(15);
     	xml.setFee(50);
     	xml.setPaid(25);
     	xml.setWin(10);
+    	xml.setOut(5);
     	xml.setBalance(15);
-    	xml.setFlag(false);
+
     	xml.setRecord(AbstractXmlCommunityTest.getDefaultXmlDate());
     	
     	if(withChilds)

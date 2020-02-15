@@ -50,7 +50,7 @@ public interface EnterpriseRest
     
     @POST @Path("/bet") @JeeslRestSecured
     @Consumes(MediaType.APPLICATION_XML) @Produces(MediaType.APPLICATION_XML)
-	Bet updateBet(Bet bet) throws JeeslXmlStructureException;
+	Bet updateBet(Bet bet);
 	
     @GET @Path("/tipps/{drId:[1-9][0-9]*}/{pId:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
