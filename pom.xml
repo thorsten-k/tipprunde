@@ -73,12 +73,12 @@
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
-				<groupId>org.jeesl</groupId>
-				<artifactId>jeesl-bom</artifactId>
+				<groupId>org.jeesl.bom</groupId>
+				<artifactId>bom-core</artifactId>
 				<version>0.2.6-SNAPSHOT</version>
 				<type>pom</type>
 				<scope>import</scope>
-			</dependency>	
+			</dependency>
 		</dependencies>
 	</dependencyManagement>
 	
