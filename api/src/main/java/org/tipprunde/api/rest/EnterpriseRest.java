@@ -52,9 +52,9 @@ public interface EnterpriseRest
     @Consumes(MediaType.APPLICATION_XML) @Produces(MediaType.APPLICATION_XML)
 	Bet updateBet(Bet bet);
 	
-    @GET @Path("/tipps/{drId:[1-9][0-9]*}/{pId:[1-9][0-9]*}") @JeeslRestSecured
+    @GET @Path("/tipps/{rdId:[1-9][0-9]*}/{pId:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
-    Tipps tipps(@PathParam("drId") long defRoundId, @PathParam("pId") long participantId);
+    Tipps tipps(@PathParam("rdId") long roundDefinitionId, @PathParam("pId") long participantId);
     
     @POST @Path("/update") @JeeslRestSecured
     @Consumes(MediaType.APPLICATION_XML) @Produces(MediaType.APPLICATION_XML)
