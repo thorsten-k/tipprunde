@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
-import org.tipprunde.model.xml.liga.Round;
 
-import net.sf.ahtutils.model.interfaces.with.EjbWithId;
+import org.jeesl.interfaces.model.with.primitive.number.EjbWithId;
+import org.tipprunde.model.xml.liga.Round;
 
 
 /**

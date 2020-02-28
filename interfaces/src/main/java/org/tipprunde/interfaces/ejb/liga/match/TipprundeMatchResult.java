@@ -2,7 +2,7 @@ package org.tipprunde.interfaces.ejb.liga.match;
 
 import java.io.Serializable;
 
-import net.sf.ahtutils.model.interfaces.with.EjbWithId;
+import org.jeesl.interfaces.model.with.primitive.number.EjbWithId;
 
 public interface TipprundeMatchResult extends Serializable,EjbWithId
 {
