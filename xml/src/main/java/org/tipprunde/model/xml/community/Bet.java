@@ -10,6 +10,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
+import org.jeesl.model.xml.text.Remark;
 
 
 /**
@@ -23,6 +24,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
  *         &lt;element ref="{http://www.tipprunde.org/community}participant"/&gt;
+ *         &lt;element ref="{http://www.jeesl.org/text}remark"/&gt;
  *       &lt;/sequence&gt;
  *       &lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}long" /&gt;
  *       &lt;attribute name="record" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
@@ -41,7 +43,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "participant"
+    "participant",
+    "remark"
 })
 @XmlRootElement(name = "bet")
 public class Bet
@@ -51,6 +54,8 @@ public class Bet
     private final static long serialVersionUID = 1L;
     @XmlElement(required = true)
     protected Participant participant;
+    @XmlElement(namespace = "http://www.jeesl.org/text", required = true)
+    protected Remark remark;
     @XmlAttribute(name = "id")
     protected Long id;
     @XmlAttribute(name = "record")
@@ -95,6 +100,34 @@ public class Bet
 
     public boolean isSetParticipant() {
         return (this.participant!= null);
+    }
+
+    /**
+     * Gets the value of the remark property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Remark }
+     *     
+     */
+    public Remark getRemark() {
+        return remark;
+    }
+
+    /**
+     * Sets the value of the remark property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Remark }
+     *     
+     */
+    public void setRemark(Remark value) {
+        this.remark = value;
+    }
+
+    public boolean isSetRemark() {
+        return (this.remark!= null);
     }
 
     /**
