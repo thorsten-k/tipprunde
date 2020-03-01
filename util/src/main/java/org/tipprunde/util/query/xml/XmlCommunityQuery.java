@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
 
+import org.jeesl.model.xml.text.Remark;
 import org.tipprunde.factory.xml.community.member.XmlParticipantsFactory;
 import org.tipprunde.model.xml.community.Bet;
 import org.tipprunde.model.xml.community.Community;
@@ -110,6 +111,7 @@ public class XmlCommunityQuery
     	xml.setWin(0);
     	xml.setOut(0);
     	xml.setBalance(0);
+    	xml.setRemark(new Remark());
 		return xml;
 	}
 	
