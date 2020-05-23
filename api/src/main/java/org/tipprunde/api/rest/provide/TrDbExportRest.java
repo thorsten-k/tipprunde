@@ -1,4 +1,4 @@
-package org.tipprunde.api.rest;
+package org.tipprunde.api.rest.provide;
 
 import javax.ws.rs.Path;
 
