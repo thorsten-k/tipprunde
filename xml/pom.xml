@@ -133,11 +133,12 @@
 			<scope>provided</scope>
 		</dependency>
 		
-		<dependency> <!-- Commons-Lang (Equals/Hashcode) -->
+		<!-- Commons-Lang (Equals/Hashcode) 
+		<dependency> 
 			<groupId>commons-lang</groupId>
 			<artifactId>commons-lang</artifactId>
 			<scope>provided</scope>
-		</dependency>
+		</dependency> -->
 	</dependencies>
 	
 	<build>
