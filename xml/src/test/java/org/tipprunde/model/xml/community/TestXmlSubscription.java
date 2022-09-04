@@ -21,7 +21,7 @@ public class TestXmlSubscription extends AbstractXmlCommunityTest<Subscription>
     	
     	Subscription subs = new Subscription();
     	subs.setId(1);
-    	subs.setDeadline(DateUtil.getXmlGc4D(d));
+    	subs.setDeadline(DateUtil.toXmlGc(d));
     	
     	Subscription.Type type = new Subscription.Type();
     	type.setCode("auto");

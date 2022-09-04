@@ -49,7 +49,7 @@ public class XmlTippQuery
 		opponent.setIcon("");
 		
 		Match qM = new Match();
-		qM.setKickOff(DateUtil.getXmlGc4D(new Date()));
+		qM.setKickOff(DateUtil.toXmlGc(new Date()));
 		qM.setId(0);
 		qM.setLeft(new Left());qM.getLeft().setOpponent(opponent);
 		qM.setRight(new Right());qM.getRight().setOpponent(opponent);

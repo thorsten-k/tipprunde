@@ -24,9 +24,9 @@ public class TestXmlUpdatePolicy extends AbstractXmlLigaDsTest<UpdatePolicy>
     	
     	UpdatePolicy p = new UpdatePolicy();
     	p.setId(1);
-    	p.setUpdateLast(DateUtil.getXmlGc4D(dLast));
-    	p.setUpdateNext(DateUtil.getXmlGc4D(dNext));
-    	p.setUpdateQueue(DateUtil.getXmlGc4D(dQueue));
+    	p.setUpdateLast(DateUtil.toXmlGc(dLast));
+    	p.setUpdateNext(DateUtil.toXmlGc(dNext));
+    	p.setUpdateQueue(DateUtil.toXmlGc(dQueue));
     	p.setType("once");
     	return p;
     }

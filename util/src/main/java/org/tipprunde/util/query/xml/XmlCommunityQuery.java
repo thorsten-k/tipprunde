@@ -59,10 +59,10 @@ public class XmlCommunityQuery
 		DefinitionRound qDr = new DefinitionRound();
 		qDr.setId(0);
 		qDr.setRound(qR);
-		qDr.setDeadline(DateUtil.getXmlGc4D(new Date()));
+		qDr.setDeadline(DateUtil.toXmlGc(new Date()));
 		
 		Subscription qS = new Subscription();
-		qS.setDeadline(DateUtil.getXmlGc4D(new Date()));
+		qS.setDeadline(DateUtil.toXmlGc(new Date()));
 		
 		Community qC = new Community();
 		qC.setSubscription(qS);
@@ -104,7 +104,7 @@ public class XmlCommunityQuery
 	{
 		Bet xml = new Bet();
 		xml.setId(0);
-		xml.setRecord(DateUtil.getXmlGc4D(new Date()));
+		xml.setRecord(DateUtil.toXmlGc(new Date()));
 		xml.setCarryover(0);
 		xml.setFee(0);
     	xml.setPaid(0);

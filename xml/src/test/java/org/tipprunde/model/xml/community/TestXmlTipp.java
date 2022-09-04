@@ -25,8 +25,8 @@ public class TestXmlTipp extends AbstractXmlCommunityTest<Tipp>
     	xml.setId(1);
     	xml.setLeft(2);
     	xml.setLeft(1);
-    	xml.setRecord(DateUtil.getXmlGc4D(d));
-    	xml.setDeadline(DateUtil.getXmlGc4D(d));
+    	xml.setRecord(DateUtil.toXmlGc(d));
+    	xml.setDeadline(DateUtil.toXmlGc(d));
     	xml.setSync("sync");
     	xml.setStatus(new Status());
     	

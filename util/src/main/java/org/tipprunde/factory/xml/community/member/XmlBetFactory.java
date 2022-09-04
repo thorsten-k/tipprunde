@@ -18,7 +18,7 @@ public class XmlBetFactory
 	public static Bet build(double carryover, double fee, double paid, double win, double out, double balance)
 	{
 		Bet xml = new Bet();
-		xml.setRecord(DateUtil.getXmlGc4D(new Date()));
+		xml.setRecord(DateUtil.toXmlGc(new Date()));
 		xml.setCarryover(carryover);
 		xml.setFee(fee);
     	xml.setPaid(paid);
