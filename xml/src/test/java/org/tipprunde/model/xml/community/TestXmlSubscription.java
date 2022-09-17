@@ -1,5 +1,6 @@
 package org.tipprunde.model.xml.community;
 
+import java.time.LocalDate;
 import java.util.Date;
 
 import org.slf4j.Logger;
@@ -17,7 +18,7 @@ public class TestXmlSubscription extends AbstractXmlCommunityTest<Subscription>
 	
     public Subscription build(boolean withChilds)
     {
-    	Date d = DateUtil.getDateFromInt(2011, 11, 11);
+    	Date d = DateUtil.toDate(LocalDate.of(2011,11,11));
     	
     	Subscription subs = new Subscription();
     	subs.setId(1);

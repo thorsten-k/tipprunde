@@ -1,6 +1,6 @@
 package org.tipprunde.model.xml.liga.ds;
 
-import java.util.Date;
+import java.time.LocalDateTime;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,9 +18,9 @@ public class TestXmlUpdatePolicy extends AbstractXmlLigaDsTest<UpdatePolicy>
     
     public UpdatePolicy build(boolean withChilds)
     {
-    	Date dLast = DateUtil.getDateFromInt(2011, 11, 11, 11, 11, 11);
-    	Date dNext = DateUtil.getDateFromInt(2012, 12, 12, 12, 12, 12);
-    	Date dQueue = DateUtil.getDateFromInt(2010, 10, 10, 10, 10, 10);
+    	LocalDateTime dLast = LocalDateTime.of(2011,11,11,11,11,11);
+    	LocalDateTime dNext = LocalDateTime.of(2012,12,12,12,12,12);
+    	LocalDateTime dQueue = LocalDateTime.of(2010,10,10,10,10,10);
     	
     	UpdatePolicy p = new UpdatePolicy();
     	p.setId(1);

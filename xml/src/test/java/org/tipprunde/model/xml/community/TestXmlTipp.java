@@ -1,5 +1,6 @@
 package org.tipprunde.model.xml.community;
 
+import java.time.LocalDateTime;
 import java.util.Date;
 
 import org.slf4j.Logger;
@@ -20,7 +21,8 @@ public class TestXmlTipp extends AbstractXmlCommunityTest<Tipp>
     
     public Tipp build(boolean withChilds)
     {
-    	Date d = DateUtil.getDateFromInt(2012, 2, 23, 12, 42, 12);
+    	Date d = DateUtil.toDate(LocalDateTime.of(2012,2,23,12,42,12));
+    		
     	Tipp xml = new Tipp();
     	xml.setId(1);
     	xml.setLeft(2);
