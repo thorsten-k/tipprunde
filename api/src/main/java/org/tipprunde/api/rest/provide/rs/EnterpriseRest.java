@@ -1,4 +1,4 @@
-package org.tipprunde.api.rest.provide;
+package org.tipprunde.api.rest.provide.rs;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
