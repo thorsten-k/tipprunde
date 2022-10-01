@@ -1,4 +1,4 @@
-package org.tipprunde.api.rest.provide;
+package org.tipprunde.api.rest.provide.rs;
 
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -8,13 +8,14 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.jeesl.interfaces.util.qualifier.JeeslRestSecured;
+import org.tipprunde.api.rest.provide.i.PersonalRestInterface;
 import org.tipprunde.model.xml.community.Tipps;
 import org.tipprunde.model.xml.liga.Event;
 import org.tipprunde.model.xml.liga.Events;
 import org.tipprunde.model.xml.liga.Round;
 
 @Path("/rest/personal")
-public interface PersonalRest
+public interface PersonalRest extends PersonalRestInterface
 {
     @GET @Path("/events") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
