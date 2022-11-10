@@ -4,7 +4,7 @@ import org.encog.ml.data.MLData;
 import org.encog.util.arrayutil.NormalizedField;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.tipprunde.model.json.openliga.OpenLigaMatchResult;
+import org.tipprunde.model.json.ssi.openliga.OpenLigaMatchResult;
 
 public class JsonOpenLigaMatchResultFactory
 {	

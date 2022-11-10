@@ -1,4 +1,4 @@
-package org.tipprunde.model.json.error;
+package org.tipprunde.model.json.ssi.openliga;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

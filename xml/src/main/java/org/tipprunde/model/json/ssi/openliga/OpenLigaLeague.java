@@ -1,4 +1,4 @@
-package org.tipprunde.model.json.openliga;
+package org.tipprunde.model.json.ssi.openliga;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,17 +12,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonAutoDetect(fieldVisibility=Visibility.ANY, getterVisibility=Visibility.NONE, setterVisibility=Visibility.NONE)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class OpenLigaSeason
+public class OpenLigaLeague
 {
 	public static final long serialVersionUID=1;
 	
-	@JsonProperty("Year")
-	private int year;
-	public int getYear() {return year;}
-	public void setYear(int year) {this.year = year;}
+	@JsonProperty("Code")
+	private String code;
+	public String getCode() {return code;}
+	public void setCode(String code) {this.code = code;}
 	
-	@JsonProperty("Groups")
-	private List<OpenLigaGroup> groups;
-	public List<OpenLigaGroup> getGroups() {if(groups==null){groups = new ArrayList<OpenLigaGroup>();} return groups;}
-	public void setGroups(List<OpenLigaGroup> groups) {this.groups = groups;}
+	@JsonProperty("Seasons")
+	private List<OpenLigaSeason> seasons;
+	public List<OpenLigaSeason> getSeasons() {if(seasons==null){seasons = new ArrayList<OpenLigaSeason>();}return seasons;}
+	public void setSeasons(List<OpenLigaSeason> seasons) {this.seasons = seasons;}
+	
 }

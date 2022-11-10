@@ -1,11 +1,10 @@
-package org.tipprunde.model.json.openliga;
+package org.tipprunde.model.json.ssi.openliga;
 
 import java.util.Date;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.googlecode.objectify.annotation.Cache;
@@ -18,7 +17,7 @@ import com.googlecode.objectify.annotation.Index;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonAutoDetect(fieldVisibility=Visibility.ANY, getterVisibility=Visibility.NONE, setterVisibility=Visibility.NONE)
-@JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonIgnoreProperties(ignoreUnknown = true)
 
 public class OpenLigaMatch
 {
@@ -30,25 +29,56 @@ public class OpenLigaMatch
 	public long getId(){return id;}
 	public void setId(long id){this.id = id;}
 	
-	@Index
-	private Long groupId;
-	public Long getGroupId(){return groupId;}
-	public void setGroupId(Long groupId){this.groupId = groupId;}
-
-	@JsonProperty("LastUpdateDateTime")
-	private Date update;
-	public Date getUpdate(){return update;}
-	public void setUpdate(Date update){this.update = update;}
-
 	@JsonProperty("MatchDateTime")
 	private Date kickoff;
 	public Date getKickoff(){return kickoff;}
 	public void setKickoff(Date kickoff){this.kickoff = kickoff;}
 	
-	@JsonProperty("MatchIsFinished")
-	private Boolean finished;
-	public Boolean getFinished() {return finished;}
-	public void setFinished(Boolean finished) {this.finished = finished;}
+	@JsonProperty("TimeZoneID")
+	private String timeZoneName;
+	
+	public String getTimeZoneName() {
+		return timeZoneName;
+	}
+	public void setTimeZoneName(String timeZoneName) {
+		this.timeZoneName = timeZoneName;
+	}
+
+	@JsonProperty("LeagueId")
+	private long leagueId;
+	public long getLeagueId() {return leagueId;}
+	public void setLeagueId(long leagueId) {this.leagueId = leagueId;}
+	
+	@JsonProperty("LeagueName")
+	private String leagueName;
+	public String getLeagueName() {return leagueName;}
+	public void setLeagueName(String leagueName) {this.leagueName = leagueName;}
+	
+	@JsonProperty("Group")
+	private OpenLigaGroup group;
+
+	public OpenLigaGroup getGroup() {
+		return group;
+	}
+	public void setGroup(OpenLigaGroup group) {
+		this.group = group;
+	}
+
+	@Index
+	private Long groupId;
+	public Long getGroupId(){return groupId;}
+	public void setGroupId(Long groupId){this.groupId = groupId;}
+
+
+
+
+	
+	@JsonProperty("MatchDateTimeUTC")
+	private Date kickoffUtc;
+	public Date getKickoffUtc() {return kickoffUtc;}
+	public void setKickoffUtc(Date kickoffUtc) {this.kickoffUtc = kickoffUtc;}
+
+
 
 	@JsonProperty("Team1")
 	private OpenLigaTeam teamLeft;
@@ -60,6 +90,17 @@ public class OpenLigaMatch
 	public OpenLigaTeam getTeamRight(){return teamRight;}
 	public void setTeamRight(OpenLigaTeam teamRight){this.teamRight = teamRight;}
 	
+	@JsonProperty("LastUpdateDateTime")
+	private Date update;
+	public Date getUpdate(){return update;}
+	public void setUpdate(Date update){this.update = update;}
+	
+	@JsonProperty("MatchIsFinished")
+	private Boolean finished;
+	public Boolean getFinished() {return finished;}
+	public void setFinished(Boolean finished) {this.finished = finished;}
+	
+	
 	@JsonProperty("MatchResults")
 	private List<OpenLigaMatchResult> results;
 	public List<OpenLigaMatchResult> getResults(){return results;}
@@ -69,6 +110,21 @@ public class OpenLigaMatch
 	private OpenLigaMatchResult result;
 	public OpenLigaMatchResult getResult() {return result;}
 	public void setResult(OpenLigaMatchResult result) {this.result = result;}
+	
+	@JsonProperty("Goals")
+	private List<OpenLigaGoal> goals;
+	public List<OpenLigaGoal> getGoals(){return goals;}
+	public void setGoals(List<OpenLigaGoal> goals){this.goals = goals;}
+	
+	@JsonProperty("Location")
+	private OpenLigaLocation location;
+	public OpenLigaLocation getLocation() {return location;}
+	public void setLocation(OpenLigaLocation location) {this.location = location;}
+	
+	@JsonProperty("NumberOfViewers")
+	private Integer numberOfViewers;
+	public Integer getNumberOfViewers() {return numberOfViewers;}
+	public void setNumberOfViewers(Integer numberOfViewers) {this.numberOfViewers = numberOfViewers;}
 	
 	public String toString()
 	{

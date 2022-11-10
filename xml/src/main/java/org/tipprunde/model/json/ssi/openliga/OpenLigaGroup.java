@@ -1,4 +1,4 @@
-package org.tipprunde.model.json.openliga;
+package org.tipprunde.model.json.ssi.openliga;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -8,7 +8,6 @@ import org.apache.commons.lang3.builder.EqualsBuilder;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.googlecode.objectify.annotation.Cache;
@@ -19,7 +18,7 @@ import com.googlecode.objectify.annotation.Id;
 @Entity
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonAutoDetect(fieldVisibility=Visibility.ANY, getterVisibility=Visibility.NONE, setterVisibility=Visibility.NONE)
-@JsonIgnoreProperties(ignoreUnknown = true)
+//@JsonIgnoreProperties(ignoreUnknown = true)
 public class OpenLigaGroup
 {
 	public static final long serialVersionUID=1;
@@ -68,7 +67,7 @@ public class OpenLigaGroup
 		StringBuffer sb = new StringBuffer();
 		sb.append("[").append(id).append("]");
 		sb.append(" ").append(nr);
-		sb.append("-(").append(name).append(")");
+//		sb.append("-(").append(name).append(")");
 		if(leagueShortcut!=null){sb.append(" ").append(leagueShortcut);}
 		if(leagueSeason!=null){sb.append(":").append(leagueSeason);}
 		sb.append(" Update:"+activeUpdate);

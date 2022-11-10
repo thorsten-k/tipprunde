@@ -1,4 +1,4 @@
-package org.tipprunde.model.json.openliga;
+package org.tipprunde.model.json.ssi.openliga;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;

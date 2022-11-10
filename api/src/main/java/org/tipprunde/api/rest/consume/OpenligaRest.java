@@ -10,8 +10,8 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.jeesl.interfaces.model.marker.qualifier.RestDescription;
-import org.tipprunde.model.json.openliga.OpenLigaGroup;
-import org.tipprunde.model.json.openliga.OpenLigaMatch;
+import org.tipprunde.model.json.ssi.openliga.OpenLigaGroup;
+import org.tipprunde.model.json.ssi.openliga.OpenLigaMatch;
 
 @Path("/api")
 @RestDescription(label="OpenligaDB JSON API",description="direct API")
@@ -26,7 +26,7 @@ public interface OpenligaRest
 	
 	@GET @Path("/getlastchangedate/{leagueShortcut}/{leagueSeason}/{groupOrderId}")
 	@Produces(MediaType.APPLICATION_JSON)
-    Date getLastChangeDate(@PathParam("leagueShortcut") String leagueShortcut,
+	Date getLastChangeDate(@PathParam("leagueShortcut") String leagueShortcut,
     						@PathParam("leagueSeason") String leagueSeason,
     						@PathParam("groupOrderId") int groupOrderId);
 	

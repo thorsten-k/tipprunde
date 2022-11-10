@@ -1,29 +1,38 @@
-package org.tipprunde.model.json.openliga;
-
-import java.util.ArrayList;
-import java.util.List;
+package org.tipprunde.model.json.ssi.openliga;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.googlecode.objectify.annotation.Cache;
+import com.googlecode.objectify.annotation.Entity;
+import com.googlecode.objectify.annotation.Id;
+
+@Cache
+@Entity
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonAutoDetect(fieldVisibility=Visibility.ANY, getterVisibility=Visibility.NONE, setterVisibility=Visibility.NONE)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class OpenLigaLeague
+public class OpenLigaGoal
 {
 	public static final long serialVersionUID=1;
 	
-	@JsonProperty("Code")
-	private String code;
-	public String getCode() {return code;}
-	public void setCode(String code) {this.code = code;}
+	@Id
+	@JsonProperty("GoalID")
+	private long id;
+	public long getId(){return id;}
+	public void setId(long id){this.id = id;}
 	
-	@JsonProperty("Seasons")
-	private List<OpenLigaSeason> seasons;
-	public List<OpenLigaSeason> getSeasons() {if(seasons==null){seasons = new ArrayList<OpenLigaSeason>();}return seasons;}
-	public void setSeasons(List<OpenLigaSeason> seasons) {this.seasons = seasons;}
+
 	
+	public String toString()
+	{
+		StringBuffer sb = new StringBuffer();
+		sb.append("[").append(id).append("]");
+		
+		
+		return sb.toString();
+	}
 }
