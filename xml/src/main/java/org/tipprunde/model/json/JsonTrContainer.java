@@ -1,14 +1,12 @@
 package org.tipprunde.model.json;
 
-import java.time.LocalDateTime;
+import org.tipprunde.model.json.liga.JsonDiscipline;
+import org.tipprunde.model.json.liga.JsonEvent;
+import org.tipprunde.model.json.liga.JsonMatch;
+import org.tipprunde.model.json.liga.JsonRound;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
-import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 //@JsonAutoDetect(fieldVisibility=Visibility.ANY, getterVisibility=Visibility.NONE, setterVisibility=Visibility.NONE)
@@ -17,19 +15,23 @@ public class JsonTrContainer
 {
 	public static final long serialVersionUID=1;
 	
-	@JsonProperty("nextUpdate")
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss.SSS")
-	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
-	@JsonSerialize(using = LocalDateTimeSerializer.class)
-	private LocalDateTime nextUpdate;
-	public LocalDateTime getNextUpdate() {return nextUpdate;}
-	public void setNextUpdate(LocalDateTime nextUpdate) {this.nextUpdate = nextUpdate;}
+	@JsonProperty("discipline")
+	private JsonDiscipline discipline;
+	public JsonDiscipline getDiscipline() {return discipline;}
+	public void setDiscipline(JsonDiscipline discipline) {this.discipline = discipline;}
 	
-	@JsonProperty("lastUpdate")
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd HH:mm:ss.SSS")
-	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
-	@JsonSerialize(using = LocalDateTimeSerializer.class)
-	private LocalDateTime lastUpdate;
-	public LocalDateTime getLastUpdate() {return lastUpdate;}
-	public void setLastUpdate(LocalDateTime lastUpdate) {this.lastUpdate = lastUpdate;}
+	@JsonProperty("event")
+	private JsonEvent event;
+	public JsonEvent getEvent() {return event;}
+	public void setEvent(JsonEvent event) {this.event = event;}
+	
+	@JsonProperty("round")
+	private JsonRound round;
+	public JsonRound getRound() {return round;}
+	public void setRound(JsonRound round) {this.round = round;}
+	
+	@JsonProperty("match")
+	private JsonMatch match;
+	public JsonMatch getMatch() {return match;}
+	public void setMatch(JsonMatch match) {this.match = match;}
 }

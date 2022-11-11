@@ -12,4 +12,9 @@ public class JsonDataSource
 	private String refId;
 	public String getRefId() {return refId;}
 	public void setRefId(String refId) {this.refId = refId;}
+	
+	@JsonProperty("openliga")
+	private JsonDsOpenLiga openliga;
+	public JsonDsOpenLiga getOpenliga() {return openliga;}
+	public void setOpenliga(JsonDsOpenLiga openliga) {this.openliga = openliga;}
 }

@@ -1,12 +1,14 @@
 package org.tipprunde.model.json.liga;
 
+import java.util.List;
+
 import org.tipprunde.model.json.ds.JsonDataSource;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class JsonEvent
+public class JsonRound
 {
 	public static final long serialVersionUID=1;
 	
@@ -15,6 +17,11 @@ public class JsonEvent
 	public String getName() {return name;}
 	public void setName(String name) {this.name = name;}
 	
+	@JsonProperty("events")
+	private List<JsonEvent> events;
+	public List<JsonEvent> getEvents() {return events;}
+	public void setEvents(List<JsonEvent> events) {this.events = events;}
+
 	@JsonProperty("dataSource")
 	private JsonDataSource dataSource;
 	public JsonDataSource getDataSource() {return dataSource;}

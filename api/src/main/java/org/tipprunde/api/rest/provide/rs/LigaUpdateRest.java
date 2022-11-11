@@ -22,7 +22,7 @@ public interface LigaUpdateRest extends LigaUpdateRestInterface
 	JsonDsUpdate nextUpdate();
     
 	@POST @Path("/heartbeat") @JeeslRestSecured
-	@Consumes(MediaType.APPLICATION_XML)
+	@Consumes(MediaType.APPLICATION_JSON)
     void heartbeat(JsonDsUpdate heartbeat);
 	
 	
