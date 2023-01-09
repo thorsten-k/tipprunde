@@ -3,9 +3,9 @@ package org.tipprunde.util.query.json;
 import org.tipprunde.model.json.ds.JsonDataSource;
 import org.tipprunde.model.json.ds.JsonDsOpenLiga;
 import org.tipprunde.model.json.liga.JsonDiscipline;
-import org.tipprunde.model.json.liga.JsonEvent;
-import org.tipprunde.model.json.liga.JsonMatch;
-import org.tipprunde.model.json.liga.JsonRound;
+import org.tipprunde.model.json.liga.JsonLigaEvent;
+import org.tipprunde.model.json.liga.JsonLigaMatch;
+import org.tipprunde.model.json.liga.JsonLigaRound;
 
 public class JsonDsUpdateQuery
 {
@@ -17,25 +17,25 @@ public class JsonDsUpdateQuery
 		return json;
 	}
 	
-	public static JsonEvent dsUpdateEvent()
+	public static JsonLigaEvent dsUpdateEvent()
 	{
-		JsonEvent json = new JsonEvent();
+		JsonLigaEvent json = new JsonLigaEvent();
 		json.setName("");
 		json.setDataSource(ds());
 		return json;
 	}
 	
-	public static JsonRound dsUpdateRound()
+	public static JsonLigaRound dsUpdateRound()
 	{
-		JsonRound json = new JsonRound();
+		JsonLigaRound json = new JsonLigaRound();
 		json.setName("");
 		json.setDataSource(ds());
 		return json;
 	}
 	
-	public static JsonMatch dsUpdateMatch()
+	public static JsonLigaMatch dsUpdateMatch()
 	{
-		JsonMatch json = new JsonMatch();
+		JsonLigaMatch json = new JsonLigaMatch();
 		json.setDataSource(ds());
 		return json;
 	}

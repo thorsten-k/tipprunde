@@ -12,7 +12,7 @@ import org.jeesl.api.exception.xml.JeeslXmlStructureException;
 import org.jeesl.exception.ejb.JeeslNotFoundException;
 import org.jeesl.interfaces.util.qualifier.JeeslRestSecured;
 import org.tipprunde.api.rest.provide.i.EnterpriseRestInterface;
-import org.tipprunde.model.json.liga.JsonEvent;
+import org.tipprunde.model.json.community.JsonCommunityEvent;
 import org.tipprunde.model.xml.community.Bet;
 import org.tipprunde.model.xml.community.Community;
 import org.tipprunde.model.xml.community.DefinitionEvent;
@@ -37,7 +37,7 @@ public interface EnterpriseRestOld extends EnterpriseRestInterface
     
     @GET @Path("/event") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_JSON)
-    JsonEvent jsonEventWithRounds();
+    JsonCommunityEvent jsonEventWithRounds();
     
     @GET @Path("/event/{id:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)

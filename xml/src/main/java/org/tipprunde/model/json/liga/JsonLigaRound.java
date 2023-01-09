@@ -8,10 +8,15 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class JsonRound
+public class JsonLigaRound
 {
 	public static final long serialVersionUID=1;
 	
+	@JsonProperty("id")
+	private Long id;
+	public Long getId() {return id;}
+	public void setId(Long id) {this.id = id;}
+
 	@JsonProperty("number")
 	private Integer number;
 	public Integer getNumber() {return number;}
@@ -23,9 +28,9 @@ public class JsonRound
 	public void setName(String name) {this.name = name;}
 	
 	@JsonProperty("events")
-	private List<JsonEvent> events;
-	public List<JsonEvent> getEvents() {return events;}
-	public void setEvents(List<JsonEvent> events) {this.events = events;}
+	private List<JsonLigaEvent> events;
+	public List<JsonLigaEvent> getEvents() {return events;}
+	public void setEvents(List<JsonLigaEvent> events) {this.events = events;}
 
 	@JsonProperty("dataSource")
 	private JsonDataSource dataSource;

@@ -1,22 +1,33 @@
 package org.tipprunde.util.query.json;
 
-import org.tipprunde.model.json.liga.JsonEvent;
-import org.tipprunde.model.json.liga.JsonRound;
+import org.tipprunde.model.json.community.JsonCommunityEvent;
+import org.tipprunde.model.json.community.JsonCommunityRound;
+import org.tipprunde.model.json.liga.JsonLigaEvent;
+import org.tipprunde.model.json.liga.JsonLigaRound;
 
 public class JsonEnterpriseQuery
 {
-	public static JsonEvent event()
+	public static JsonCommunityEvent event()
 	{
-		JsonEvent json = new JsonEvent();
-		json.setName("");
+		JsonLigaEvent event = new JsonLigaEvent();
+		event.setName("");
+		
+		JsonCommunityEvent json = new JsonCommunityEvent();
+		json.setEvent(event);
+		
 		return json;
 	}
 	
-	public static JsonRound round()
+	public static JsonCommunityRound round()
 	{
-		JsonRound json = new JsonRound();
-		json.setNumber(0);
-		json.setName("");
+		JsonLigaRound round = new JsonLigaRound();
+		round.setNumber(0);
+		round.setName("");
+		
+		JsonCommunityRound json = new JsonCommunityRound();
+		json.setId(0l);
+		json.setRound(round);
+		
 		return json;
 	}
 }

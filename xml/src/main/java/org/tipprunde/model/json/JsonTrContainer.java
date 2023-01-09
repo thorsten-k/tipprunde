@@ -1,9 +1,9 @@
 package org.tipprunde.model.json;
 
 import org.tipprunde.model.json.liga.JsonDiscipline;
-import org.tipprunde.model.json.liga.JsonEvent;
-import org.tipprunde.model.json.liga.JsonMatch;
-import org.tipprunde.model.json.liga.JsonRound;
+import org.tipprunde.model.json.liga.JsonLigaEvent;
+import org.tipprunde.model.json.liga.JsonLigaMatch;
+import org.tipprunde.model.json.liga.JsonLigaRound;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -21,17 +21,17 @@ public class JsonTrContainer
 	public void setDiscipline(JsonDiscipline discipline) {this.discipline = discipline;}
 	
 	@JsonProperty("event")
-	private JsonEvent event;
-	public JsonEvent getEvent() {return event;}
-	public void setEvent(JsonEvent event) {this.event = event;}
+	private JsonLigaEvent event;
+	public JsonLigaEvent getEvent() {return event;}
+	public void setEvent(JsonLigaEvent event) {this.event = event;}
 	
 	@JsonProperty("round")
-	private JsonRound round;
-	public JsonRound getRound() {return round;}
-	public void setRound(JsonRound round) {this.round = round;}
+	private JsonLigaRound round;
+	public JsonLigaRound getRound() {return round;}
+	public void setRound(JsonLigaRound round) {this.round = round;}
 	
 	@JsonProperty("match")
-	private JsonMatch match;
-	public JsonMatch getMatch() {return match;}
-	public void setMatch(JsonMatch match) {this.match = match;}
+	private JsonLigaMatch match;
+	public JsonLigaMatch getMatch() {return match;}
+	public void setMatch(JsonLigaMatch match) {this.match = match;}
 }

@@ -1,8 +1,8 @@
 package org.tipprunde.api.rest.provide.i;
 
-import org.tipprunde.model.json.liga.JsonEvent;
+import org.tipprunde.model.json.community.JsonCommunityEvent;
 
 public interface EnterpriseRestInterface
 {
-	JsonEvent jsonEventWithRounds();
+	JsonCommunityEvent jsonEventWithRounds();
 }
