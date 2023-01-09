@@ -11,6 +11,8 @@ import javax.ws.rs.core.MediaType;
 import org.jeesl.api.exception.xml.JeeslXmlStructureException;
 import org.jeesl.exception.ejb.JeeslNotFoundException;
 import org.jeesl.interfaces.util.qualifier.JeeslRestSecured;
+import org.tipprunde.api.rest.provide.i.EnterpriseRestInterface;
+import org.tipprunde.model.json.liga.JsonEvent;
 import org.tipprunde.model.xml.community.Bet;
 import org.tipprunde.model.xml.community.Community;
 import org.tipprunde.model.xml.community.DefinitionEvent;
@@ -22,7 +24,7 @@ import org.tipprunde.model.xml.tr.Report;
 import org.tipprunde.model.xml.tr.Tg;
 
 @Path("/rest/enterprise")
-public interface EnterpriseRest
+public interface EnterpriseRestOld extends EnterpriseRestInterface
 {
     @GET @Path("/community/members/{id:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
@@ -32,9 +34,15 @@ public interface EnterpriseRest
     @Produces(MediaType.APPLICATION_XML)
     Participant participant(@PathParam("id") long communityId, @PathParam("email") String email);
     
+    
+    @GET @Path("/event") @JeeslRestSecured
+    @Produces(MediaType.APPLICATION_JSON)
+    JsonEvent jsonEventWithRounds();
+    
     @GET @Path("/event/{id:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)
     DefinitionEvent event(@PathParam("id") long communityId);
+    
     
     @GET @Path("/community/opponents/{id:[1-9][0-9]*}") @JeeslRestSecured
     @Produces(MediaType.APPLICATION_XML)

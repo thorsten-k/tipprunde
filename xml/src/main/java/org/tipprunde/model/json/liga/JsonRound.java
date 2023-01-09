@@ -12,6 +12,11 @@ public class JsonRound
 {
 	public static final long serialVersionUID=1;
 	
+	@JsonProperty("number")
+	private Integer number;
+	public Integer getNumber() {return number;}
+	public void setNumber(Integer number) {this.number = number;}
+
 	@JsonProperty("name")
 	private String name;
 	public String getName() {return name;}
