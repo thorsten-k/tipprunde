@@ -1,5 +1,7 @@
 package org.tipprunde.util.query.json;
 
+import java.time.LocalDateTime;
+
 import org.tipprunde.model.json.community.JsonCommunityEvent;
 import org.tipprunde.model.json.community.JsonCommunityRound;
 import org.tipprunde.model.json.liga.JsonLigaEvent;
@@ -27,6 +29,7 @@ public class JsonEnterpriseQuery
 		JsonCommunityRound json = new JsonCommunityRound();
 		json.setId(0l);
 		json.setRound(round);
+		json.setTippDeadline(LocalDateTime.now());
 		
 		return json;
 	}
