@@ -1,5 +1,6 @@
 package org.tipprunde.util.filter.json.liga;
 
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,5 +34,18 @@ public class JsonRoundFilter
 			}
 		}
 		return result;
+	}
+	
+	public static JsonCommunityRound nextDeadline(JsonCommunityEvent event)
+	{
+		if(ObjectUtils.isNotEmpty(event.getRounds()))
+		{
+			LocalDateTime now = LocalDateTime.now();
+			for(JsonCommunityRound r : event.getRounds())
+			{
+				if(r.getTippDeadline().isAfter(now)){return r;}
+			}
+		}
+		return null;
 	}
 }
