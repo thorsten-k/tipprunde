@@ -17,26 +17,23 @@ import org.tipprunde.model.xml.tr.Tg;
 @Path("/rest/update")
 public interface LigaUpdateRest extends LigaUpdateRestInterface
 {    
-    @GET @Path("/next") @JeeslRestSecured
-    @Produces(MediaType.APPLICATION_JSON)
-	JsonDsUpdate nextUpdate();
+	@JeeslRestSecured
+    @GET @Path("/next")  @Produces(MediaType.APPLICATION_JSON)
+	JsonDsUpdate nextUpdateTime();
     
-	@POST @Path("/heartbeat") @JeeslRestSecured
-	@Consumes(MediaType.APPLICATION_JSON)
+    @JeeslRestSecured
+	@POST @Path("/heartbeat") @Consumes(MediaType.APPLICATION_JSON)
     void heartbeat(JsonDsUpdate heartbeat);
 	
+	@JeeslRestSecured
+	@GET @Path("/job") @Produces(MediaType.APPLICATION_XML)
+    Tg nextOutdatedJob();
 	
-	@GET @Path("/job") @JeeslRestSecured
-	@Produces(MediaType.APPLICATION_XML)
-    Tg nextJobXml();
+	@JeeslRestSecured
+	@GET @Path("/job") @Produces(MediaType.APPLICATION_JSON)
+    JsonTrContainer nextUpdateJob();
 	
-	@GET @Path("/job") @JeeslRestSecured
-	@Produces(MediaType.APPLICATION_JSON)
-    JsonTrContainer nextJobJson();
-	
-    
-	@POST @Path("/update") @JeeslRestSecured
-	@Consumes(MediaType.APPLICATION_XML)
-	@Produces(MediaType.APPLICATION_XML)
+	@JeeslRestSecured
+	@POST @Path("/update") @Consumes(MediaType.APPLICATION_XML) @Produces(MediaType.APPLICATION_XML)
     UpdatePolicy update(Tg tg);
 }

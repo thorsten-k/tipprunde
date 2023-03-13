@@ -20,7 +20,8 @@ public class JsonDsUpdateFactory
 	
 	public static JsonDsUpdate build() {return new JsonDsUpdate();}
 	
-	public JsonDsUpdateFactory last(LocalDateTime ldt) {json.setLastUpdate(ldt);return this;}
+	public JsonDsUpdateFactory last(LocalDateTime ldt) {json.setLastUpdate(ldt); return this;}
+	public JsonDsUpdateFactory next(LocalDateTime ldt) {json.setNextUpdate(ldt); return this;}
 	public JsonDsUpdate toJson() {return json;}
 	
 }

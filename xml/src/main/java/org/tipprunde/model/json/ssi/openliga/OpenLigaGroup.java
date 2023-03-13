@@ -24,17 +24,17 @@ public class OpenLigaGroup
 	public static final long serialVersionUID=1;
 	
 	@Id
-	@JsonProperty("GroupID")
+	@JsonProperty("groupID")
 	private Long id;
 	public Long getId(){return id;}
 	public void setId(Long id){this.id = id;}
 	
-	@JsonProperty("GroupName")
+	@JsonProperty("groupName")
 	private String name;
 	public String getName(){return name;}
 	public void setName(String name){this.name = name;}
 	
-	@JsonProperty("GroupOrderID")
+	@JsonProperty("groupOrderID")
 	private int nr;
 	public int getNr(){return nr;}
 	public void setNr(int nr){this.nr = nr;}
@@ -67,7 +67,6 @@ public class OpenLigaGroup
 		StringBuffer sb = new StringBuffer();
 		sb.append("[").append(id).append("]");
 		sb.append(" ").append(nr);
-//		sb.append("-(").append(name).append(")");
 		if(leagueShortcut!=null){sb.append(" ").append(leagueShortcut);}
 		if(leagueSeason!=null){sb.append(":").append(leagueSeason);}
 		sb.append(" Update:"+activeUpdate);

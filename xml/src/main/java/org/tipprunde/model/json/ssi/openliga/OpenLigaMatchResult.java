@@ -12,37 +12,37 @@ public class OpenLigaMatchResult
 {
 	public static final long serialVersionUID=1;
 	
-	@JsonProperty("ResultID")
+	@JsonProperty("resultID")
 	private Long id;
 	public Long getId(){return id;}
 	public void setId(Long id){this.id = id;}
 	
-	@JsonProperty("ResultName")
+	@JsonProperty("resultName")
 	private String name;
 	public String getName() {return name;}
 	public void setName(String name) {this.name = name;}
 
-	@JsonProperty("PointsTeam1")
+	@JsonProperty("pointsTeam1")
 	private int left;
 	public int getLeft() {return left;}
 	public void setLeft(int left) {this.left = left;}
 	
-	@JsonProperty("PointsTeam2")
+	@JsonProperty("pointsTeam2")
 	private int right;
 	public int getRight() {return right;}
 	public void setRight(int right) {this.right = right;}
 	
-	@JsonProperty("ResultOrderID")
+	@JsonProperty("resultOrderID")
 	private Integer order;
 	public Integer getOrder() {return order;}
 	public void setOrder(Integer order) {this.order = order;}
 	
-	@JsonProperty("ResultTypeID")
+	@JsonProperty("resultTypeID")
 	private Integer type;
 	public Integer getType() {return type;}
 	public void setType(Integer type) {this.type = type;}
 	
-	@JsonProperty("ResultDescription")
+	@JsonProperty("resultDescription")
 	private String description;
 	public String getDescription() {return description;}
 	public void setDescription(String description) {this.description = description;}

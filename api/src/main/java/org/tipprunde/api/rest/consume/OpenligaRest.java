@@ -13,22 +13,19 @@ import org.jeesl.interfaces.model.marker.qualifier.RestDescription;
 import org.tipprunde.model.json.ssi.openliga.OpenLigaGroup;
 import org.tipprunde.model.json.ssi.openliga.OpenLigaMatch;
 
-@Path("/api")
+@Path("/")
 @RestDescription(label="OpenligaDB JSON API",description="direct API")
 public interface OpenligaRest
 {		    
-	public static String restHost = "https://www.openligadb.de";
-	public static String context = "api";
+	public static String restHost = "https://api.openligadb.de";
 	
 	@GET @Path("/getcurrentgroup/{leagueShortcut}")
 	@Produces(MediaType.APPLICATION_JSON)
 	OpenLigaGroup getCurrentGroup(@PathParam("leagueShortcut") String leagueShortcut);
 	
-	@GET @Path("/getlastchangedate/{leagueShortcut}/{leagueSeason}/{groupOrderId}")
+	@GET @Path("/getlastchangedate/{league}/{season}/{day}")
 	@Produces(MediaType.APPLICATION_JSON)
-	Date getLastChangeDate(@PathParam("leagueShortcut") String leagueShortcut,
-    						@PathParam("leagueSeason") String leagueSeason,
-    						@PathParam("groupOrderId") int groupOrderId);
+	Date getLastChangeDate(@PathParam("league") String leagueShortcut, @PathParam("season") String leagueSeason, @PathParam("day") int groupOrderId);
 	
 	@GET @Path("/getmatchdata/{leagueShortcut}/{leagueSeason}")
 	@Produces(MediaType.APPLICATION_JSON)

@@ -7,11 +7,10 @@ import org.tipprunde.model.xml.tr.Tg;
 
 public interface LigaUpdateRestInterface
 {
-	JsonDsUpdate nextUpdate();
-	void heartbeat(JsonDsUpdate status);
-	
-	Tg nextJobXml();
-	JsonTrContainer nextJobJson();
+	JsonDsUpdate nextUpdateTime();
+	JsonTrContainer nextUpdateJob();
+	Tg nextOutdatedJob();
    
+	void heartbeat(JsonDsUpdate status);
     UpdatePolicy update(Tg tg);   
 }
