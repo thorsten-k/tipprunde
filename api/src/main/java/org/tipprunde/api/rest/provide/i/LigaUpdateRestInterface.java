@@ -11,6 +11,6 @@ public interface LigaUpdateRestInterface
 	JsonTrContainer nextUpdateJob();
 	Tg nextOutdatedJob();
    
-	void heartbeat(JsonDsUpdate status);
+	void uploadHeartbeat(JsonDsUpdate status);
     UpdatePolicy update(Tg tg);   
 }

@@ -40,6 +40,12 @@ public class JsonDsUpdateQuery
 		return json;
 	}
 	
+	public static JsonDataSource dsUpdateOpenLiga()
+	{
+		JsonDataSource json = new JsonDataSource();
+		json.setOpenliga(JsonDsUpdateQuery.dsOpenLiga());
+		return json;
+	}
 	
 	private static JsonDataSource ds()
 	{

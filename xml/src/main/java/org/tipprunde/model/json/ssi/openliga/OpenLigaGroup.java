@@ -35,9 +35,9 @@ public class OpenLigaGroup
 	public void setName(String name){this.name = name;}
 	
 	@JsonProperty("groupOrderID")
-	private int nr;
-	public int getNr(){return nr;}
-	public void setNr(int nr){this.nr = nr;}
+	private Integer groupOrderID;
+	public int getGroupOrderID() {return groupOrderID;}
+	public void setGroupOrderID(int groupOrderID){this.groupOrderID = groupOrderID;}
 	
 	@JsonProperty("LeagueShortcut")
 	private String leagueShortcut;
@@ -66,7 +66,7 @@ public class OpenLigaGroup
 	{
 		StringBuffer sb = new StringBuffer();
 		sb.append("[").append(id).append("]");
-		sb.append(" ").append(nr);
+		sb.append(" ").append(groupOrderID);
 		if(leagueShortcut!=null){sb.append(" ").append(leagueShortcut);}
 		if(leagueSeason!=null){sb.append(":").append(leagueSeason);}
 		sb.append(" Update:"+activeUpdate);

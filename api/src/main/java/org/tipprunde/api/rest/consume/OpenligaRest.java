@@ -19,6 +19,10 @@ public interface OpenligaRest
 {		    
 	public static String restHost = "https://api.openligadb.de";
 	
+	@GET @Path("/getavailablegroups/{leagueShortcut}/{leagueSeason}")
+	@Produces(MediaType.APPLICATION_JSON)
+	List<OpenLigaGroup> getAvailableGroups(@PathParam("leagueShortcut") String leagueShortcut, @PathParam("leagueSeason") String leagueSeason);
+	
 	@GET @Path("/getcurrentgroup/{leagueShortcut}")
 	@Produces(MediaType.APPLICATION_JSON)
 	OpenLigaGroup getCurrentGroup(@PathParam("leagueShortcut") String leagueShortcut);

@@ -14,7 +14,7 @@ import org.tipprunde.model.json.ds.JsonDsUpdate;
 import org.tipprunde.model.xml.liga.UpdatePolicy;
 import org.tipprunde.model.xml.tr.Tg;
 
-@Path("/rest/update")
+@Path("/rest/liga/update")
 public interface LigaUpdateRest extends LigaUpdateRestInterface
 {    
 	@JeeslRestSecured
@@ -23,7 +23,7 @@ public interface LigaUpdateRest extends LigaUpdateRestInterface
     
     @JeeslRestSecured
 	@POST @Path("/heartbeat") @Consumes(MediaType.APPLICATION_JSON)
-    void heartbeat(JsonDsUpdate heartbeat);
+    void uploadHeartbeat(JsonDsUpdate heartbeat);
 	
 	@JeeslRestSecured
 	@GET @Path("/job") @Produces(MediaType.APPLICATION_XML)

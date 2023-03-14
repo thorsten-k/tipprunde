@@ -8,6 +8,7 @@ public class JsonDsOpenLiga
 {
 	public static final long serialVersionUID=1;
 	
+	
 	@JsonProperty("refId")
 	private Integer refId;
 	public Integer getRefId() {return refId;}

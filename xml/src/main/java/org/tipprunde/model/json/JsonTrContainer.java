@@ -1,5 +1,6 @@
 package org.tipprunde.model.json;
 
+import org.tipprunde.model.json.ds.JsonDataSource;
 import org.tipprunde.model.json.liga.JsonDiscipline;
 import org.tipprunde.model.json.liga.JsonLigaEvent;
 import org.tipprunde.model.json.liga.JsonLigaMatch;
@@ -34,4 +35,10 @@ public class JsonTrContainer
 	private JsonLigaMatch match;
 	public JsonLigaMatch getMatch() {return match;}
 	public void setMatch(JsonLigaMatch match) {this.match = match;}
+	
+	
+	@JsonProperty("datasource")
+	private JsonDataSource datasource;
+	public JsonDataSource getDatasource() {return datasource;}
+	public void setDatasource(JsonDataSource datasource) {this.datasource = datasource;}
 }

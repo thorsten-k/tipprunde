@@ -1,4 +1,4 @@
-package org.tipprunde.factory.json.liga;
+package org.tipprunde.factory.json.system.io.ssi.openliga;
 
 import org.encog.ml.data.MLData;
 import org.encog.util.arrayutil.NormalizedField;
