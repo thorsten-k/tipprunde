@@ -1,14 +1,12 @@
 package org.tipprunde.model.json.liga;
 
-import java.util.List;
-
 import org.tipprunde.model.json.ds.JsonDataSource;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class JsonLigaEvent
+public class JsonLigaTeam
 {
 	public static final long serialVersionUID=1;
 	
@@ -16,14 +14,19 @@ public class JsonLigaEvent
 	private JsonDataSource dataSource;
 	public JsonDataSource getDataSource() {return dataSource;}
 	public void setDataSource(JsonDataSource dataSource) {this.dataSource = dataSource;}
-
+	
 	@JsonProperty("name")
 	private String name;
 	public String getName() {return name;}
 	public void setName(String name) {this.name = name;}
+	
+	@JsonProperty("shortName")
+	private String shortName;
+	public String getShortName() {return shortName;}
+	public void setShortName(String shortName) {this.shortName = shortName;}
 
-	@JsonProperty("rounds")
-	private List<JsonLigaRound> rounds;
-	public List<JsonLigaRound> getRounds() {return rounds;}
-	public void setRounds(List<JsonLigaRound> rounds) {this.rounds = rounds;}
+	@JsonProperty("iconUrl")
+	private String iconUrl;
+	public String getIconUrl() {return iconUrl;}
+	public void setIconUrl(String iconUrl) {this.iconUrl = iconUrl;}
 }

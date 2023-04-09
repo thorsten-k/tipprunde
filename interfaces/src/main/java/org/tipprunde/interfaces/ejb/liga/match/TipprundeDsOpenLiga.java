@@ -6,5 +6,5 @@ import org.jeesl.interfaces.model.with.primitive.number.EjbWithId;
 
 public interface TipprundeDsOpenLiga extends Serializable,EjbWithId
 {
-	public static enum Type {sport,league,group,match,location,goal,opponent,scorer}
+	public static enum Type {sport,league,group,match,result,location,goal,opponent,scorer}
 }

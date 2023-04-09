@@ -17,10 +17,11 @@
 			<groupId>org.tipprunde</groupId>
 			<artifactId>tipprunde-api</artifactId>
 		</dependency>
+		
 		<dependency>
-			<groupId>org.tipprunde</groupId>
-			<artifactId>tipprunde-xml</artifactId>
-		</dependency>
+   	   		<groupId>org.jeesl</groupId>
+   	   		<artifactId>jeesl-util</artifactId>
+   	   	</dependency>
 		<dependency>
             <groupId>net.sf.exlp</groupId>
             <artifactId>exlp-util</artifactId>

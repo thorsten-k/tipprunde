@@ -16,6 +16,11 @@ public class JsonLigaRound
 	private Long id;
 	public Long getId() {return id;}
 	public void setId(Long id) {this.id = id;}
+	
+	@JsonProperty("dataSource")
+	private JsonDataSource dataSource;
+	public JsonDataSource getDataSource() {return dataSource;}
+	public void setDataSource(JsonDataSource dataSource) {this.dataSource = dataSource;}
 
 	@JsonProperty("number")
 	private Integer number;
@@ -31,9 +36,4 @@ public class JsonLigaRound
 	private List<JsonLigaEvent> events;
 	public List<JsonLigaEvent> getEvents() {return events;}
 	public void setEvents(List<JsonLigaEvent> events) {this.events = events;}
-
-	@JsonProperty("dataSource")
-	private JsonDataSource dataSource;
-	public JsonDataSource getDataSource() {return dataSource;}
-	public void setDataSource(JsonDataSource dataSource) {this.dataSource = dataSource;}
 }

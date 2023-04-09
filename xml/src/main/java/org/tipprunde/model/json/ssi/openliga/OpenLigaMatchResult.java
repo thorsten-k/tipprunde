@@ -20,14 +20,14 @@ public class OpenLigaMatchResult
 	public void setName(String name) {this.name = name;}
 
 	@JsonProperty("pointsTeam1")
-	private int left;
-	public int getLeft() {return left;}
-	public void setLeft(int left) {this.left = left;}
+	private Integer left;
+	public Integer getLeft() {return left;}
+	public void setLeft(Integer left) {this.left = left;}
 	
 	@JsonProperty("pointsTeam2")
-	private int right;
-	public int getRight() {return right;}
-	public void setRight(int right) {this.right = right;}
+	private Integer right;
+	public Integer getRight() {return right;}
+	public void setRight(Integer right) {this.right = right;}
 	
 	@JsonProperty("resultOrderID")
 	private Integer order;

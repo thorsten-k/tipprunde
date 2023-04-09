@@ -53,7 +53,7 @@ public class OpenLigaMatch
 	public void setMatchDateTimeUtc(LocalDateTime matchDateTimeUtc) {this.matchDateTimeUtc = matchDateTimeUtc;}
 	
 	@JsonProperty("lastUpdateDateTime")
-	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd'T'HH:mm:ss.SSS")
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd'T'HH:mm:ss.n")
 	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
 	@JsonSerialize(using = LocalDateTimeSerializer.class)
 	private LocalDateTime updateDateTime;

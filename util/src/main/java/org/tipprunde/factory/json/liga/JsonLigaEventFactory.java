@@ -41,7 +41,7 @@ public class JsonLigaEventFactory
 			json.setRounds(new ArrayList<>());
 			for(OpenLigaGroup olg : groups)
 			{
-				JsonLigaRound r = JsonLigaRoundFactory.transform(olg);
+				JsonLigaRound r = JsonLigaRoundFactory.build(olg);
 				if(Objects.nonNull(r.getDataSource()) && Objects.nonNull(r.getDataSource().getOpenliga()))
 				{
 					r.getDataSource().getOpenliga().setSeason(job.getSeason());

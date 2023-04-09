@@ -22,7 +22,7 @@ public class JsonLigaRoundFactory
 	public static JsonLigaRound build() {return new JsonLigaRound();}
 	
 	
-	public static JsonLigaRound transform(OpenLigaGroup olg)
+	public static JsonLigaRound build(OpenLigaGroup olg)
 	{
 		JsonLigaRound json = build();
 		
