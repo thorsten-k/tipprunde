@@ -137,13 +137,7 @@
 		   <artifactId>jackson-datatype-jsr310</artifactId>
 		   <scope>provided</scope>
 		</dependency>
-		
-		<!-- Commons-Lang (Equals/Hashcode) 
-		<dependency> 
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
-			<scope>provided</scope>
-		</dependency> -->
+
 	</dependencies>
 	
 	<build>

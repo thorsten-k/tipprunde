@@ -1,28 +1,25 @@
 package org.tipprunde.model.json.ssi.openliga;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.List;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import org.jeesl.util.time.ZuluDateTimeDeserializer;
+
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.datatype.jsr310.deser.LocalDateTimeDeserializer;
 import com.fasterxml.jackson.datatype.jsr310.ser.LocalDateTimeSerializer;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
 import com.googlecode.objectify.annotation.Cache;
 import com.googlecode.objectify.annotation.Entity;
 import com.googlecode.objectify.annotation.Id;
 import com.googlecode.objectify.annotation.Index;
 
-@Cache
-@Entity
+@Cache @Entity
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@JsonAutoDetect(fieldVisibility=Visibility.ANY, getterVisibility=Visibility.NONE, setterVisibility=Visibility.NONE)
 //@JsonIgnoreProperties(ignoreUnknown = true)
 public class OpenLigaMatch
 {
@@ -30,9 +27,9 @@ public class OpenLigaMatch
 	
 	@Id
 	@JsonProperty("matchID")
-	private long id;
-	public long getId(){return id;}
-	public void setId(long id){this.id = id;}
+	private Long id;
+	public Long getId() {return id;}
+	public void setId(Long id) {this.id = id;}
 	
 	@JsonProperty("matchDateTime")
 	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd'T'HH:mm:ss")
@@ -46,6 +43,22 @@ public class OpenLigaMatch
 	private String timeZoneName;
 	public String getTimeZoneName() {return timeZoneName;}
 	public void setTimeZoneName(String timeZoneName) {this.timeZoneName = timeZoneName;}
+	
+	@JsonProperty("matchDateTimeUTC")
+	@JsonFormat(pattern="yyyy-MM-dd'T'HH:mm:ss'Z'")
+	@JsonSerialize(using = LocalDateTimeSerializer.class)
+	@JsonDeserialize(using = ZuluDateTimeDeserializer.class)
+	private LocalDateTime matchDateTimeUtc;
+	public LocalDateTime getMatchDateTimeUtc() {return matchDateTimeUtc;}
+	public void setMatchDateTimeUtc(LocalDateTime matchDateTimeUtc) {this.matchDateTimeUtc = matchDateTimeUtc;}
+	
+	@JsonProperty("lastUpdateDateTime")
+	@JsonFormat(shape=JsonFormat.Shape.STRING, pattern="yyyy-MM-dd'T'HH:mm:ss.SSS")
+	@JsonDeserialize(using = LocalDateTimeDeserializer.class)
+	@JsonSerialize(using = LocalDateTimeSerializer.class)
+	private LocalDateTime updateDateTime;
+	public LocalDateTime getUpdateDateTime() {return updateDateTime;}
+	public void setUpdateDateTime(LocalDateTime updateDateTime) {this.updateDateTime = updateDateTime;}
 
 	@JsonProperty("leagueId")
 	private long leagueId;
@@ -76,11 +89,6 @@ public class OpenLigaMatch
 	private Long groupId;
 	public Long getGroupId(){return groupId;}
 	public void setGroupId(Long groupId){this.groupId = groupId;}
-	
-	@JsonProperty("matchDateTimeUTC")
-	private Date kickoffUtc;
-	public Date getKickoffUtc() {return kickoffUtc;}
-	public void setKickoffUtc(Date kickoffUtc) {this.kickoffUtc = kickoffUtc;}
 
 	@JsonProperty("team1")
 	private OpenLigaTeam teamLeft;
@@ -91,11 +99,6 @@ public class OpenLigaMatch
 	private OpenLigaTeam teamRight;
 	public OpenLigaTeam getTeamRight(){return teamRight;}
 	public void setTeamRight(OpenLigaTeam teamRight){this.teamRight = teamRight;}
-	
-	@JsonProperty("lastUpdateDateTime")
-	private Date update;
-	public Date getUpdate(){return update;}
-	public void setUpdate(Date update){this.update = update;}
 	
 	@JsonProperty("matchIsFinished")
 	private Boolean finished;
@@ -133,7 +136,7 @@ public class OpenLigaMatch
 		StringBuffer sb = new StringBuffer();
 		sb.append("[").append(id).append("]");
 		sb.append(" ko").append(matchDateTime);
-		sb.append(" up").append(update);
+		sb.append(" up").append(updateDateTime);
 		if(teamLeft!=null){sb.append(" TL{").append(teamLeft.toString()).append("}");}
 		if(teamRight!=null){sb.append(" TR{").append(teamRight.toString()).append("}");}
 		

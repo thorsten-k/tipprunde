@@ -20,6 +20,8 @@ public class JsonLigaRoundFactory
 	}
 	
 	public static JsonLigaRound build() {return new JsonLigaRound();}
+	
+	
 	public static JsonLigaRound transform(OpenLigaGroup olg)
 	{
 		JsonLigaRound json = build();
@@ -27,11 +29,12 @@ public class JsonLigaRoundFactory
 		json.setNumber(olg.getGroupOrderID());
 		json.setName(olg.getName());
 		
+		JsonDsOpenLiga ds = JsonDsOpenligaFactory.build();
+		ds.setType(TipprundeDsOpenLiga.Type.group.toString());
+		ds.setRefId(olg.getId().intValue());
+		ds.setGroupOrderId(olg.getGroupOrderID());
 		
-		JsonDsOpenLiga dsOpenLiga = JsonDsOpenligaFactory.build();
-		dsOpenLiga.setRefId(olg.getGroupOrderID());
-		dsOpenLiga.setType(TipprundeDsOpenLiga.Type.group.toString());
-		json.setDataSource(JsonDataSourceFactory.build(dsOpenLiga));
+		json.setDataSource(JsonDataSourceFactory.build(ds));
 		
 		return json;
 	}

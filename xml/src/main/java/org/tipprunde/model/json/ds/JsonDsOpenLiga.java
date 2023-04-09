@@ -8,6 +8,10 @@ public class JsonDsOpenLiga
 {
 	public static final long serialVersionUID=1;
 	
+	@JsonProperty("type")
+	public String type;
+	public String getType() {return type;}
+	public void setType(String type) {this.type = type;}
 	
 	@JsonProperty("refId")
 	private Integer refId;
@@ -24,9 +28,9 @@ public class JsonDsOpenLiga
 	public String getShortcut() {return shortcut;}
 	public void setShortcut(String shortcut) {this.shortcut = shortcut;}
 	
-	@JsonProperty("type")
-	public String type;
-	public String getType() {return type;}
-	public void setType(String type) {this.type = type;}
+	@JsonProperty("groupOrderId")
+	public Integer groupOrderId;
+	public Integer getGroupOrderId() {return groupOrderId;}
+	public void setGroupOrderId(Integer groupOrderId) {this.groupOrderId = groupOrderId;}
 
 }

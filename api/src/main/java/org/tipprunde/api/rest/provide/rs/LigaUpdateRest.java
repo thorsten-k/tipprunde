@@ -8,6 +8,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import org.jeesl.interfaces.util.qualifier.JeeslRestSecured;
+import org.jeesl.model.json.io.ssi.update.JsonSsiUpdate;
 import org.tipprunde.api.rest.provide.i.LigaUpdateRestInterface;
 import org.tipprunde.model.json.JsonTrContainer;
 import org.tipprunde.model.json.ds.JsonDsUpdate;
@@ -24,16 +25,21 @@ public interface LigaUpdateRest extends LigaUpdateRestInterface
     @JeeslRestSecured
 	@POST @Path("/heartbeat") @Consumes(MediaType.APPLICATION_JSON)
     void uploadHeartbeat(JsonDsUpdate heartbeat);
-	
-	@JeeslRestSecured
-	@GET @Path("/job") @Produces(MediaType.APPLICATION_XML)
-    Tg nextOutdatedJob();
+
 	
 	@JeeslRestSecured
 	@GET @Path("/job") @Produces(MediaType.APPLICATION_JSON)
     JsonTrContainer nextUpdateJob();
 	
+	@POST @Path("/update") @Consumes(MediaType.APPLICATION_JSON) @Produces(MediaType.APPLICATION_JSON)
+	JsonSsiUpdate update(JsonTrContainer json);
+	
+
+	@JeeslRestSecured
+	@GET @Path("/job") @Produces(MediaType.APPLICATION_XML)
+    Tg nextOutdatedJob();
+	
 	@JeeslRestSecured
 	@POST @Path("/update") @Consumes(MediaType.APPLICATION_XML) @Produces(MediaType.APPLICATION_XML)
-    UpdatePolicy update(Tg tg);
+    UpdatePolicy updateOutdated(Tg tg);
 }

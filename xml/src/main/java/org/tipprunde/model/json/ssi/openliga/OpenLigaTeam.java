@@ -1,32 +1,37 @@
 package org.tipprunde.model.json.ssi.openliga;
 
-import com.fasterxml.jackson.annotation.JsonAutoDetect;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
-@JsonAutoDetect(fieldVisibility=Visibility.ANY, getterVisibility=Visibility.NONE, setterVisibility=Visibility.NONE)
-
+//@JsonIgnoreProperties(ignoreUnknown = true)
 public class OpenLigaTeam
 {
 	public static final long serialVersionUID=1;
 	
-	@JsonProperty("TeamId")
-	private long id;
-	public long getId(){return id;}
-	public void setId(long id){this.id = id;}
+	@JsonProperty("teamId")
+	private Long id;
+	public Long getId(){return id;}
+	public void setId(Long id){this.id = id;}
 	
-	@JsonProperty("TeamName")
+	@JsonProperty("teamName")
 	private String name;
-	
+	public String getName() {return name;}
+	public void setName(String name) {this.name = name;}
 
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	@JsonProperty("shortName")
+	private String shortName;
+	public String getShortName() {return shortName;}
+	public void setShortName(String shortName) {this.shortName = shortName;}
+
+	@JsonProperty("teamIconUrl")
+	private String iconUrl;
+	public String getIconUrl() {return iconUrl;}
+	public void setIconUrl(String iconUrl) {this.iconUrl = iconUrl;}
+	
+	@JsonProperty("teamGroupName")
+	private String groupName;
+	public String getGroupName() {return groupName;}
+	public void setGroupName(String groupName) {this.groupName = groupName;}
+	
 	public String toString()
 	{
 		StringBuffer sb = new StringBuffer();
