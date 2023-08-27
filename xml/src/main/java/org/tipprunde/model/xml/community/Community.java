@@ -10,9 +10,8 @@ import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
+import org.exlp.model.xml.net.Urls;
 import org.jeesl.interfaces.model.with.primitive.number.EjbWithId;
-
-import net.sf.exlp.xml.net.Urls;
 
 
 /**

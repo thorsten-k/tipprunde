@@ -1,11 +1,10 @@
 package org.tipprunde.model.xml.community;
 
+import org.exlp.model.xml.net.Urls;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.community.settings.TestXmlDefinitionEvent;
 import org.tipprunde.test.TrXmlTestBootstrap;
-
-import net.sf.exlp.xml.net.Urls;
 
 public class TestXmlCommunity extends AbstractXmlCommunityTest<Community>
 {
