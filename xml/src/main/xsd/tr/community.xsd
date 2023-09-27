@@ -11,7 +11,7 @@
 	<xsd:import namespace="http://www.tipprunde.org/liga"			schemaLocation="liga.xsd"/>
 	<xsd:import namespace="http://www.jeesl.org/text"				schemaLocation="../../../../../../jeesl/xml/src/main/xsd/jeesl/text.xsd"/>
 	<xsd:import namespace="http://ahtutils.aht-group.com/status"	schemaLocation="../../../../../../jeesl/xml/src/main/xsd/jeesl/status.xsd"/>
-	<xsd:import namespace="http://exlp.sf.net/net"					schemaLocation="../../../../../../exlp/xml/src/main/xsd/util/net.xsd"/>
+	<xsd:import namespace="http://exlp.sf.net/net"					schemaLocation="../../../../../../exlp/xml/src/main/xsd/net.xsd"/>
 	<xsd:element name="community">
         <xsd:complexType>
             <xsd:sequence>
