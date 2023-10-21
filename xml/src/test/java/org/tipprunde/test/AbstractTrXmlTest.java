@@ -25,7 +25,7 @@ public class AbstractTrXmlTest <T extends Object> extends AbstractJeeslXmlTest<T
     public static void initLogger()
 	{
 		LoggerInit loggerInit = new LoggerInit("log4junit.xml");	
-		loggerInit.addAltPath("tipprunde-xml.test/config");
+		loggerInit.path("tipprunde-xml.test/config");
 		loggerInit.init();
     }
 	
