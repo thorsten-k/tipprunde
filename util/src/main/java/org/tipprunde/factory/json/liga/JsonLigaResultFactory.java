@@ -1,7 +1,5 @@
 package org.tipprunde.factory.json.liga;
 
-import java.util.List;
-
 import org.jeesl.factory.json.system.status.JsonTypeFactory;
 import org.jeesl.model.json.system.status.JsonType;
 import org.slf4j.Logger;
