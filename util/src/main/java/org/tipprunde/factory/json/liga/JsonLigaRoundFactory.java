@@ -3,6 +3,7 @@ package org.tipprunde.factory.json.liga;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.exlp.util.io.JsonUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.factory.json.JsonTrContainerFactory;
@@ -13,8 +14,6 @@ import org.tipprunde.model.json.JsonTrContainer;
 import org.tipprunde.model.json.ds.JsonDsOpenLiga;
 import org.tipprunde.model.json.liga.JsonLigaRound;
 import org.tipprunde.model.json.ssi.openliga.OpenLigaGroup;
-
-import net.sf.exlp.util.io.JsonUtil;
 
 public class JsonLigaRoundFactory
 {	
