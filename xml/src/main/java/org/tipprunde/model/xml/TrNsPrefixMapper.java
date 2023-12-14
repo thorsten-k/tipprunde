@@ -1,10 +1,10 @@
 package org.tipprunde.model.xml;
 
-import net.sf.exlp.xml.ns.NsPrefixMapperInterface;
-
 import org.jeesl.model.xml.JeeslNsPrefixMapper;
 
 import com.sun.xml.bind.marshaller.NamespacePrefixMapper;
+
+import net.sf.exlp.xml.ns.NsPrefixMapperInterface;
 
 public class TrNsPrefixMapper extends NamespacePrefixMapper implements NsPrefixMapperInterface
 {
