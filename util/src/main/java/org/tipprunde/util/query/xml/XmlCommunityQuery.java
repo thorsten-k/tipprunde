@@ -4,7 +4,7 @@ import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
 
-import org.jeesl.model.xml.text.Remark;
+import org.jeesl.model.xml.io.cms.text.Remark;
 import org.tipprunde.factory.xml.community.member.XmlParticipantsFactory;
 import org.tipprunde.model.xml.community.Bet;
 import org.tipprunde.model.xml.community.Community;
