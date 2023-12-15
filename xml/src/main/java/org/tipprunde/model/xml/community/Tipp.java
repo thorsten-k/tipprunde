@@ -11,9 +11,8 @@ import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
 
-import net.sf.ahtutils.xml.status.Status;
-
 import org.jeesl.interfaces.model.with.primitive.number.EjbWithId;
+import org.jeesl.model.xml.io.locale.status.Status;
 import org.tipprunde.model.xml.liga.Match;
 import org.tipprunde.model.xml.user.Identity;
 

@@ -1,12 +1,11 @@
 package org.tipprunde.model.xml.liga.match;
 
+import org.jeesl.model.xml.io.locale.status.Type;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.liga.Opponent;
 import org.tipprunde.model.xml.liga.ds.TestXmlDataSource;
 import org.tipprunde.test.TrXmlTestBootstrap;
-
-import net.sf.ahtutils.xml.status.Type;
 
 public class TestXmlOpponent extends AbstractXmlMatchTest<Opponent>
 {

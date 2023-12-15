@@ -2,13 +2,13 @@ package org.tipprunde.model.xml.community;
 
 import java.time.LocalDateTime;
 
+import org.jeesl.model.xml.io.locale.status.Status;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.liga.match.TestXmlMatch;
 import org.tipprunde.model.xml.user.identity.TestXmlIdentity;
 import org.tipprunde.test.TrXmlTestBootstrap;
 
-import net.sf.ahtutils.xml.status.Status;
 import net.sf.exlp.util.DateUtil;
 
 public class TestXmlTipp extends AbstractXmlCommunityTest<Tipp>
