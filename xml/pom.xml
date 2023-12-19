@@ -22,6 +22,7 @@
 		<dependency>
    	   		<groupId>org.jeesl</groupId>
    	   		<artifactId>jeesl-xml</artifactId>
+   	   		<classifier>javax</classifier>
    	   	</dependency>
    	   	<dependency>
 			<groupId>net.sf.exlp</groupId>
