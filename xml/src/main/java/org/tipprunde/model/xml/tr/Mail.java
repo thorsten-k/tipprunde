@@ -43,7 +43,7 @@ public class Mail
 
     private final static long serialVersionUID = 1L;
     @XmlElement(namespace = "http://www.jeesl.org/io/mail", required = true)
-    protected org.jeesl.model.xml.system.io.mail.Mail mail;
+    protected org.jeesl.model.xml.io.mail.Mail mail;
     @XmlElement(required = true)
     protected Tg tg;
     @XmlAttribute(name = "id")
@@ -54,10 +54,10 @@ public class Mail
      * 
      * @return
      *     possible object is
-     *     {@link org.jeesl.model.xml.system.io.mail.Mail }
+     *     {@link org.jeesl.model.xml.io.mail.Mail }
      *     
      */
-    public org.jeesl.model.xml.system.io.mail.Mail getMail() {
+    public org.jeesl.model.xml.io.mail.Mail getMail() {
         return mail;
     }
 
@@ -66,10 +66,10 @@ public class Mail
      * 
      * @param value
      *     allowed object is
-     *     {@link org.jeesl.model.xml.system.io.mail.Mail }
+     *     {@link org.jeesl.model.xml.io.mail.Mail }
      *     
      */
-    public void setMail(org.jeesl.model.xml.system.io.mail.Mail value) {
+    public void setMail(org.jeesl.model.xml.io.mail.Mail value) {
         this.mail = value;
     }
 

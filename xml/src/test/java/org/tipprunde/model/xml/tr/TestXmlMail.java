@@ -15,7 +15,7 @@ public class TestXmlMail extends AbstractXmlTgTest<Mail>
     	if(withChilds)
     	{
     		xml.setTg(TestXmlTr.create(false));
-    		xml.setMail(new org.jeesl.model.xml.system.io.mail.Mail());
+    		xml.setMail(new org.jeesl.model.xml.io.mail.Mail());
     	}
     	return xml;
     }
