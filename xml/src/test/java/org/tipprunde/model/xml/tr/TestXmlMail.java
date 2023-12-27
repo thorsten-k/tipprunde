@@ -10,7 +10,7 @@ public class TestXmlMail extends AbstractXmlTgTest<Mail>
     public Mail build(boolean withChilds)
     {
     	Mail xml = new Mail();
-    	xml.setId(123);
+    	xml.setId(123l);
     	
     	if(withChilds)
     	{

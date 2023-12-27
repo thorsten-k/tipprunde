@@ -15,7 +15,7 @@ public class TestXmlUpdateWorker extends AbstractXmlStatTest<UpdateWorker>
     public UpdateWorker build(boolean withChilds)
     {
     	UpdateWorker xml = new UpdateWorker();
-    	xml.setId(123);
+    	xml.setId(123l);
     	xml.setName("myName");
     	
     	if(withChilds)
