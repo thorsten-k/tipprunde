@@ -66,7 +66,7 @@ public class Openliga
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -78,16 +78,8 @@ public class Openliga
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -98,7 +90,7 @@ public class Openliga
      *     {@link Integer }
      *     
      */
-    public int getRefId() {
+    public Integer getRefId() {
         return refId;
     }
 
@@ -110,16 +102,8 @@ public class Openliga
      *     {@link Integer }
      *     
      */
-    public void setRefId(int value) {
+    public void setRefId(Integer value) {
         this.refId = value;
-    }
-
-    public boolean isSetRefId() {
-        return (this.refId!= null);
-    }
-
-    public void unsetRefId() {
-        this.refId = null;
     }
 
     /**
@@ -146,10 +130,6 @@ public class Openliga
         this.saison = value;
     }
 
-    public boolean isSetSaison() {
-        return (this.saison!= null);
-    }
-
     /**
      * Gets the value of the shortcut property.
      * 
@@ -174,10 +154,6 @@ public class Openliga
         this.shortcut = value;
     }
 
-    public boolean isSetShortcut() {
-        return (this.shortcut!= null);
-    }
-
     /**
      * Gets the value of the type property.
      * 
@@ -200,10 +176,6 @@ public class Openliga
      */
     public void setType(String value) {
         this.type = value;
-    }
-
-    public boolean isSetType() {
-        return (this.type!= null);
     }
 
 }

@@ -15,7 +15,7 @@ public class TestXmlOpenliga extends AbstractXmlLigaDsTest<Openliga>
     public Openliga build(boolean withChilds)
     {
     	Openliga xml = new Openliga();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setRefId(4711);
     	xml.setType("sport");
     	xml.setSaison("mySaison");
