@@ -10,10 +10,67 @@
 		<jxb:serializable uid="1" />
 	</jxb:globalBindings>
 
+    <jxb:bindings schemaLocation="../xsd/tr/community.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.tipprunde.model.xml.community"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+	<jxb:bindings schemaLocation="../xsd/tr/liga.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.tipprunde.model.xml.liga"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
     <jxb:bindings schemaLocation="../xsd/tr/ligads.xsd" node="/xsd:schema">
         <jxb:schemaBindings>
             <jxb:package name="org.tipprunde.model.xml.ds"/>
         </jxb:schemaBindings>
     </jxb:bindings>
+    	<jxb:bindings schemaLocation="../xsd/tr/stats.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.tipprunde.model.xml.statistic"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+	<jxb:bindings schemaLocation="../xsd/tr/user.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.tipprunde.model.xml.user"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
     
+	<jxb:bindings schemaLocation="../../../../../jeesl/xml/src/main/xsd/jeesl/text.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.jeesl.model.xml.io.cms.text"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+	<jxb:bindings schemaLocation="../../../../../jeesl/xml/src/main/xsd/jeesl/symbol.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.jeesl.model.xml.io.graphic"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+	<jxb:bindings schemaLocation="../../../../../jeesl/xml/src/main/xsd/jeesl/status.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.jeesl.model.xml.io.locale.status"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+	<jxb:bindings schemaLocation="../../../../../jeesl/xml/src/main/xsd/aht/navigation.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.jeesl.model.xml.system.navigation"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="../../../../../jeesl/xml/src/main/xsd/jeesl/system/security.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.jeesl.model.xml.system.security"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    
+	<jxb:bindings schemaLocation="../../../../../exlp/xml/src/main/xsd/exlp/io.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.exlp.model.xml.io"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="../../../../../exlp/xml/src/main/xsd/exlp/net.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.exlp.model.xml.net"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
 </jxb:bindings>

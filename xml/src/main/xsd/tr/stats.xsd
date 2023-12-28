@@ -2,9 +2,7 @@
 <xsd:schema targetNamespace="http://www.tipprunde.org/stats"
     xmlns:tgs="http://www.tipprunde.org/stats"
     xmlns:tgl="http://www.tipprunde.org/liga"
-    xmlns:tgc="http://www.tipprunde.org/community"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-    <xsd:import namespace="http://www.tipprunde.org/community"		schemaLocation="community.xsd"/>
     <xsd:import namespace="http://www.tipprunde.org/liga"			schemaLocation="liga.xsd"/>
     <xsd:element name="statRound">
         <xsd:complexType>
