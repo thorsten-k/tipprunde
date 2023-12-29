@@ -1,5 +1,7 @@
 package org.tipprunde.processor.liga;
 
+import java.util.Objects;
+
 import org.jeesl.exception.processing.UtilsProcessingException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,9 +50,9 @@ public class MatchResultProcessor
 	
 	private static void checkXmlStructure(Match match) throws UtilsProcessingException
 	{
-		if(!match.isSetLeft()) {throw new UtilsProcessingException("No left Opponent");}
-		if(!match.getLeft().isSetOpponent()) {throw new UtilsProcessingException("No left Opponent");}
-		if(!match.getLeft().getOpponent().isSetId()) {throw new UtilsProcessingException("No left Opponent");}
+		if(Objects.isNull(match.getLeft())) {throw new UtilsProcessingException("No left Opponent");}
+		if(Objects.isNull(match.getLeft().getOpponent())) {throw new UtilsProcessingException("No left Opponent");}
+		if(Objects.isNull(match.getLeft().getOpponent().getId())) {throw new UtilsProcessingException("No left Opponent");}
 		
 		if(!match.isSetRight()) {throw new UtilsProcessingException("No right Opponent");}
 		if(!match.getRight().isSetOpponent()) {throw new UtilsProcessingException("No right Opponent");}

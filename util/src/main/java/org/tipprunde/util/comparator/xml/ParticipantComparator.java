@@ -1,7 +1,9 @@
 package org.tipprunde.util.comparator.xml;
 
 import java.util.Comparator;
+import java.util.Objects;
 
+import org.apache.commons.lang3.ObjectUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.community.Participant;
@@ -62,14 +64,14 @@ public class ParticipantComparator
 		    try {diff = a.getPointsEvent().getPointsRound().get(0).getScore()-b.getPointsEvent().getPointsRound().get(0).getScore();}
 		    catch (IndexOutOfBoundsException e)
 		    {
-		    	boolean aValid = a.isSetPointsEvent() &&
-		    					 a.getPointsEvent().isSetPointsRound() &&
+		    	boolean aValid = Objects.nonNull(a.getPointsEvent()) &&
+		    					 ObjectUtils.isNotEmpty(a.getPointsEvent().getPointsRound()) &&
 		    					 a.getPointsEvent().getPointsRound().size()>0 &&
-		    					 a.getPointsEvent().getPointsRound().get(0).isSetScore();
-		    	boolean bValid = b.isSetPointsEvent() &&
-								 b.getPointsEvent().isSetPointsRound() &&
+		    					 Objects.nonNull(a.getPointsEvent().getPointsRound().get(0).getScore());
+		    	boolean bValid = Objects.nonNull(b.getPointsEvent()) &&
+		    					 ObjectUtils.isNotEmpty(b.getPointsEvent().getPointsRound()) &&
 								 b.getPointsEvent().getPointsRound().size()>0 &&
-								 b.getPointsEvent().getPointsRound().get(0).isSetScore();
+								 Objects.nonNull(b.getPointsEvent().getPointsRound().get(0).getScore());
 		    	logger.trace("IndexOutOfBoundsException aValid:"+aValid+" bValid="+bValid);
 		    	if(!aValid && bValid){diff=-1;}
 		    	else if(aValid && !bValid){diff=1;}
