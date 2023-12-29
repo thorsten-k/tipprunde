@@ -15,7 +15,7 @@ public class TestXmlUser extends AbstractXmlUserTest<User>
 	@Override public User build(boolean withChilds)
     {
     	User xml = new User();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setFirstName("firstName");
     	xml.setLastName("lastName");
     	if(withChilds)

@@ -47,7 +47,7 @@ public class XmlLigaQuery
 	public static Opponent opponent()
 	{		
 		Opponent xml = new Opponent();
-		xml.setId(0);
+		xml.setId(0l);
 		xml.setName("");
 		xml.setIcon("");
 		xml.setName3("");
@@ -59,7 +59,7 @@ public class XmlLigaQuery
 	public static Event events()
 	{		
 		Event xml = new Event();
-		xml.setId(0);
+		xml.setId(0l);
 		xml.setName("");
 		
 		
@@ -69,12 +69,12 @@ public class XmlLigaQuery
 	public static Event event()
 	{		
 		Round round = new Round();
-		round.setId(0);
+		round.setId(0l);
 		round.setNr(0);
 		round.setName("");
 		
 		Event xml = new Event();
-		xml.setId(0);
+		xml.setId(0l);
 		xml.setName("");
 		xml.setRounds(XmlRoundsFactory.build(round));
 		
@@ -84,13 +84,13 @@ public class XmlLigaQuery
 	private static Round round()
 	{	
 		Match match = new Match();
-		match.setId(0);
+		match.setId(0l);
 		match.setKickOff(DateUtil.toXmlGc(new Date()));
 		match.setLeft(XmlLeftFactory.build(opponent()));
 		match.setRight(XmlRightFactory.build(opponent()));
 
 		Round xml = new Round();
-		xml.setId(0);
+		xml.setId(0l);
 		xml.setNr(0);
 		xml.setName("");
 		
@@ -102,7 +102,7 @@ public class XmlLigaQuery
 	private static Match match()
 	{	
 		Match xml = new Match();
-		xml.setId(0);
+		xml.setId(0l);
 		xml.setKickOff(DateUtil.toXmlGc(new Date()));
 		xml.setLeft(XmlLeftFactory.build(opponent()));
 		xml.setRight(XmlRightFactory.build(opponent()));
@@ -117,7 +117,7 @@ public class XmlLigaQuery
 		result.setScoreRight(0);
 		
 		Match xml = match();
-		xml.setId(0);
+		xml.setId(0l);
 		xml.setKickOff(DateUtil.toXmlGc(new Date()));
 		xml.setLeft(XmlLeftFactory.build(opponent()));
 		xml.setRight(XmlRightFactory.build(opponent()));

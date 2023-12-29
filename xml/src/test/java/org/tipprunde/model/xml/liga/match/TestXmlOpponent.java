@@ -17,7 +17,7 @@ public class TestXmlOpponent extends AbstractXmlMatchTest<Opponent>
     public Opponent build(boolean withChilds)
     {
     	Opponent xml = new Opponent();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setName("myName");
     	xml.setName3("ABC");
     	xml.setNameLegal("myLegalName");

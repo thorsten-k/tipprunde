@@ -18,7 +18,7 @@ public class TestXmlDefinitionEvent extends AbstractXmlDefinitionTest<Definition
     public DefinitionEvent build(boolean withChilds)
     {
     	DefinitionEvent xml = new DefinitionEvent();
-    	xml.setId(1);
+    	xml.setId(1l);
     	
     	if(withChilds)
     	{

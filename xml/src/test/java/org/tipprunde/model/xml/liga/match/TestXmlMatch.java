@@ -17,7 +17,7 @@ public class TestXmlMatch extends AbstractXmlMatchTest<Match>
     public Match build(boolean withChilds)
     {
     	Match xml = new Match();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setFinished(true);
     	xml.setOngoing(false);
     	xml.setKickOff(AbstractXmlMatchTest.getDefaultXmlDate());

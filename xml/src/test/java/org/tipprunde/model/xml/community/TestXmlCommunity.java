@@ -16,7 +16,7 @@ public class TestXmlCommunity extends AbstractXmlCommunityTest<Community>
     public Community build(boolean withChilds)
     {
     	Community xml = new Community();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setName("Test Community");
     	
     	if(withChilds)

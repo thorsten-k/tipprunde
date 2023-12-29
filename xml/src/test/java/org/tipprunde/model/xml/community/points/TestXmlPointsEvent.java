@@ -16,7 +16,7 @@ public class TestXmlPointsEvent extends AbstractXmlPointsTest<PointsEvent>
     public PointsEvent build(boolean withChilds)
     {
     	PointsEvent xml = new PointsEvent();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setScore(5);
     	xml.setRank(2);
     	

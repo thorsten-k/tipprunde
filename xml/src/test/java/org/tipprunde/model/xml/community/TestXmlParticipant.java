@@ -16,7 +16,7 @@ public class TestXmlParticipant extends AbstractXmlCommunityTest<Participant>
     public Participant build(boolean withChilds)
     {
     	Participant xml = new Participant();
-    	xml.setId(1);
+    	xml.setId(1l);
     	
     	if(withChilds)
     	{

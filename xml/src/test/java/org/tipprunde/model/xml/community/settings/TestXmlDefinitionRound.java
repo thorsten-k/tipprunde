@@ -16,7 +16,7 @@ public class TestXmlDefinitionRound extends AbstractXmlDefinitionTest<Definition
     public DefinitionRound build(boolean withChilds)
     {
     	DefinitionRound xml = new DefinitionRound();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setDeadline(AbstractXmlDefinitionTest.getDefaultXmlDate());
     	
     	if(withChilds)

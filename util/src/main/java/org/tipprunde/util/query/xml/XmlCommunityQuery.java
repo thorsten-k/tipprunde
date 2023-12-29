@@ -52,12 +52,12 @@ public class XmlCommunityQuery
 	private static DefinitionEvent event()
 	{		
 		Round qR = new Round();
-		qR.setId(0);
+		qR.setId(0l);
 		qR.setName("");
 		qR.setNr(1);
 		
 		DefinitionRound qDr = new DefinitionRound();
-		qDr.setId(0);
+		qDr.setId(0l);
 		qDr.setRound(qR);
 		qDr.setDeadline(DateUtil.toXmlGc(new Date()));
 		
@@ -68,7 +68,7 @@ public class XmlCommunityQuery
 		qC.setSubscription(qS);
 		
 		DefinitionEvent qDe = new DefinitionEvent();
-		qDe.setId(0);
+		qDe.setId(0l);
 		qDe.getDefinitionRound().add(qDr);
 		qDe.setCommunity(qC);
 		return qDe;
@@ -85,7 +85,7 @@ public class XmlCommunityQuery
 		qId.setUser(qUser);
 		
 		Participant participant = new Participant();
-		participant.setId(0);
+		participant.setId(0l);
 		participant.setIdentity(qId);
 		participant.setBet(bet());
     	
@@ -94,7 +94,7 @@ public class XmlCommunityQuery
     	
     	Community qCommunity = new Community();
     	qCommunity.setName("test");
-    	qCommunity.setId(0);
+    	qCommunity.setId(0l);
     	qCommunity.setParticipants(participants);
     	
     	return qCommunity;
@@ -103,14 +103,14 @@ public class XmlCommunityQuery
 	private static Bet bet()
 	{
 		Bet xml = new Bet();
-		xml.setId(0);
+		xml.setId(0l);
 		xml.setRecord(DateUtil.toXmlGc(new Date()));
-		xml.setCarryover(0);
-		xml.setFee(0);
-    	xml.setPaid(0);
-    	xml.setWin(0);
-    	xml.setOut(0);
-    	xml.setBalance(0);
+		xml.setCarryover(0d);
+		xml.setFee(0d);
+    	xml.setPaid(0d);
+    	xml.setWin(0d);
+    	xml.setOut(0d);
+    	xml.setBalance(0d);
     	xml.setRemark(new Remark());
 		return xml;
 	}
@@ -118,7 +118,7 @@ public class XmlCommunityQuery
 	private static Tipp tipp()
 	{	
 		Match match = new Match();
-		match.setId(0);
+		match.setId(0l);
 		
 		Tipp xml = new Tipp();
 		xml.setLeft(0);

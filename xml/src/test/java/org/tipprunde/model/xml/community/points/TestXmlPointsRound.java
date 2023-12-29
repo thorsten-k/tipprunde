@@ -16,7 +16,7 @@ public class TestXmlPointsRound extends AbstractXmlPointsTest<PointsRound>
     public PointsRound build(boolean withChilds)
     {
     	PointsRound xml = new PointsRound();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setScore(5);
     	xml.setRank(2);
     	

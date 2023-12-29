@@ -23,7 +23,7 @@ public class TestXmlTipp extends AbstractXmlCommunityTest<Tipp>
     	LocalDateTime d = LocalDateTime.of(2012,2,23,12,42,12);
     		
     	Tipp xml = new Tipp();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setLeft(2);
     	xml.setLeft(1);
     	xml.setRecord(DateUtil.toXmlGc(d));

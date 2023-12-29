@@ -14,13 +14,13 @@ public class TestXmlBet extends AbstractXmlCommunityTest<Bet>
     public Bet build(boolean withChilds)
     {
     	Bet xml = new Bet();
-    	xml.setId(1);
-    	xml.setCarryover(15);
-    	xml.setFee(50);
-    	xml.setPaid(25);
-    	xml.setWin(10);
-    	xml.setOut(5);
-    	xml.setBalance(15);
+    	xml.setId(1l);
+    	xml.setCarryover(15d);
+    	xml.setFee(50d);
+    	xml.setPaid(25d);
+    	xml.setWin(10d);
+    	xml.setOut(5d);
+    	xml.setBalance(15d);
 
     	xml.setRecord(AbstractXmlCommunityTest.getDefaultXmlDate());
     	

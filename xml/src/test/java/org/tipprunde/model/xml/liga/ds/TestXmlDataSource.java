@@ -15,7 +15,7 @@ public class TestXmlDataSource extends AbstractXmlLigaDsTest<DataSource>
     public DataSource build(boolean withChildren)
     {
     	DataSource xml = new DataSource();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setLastChange(AbstractXmlLigaDsTest.getDefaultXmlDate());
     	
     	if(withChildren)

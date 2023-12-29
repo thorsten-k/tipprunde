@@ -15,7 +15,7 @@ public class TestXmlEvent extends AbstractXmlLigaTest<Event>
     public Event build(boolean withChilds)
     {
     	Event xml = new Event();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setName("testName");
     	
     	if(withChilds)

@@ -16,7 +16,7 @@ public class TestXmlPointsMatch extends AbstractXmlPointsTest<PointsMatch>
     public PointsMatch build(boolean withChilds)
     {
     	PointsMatch xml = new PointsMatch();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setScore(5);
     	
     	if(withChilds)

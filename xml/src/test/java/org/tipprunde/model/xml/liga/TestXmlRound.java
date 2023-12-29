@@ -16,7 +16,7 @@ public class TestXmlRound extends AbstractXmlLigaTest<Round>
     public Round build(boolean withChilds)
     {
     	Round xml = new Round();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setName("myName");
     	xml.setNr(7);
     	

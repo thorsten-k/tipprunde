@@ -44,13 +44,13 @@ public class XmlTippQuery
 		qResult.setScoreRight(0);
 		
 		Opponent opponent = new Opponent();
-		opponent.setId(0);
+		opponent.setId(0l);
 		opponent.setName("");
 		opponent.setIcon("");
 		
 		Match qM = new Match();
 		qM.setKickOff(DateUtil.toXmlGc(new Date()));
-		qM.setId(0);
+		qM.setId(0l);
 		qM.setLeft(new Left());qM.getLeft().setOpponent(opponent);
 		qM.setRight(new Right());qM.getRight().setOpponent(opponent);
 		qM.setResult(qResult);
@@ -58,7 +58,7 @@ public class XmlTippQuery
 		Tipp qT = new Tipp();
 		qT.setLeft(0);
 		qT.setRight(0);
-		qT.setId(0);
+		qT.setId(0l);
 		qT.setMatch(qM);
 		
 		return qT;

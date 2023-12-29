@@ -15,7 +15,7 @@ public class TestXmlResult extends AbstractXmlMatchTest<Result>
     public Result build(boolean withChilds)
     {
     	Result xml = new Result();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setScoreLeft(1);
     	xml.setScoreRight(1);
     	

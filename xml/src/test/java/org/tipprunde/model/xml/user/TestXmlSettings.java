@@ -14,7 +14,7 @@ public class TestXmlSettings extends AbstractXmlUserTest<Settings>
     @Override public Settings build(boolean withChilds)
     {
     	Settings xml = new Settings();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setLang("de");
     	
        	if(withChilds)

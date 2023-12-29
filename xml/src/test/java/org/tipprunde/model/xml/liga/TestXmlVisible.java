@@ -14,7 +14,7 @@ public class TestXmlVisible extends AbstractXmlLigaTest<Visible>
     public Visible build(boolean withChilds)
     {
     	Visible v = new Visible();
-    	v.setId(1);
+    	v.setId(1l);
     	v.setName("Test Community");
     	v.setCode("visible");
     	return v;

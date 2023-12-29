@@ -15,7 +15,7 @@ public class TestXmlIdentity extends AbstractXmlIdentityTest<Identity>
     @Override public Identity build(boolean withChilds)
     {
     	Identity xml = new Identity();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setPreferred(true);
     	xml.setEmail("myEmail");
     	xml.setEmailVerified(true);

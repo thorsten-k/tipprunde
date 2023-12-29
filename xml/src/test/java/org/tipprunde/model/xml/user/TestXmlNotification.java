@@ -14,7 +14,7 @@ public class TestXmlNotification extends AbstractXmlUserTest<Notification>
 	@Override public Notification build(boolean withChilds)
     {
     	Notification xml = new Notification();
-    	xml.setId(1);
+    	xml.setId(1l);
     	
     	return xml;
     }

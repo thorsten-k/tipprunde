@@ -15,7 +15,7 @@ public class TestXmlDiscipline extends AbstractXmlLigaTest<Discipline>
     public Discipline build(boolean withChilds)
     {
     	Discipline xml = new Discipline();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setName("Test Community");
     	
     	if(withChilds)

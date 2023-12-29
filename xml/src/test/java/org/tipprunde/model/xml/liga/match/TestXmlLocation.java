@@ -16,7 +16,7 @@ public class TestXmlLocation extends AbstractXmlMatchTest<Location>
     public Location build(boolean withChilds)
     {
     	Location xml = new Location();
-    	xml.setId(1);
+    	xml.setId(1l);
     	xml.setCity("myCity");
     	xml.setStadium("myStadium");
     	
