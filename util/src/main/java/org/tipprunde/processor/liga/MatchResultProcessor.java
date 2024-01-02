@@ -54,13 +54,13 @@ public class MatchResultProcessor
 		if(Objects.isNull(match.getLeft().getOpponent())) {throw new UtilsProcessingException("No left Opponent");}
 		if(Objects.isNull(match.getLeft().getOpponent().getId())) {throw new UtilsProcessingException("No left Opponent");}
 		
-		if(!match.isSetRight()) {throw new UtilsProcessingException("No right Opponent");}
-		if(!match.getRight().isSetOpponent()) {throw new UtilsProcessingException("No right Opponent");}
-		if(!match.getRight().getOpponent().isSetId()) {throw new UtilsProcessingException("No right Opponent");}
+		if(Objects.isNull(match.getRight())) {throw new UtilsProcessingException("No right Opponent");}
+		if(Objects.isNull(match.getRight().getOpponent())) {throw new UtilsProcessingException("No right Opponent");}
+		if(Objects.isNull(match.getRight().getOpponent().getId())) {throw new UtilsProcessingException("No right Opponent");}
 		
-		if(!match.isSetResult()) {throw new UtilsProcessingException("No Result");}
-		if(!match.getResult().isSetScoreLeft()) {throw new UtilsProcessingException("No Result.left");}
-		if(!match.getResult().isSetScoreRight()) {throw new UtilsProcessingException("No Result.right");}
+		if(Objects.isNull(match.getResult())) {throw new UtilsProcessingException("No Result");}
+		if(Objects.isNull(match.getResult().getScoreLeft())) {throw new UtilsProcessingException("No Result.left");}
+		if(Objects.isNull(match.getResult().getScoreRight())) {throw new UtilsProcessingException("No Result.right");}
 	}
 	
 	private static boolean leftWins(Match match)
