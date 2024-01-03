@@ -139,7 +139,6 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
 				<inherited>true</inherited>
 				<configuration>
 					<source>1.8</source>
@@ -156,7 +155,6 @@
       		<plugin>
         		<groupId>org.apache.maven.plugins</groupId>
         		<artifactId>maven-enforcer-plugin</artifactId>
-        		<version>1.0.1</version>
         		<executions>
           			<execution>
             			<id>enforce-banned-dependencies</id>
