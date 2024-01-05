@@ -192,7 +192,7 @@
 		                    			<xsdOption>
 											<bindingFile>${basedir}/src/main/xsd/javax.xjb</bindingFile>
 											<extensionArgs><arg>-encoding</arg><arg>UTF-8</arg><arg>-no-header</arg></extensionArgs>
-		                        			<xsd>${basedir}/src/main/xsd/xsd2.xsd</xsd>
+		                        			<xsd>${basedir}/src/main/xsd/xsd.xsd</xsd>
 		                    			</xsdOption>
 									</xsdOptions>
 		            			</configuration>
@@ -209,8 +209,8 @@
 								<goals><goal>clean</goal></goals>
 								<configuration>
 									<filesets>
-										<fileset><directory>src/main/java/org/exlp/model/xml</directory><followSymlinks>false</followSymlinks></fileset>
-										<fileset><directory>src/main/java/org/jeesl/model/xml</directory><followSymlinks>false</followSymlinks></fileset>
+										<fileset><directory>src/main/java/org/exlp</directory><followSymlinks>false</followSymlinks></fileset>
+										<fileset><directory>src/main/java/org/jeesl</directory><followSymlinks>false</followSymlinks></fileset>
 									</filesets>
 								</configuration>
 							</execution>
