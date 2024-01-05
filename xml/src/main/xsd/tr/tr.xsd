@@ -2,29 +2,23 @@
 <xsd:schema targetNamespace="http://www.tipprunde.org"
     xmlns:tg="http://www.tipprunde.org"
     xmlns:tgc="http://www.tipprunde.org/community"
-    xmlns:tgl="http://www.tipprunde.org/liga"
-    xmlns:tglds="http://www.tipprunde.org/liga/datasource"
-    xmlns:tgs="http://www.tipprunde.org/stats"
-    xmlns:u="http://www.tipprunde.org/user" 
-    xmlns:m="http://www.jeesl.org/io/mail"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
-    xmlns:jaxb="http://java.sun.com/xml/ns/jaxb"
-    xmlns:xjc="http://java.sun.com/xml/ns/jaxb/xjc" jaxb:extensionBindingPrefixes="xjc"
-    jaxb:version="2.0">
-    <xsd:import namespace="http://www.tipprunde.org/community"				schemaLocation="tr/community.xsd"/>
-    <xsd:import namespace="http://www.tipprunde.org/liga"					schemaLocation="tr/liga.xsd"/>
-    <xsd:import namespace="http://www.tipprunde.org/liga/datasource"		schemaLocation="tr/ligads.xsd"/>
-    <xsd:import namespace="http://www.tipprunde.org/user"					schemaLocation="tr/user.xsd"/>
-    <xsd:import namespace="http://www.tipprunde.org/stats"					schemaLocation="tr/stats.xsd"/>
-    <xsd:import namespace="http://www.jeesl.org/io/mail"					schemaLocation="../../../../../jeesl/xml/src/main/xsd/jeesl/io/mail.xsd"/>
-    <xsd:annotation>
-        <xsd:appinfo>
-            <jaxb:globalBindings generateIsSetMethod="true">
-                <xjc:serializable uid="1"/>
-            </jaxb:globalBindings>
-        </xsd:appinfo>
-    </xsd:annotation>
-    <xsd:element name="query">
+  	xmlns:tgl="http://www.tipprunde.org/liga"
+  	xmlns:tglds="http://www.tipprunde.org/liga/datasource"
+  	 xmlns:tgs="http://www.tipprunde.org/stats"
+  	xmlns:u="http://www.tipprunde.org/user" 
+  	 xmlns:m="http://www.jeesl.org/io/mail"
+  	
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<xsd:import namespace="http://www.tipprunde.org/community"				schemaLocation="community.xsd"/>
+    <xsd:import namespace="http://www.tipprunde.org/liga"				schemaLocation="liga.xsd"/>
+    <xsd:import namespace="http://www.tipprunde.org/user"					schemaLocation="user.xsd"/>
+    <xsd:import namespace="http://www.tipprunde.org/liga/datasource" 	schemaLocation="ligads.xsd"/>
+	<xsd:import namespace="http://www.tipprunde.org/stats"					schemaLocation="stats.xsd"/>
+    
+    <xsd:import namespace="http://www.jeesl.org/io/mail"					schemaLocation="../../../../../../jeesl/xml/src/main/xsd/jeesl/io/mail.xsd"/>
+    <xsd:import namespace="http://ahtutils.aht-group.com/status"		schemaLocation="../../../../../../jeesl/xml/src/main/xsd/jeesl/status.xsd"/>
+   
+   <xsd:element name="query">
         <xsd:complexType>
             <xsd:sequence>
             	<xsd:element ref="tgc:community" maxOccurs="1"/>

@@ -211,7 +211,6 @@
 									<filesets>
 										<fileset><directory>src/main/java/org/exlp/model/xml</directory><followSymlinks>false</followSymlinks></fileset>
 										<fileset><directory>src/main/java/org/jeesl/model/xml</directory><followSymlinks>false</followSymlinks></fileset>
-										<fileset><directory>src/main/java/org/geojsf/model/xml</directory><followSymlinks>false</followSymlinks></fileset>
 									</filesets>
 								</configuration>
 							</execution>

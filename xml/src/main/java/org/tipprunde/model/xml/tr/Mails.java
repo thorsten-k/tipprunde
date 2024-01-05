@@ -72,12 +72,4 @@ public class Mails
         return this.mail;
     }
 
-    public boolean isSetMail() {
-        return ((this.mail!= null)&&(!this.mail.isEmpty()));
-    }
-
-    public void unsetMail() {
-        this.mail = null;
-    }
-
 }

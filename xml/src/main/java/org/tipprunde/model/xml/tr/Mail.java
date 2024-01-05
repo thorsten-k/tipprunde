@@ -73,10 +73,6 @@ public class Mail
         this.mail = value;
     }
 
-    public boolean isSetMail() {
-        return (this.mail!= null);
-    }
-
     /**
      * Gets the value of the tg property.
      * 
@@ -101,10 +97,6 @@ public class Mail
         this.tg = value;
     }
 
-    public boolean isSetTg() {
-        return (this.tg!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -113,7 +105,7 @@ public class Mail
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -125,16 +117,8 @@ public class Mail
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
 }

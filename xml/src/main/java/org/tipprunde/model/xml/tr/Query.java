@@ -165,10 +165,6 @@ public class Query
         this.community = value;
     }
 
-    public boolean isSetCommunity() {
-        return (this.community!= null);
-    }
-
     /**
      * Gets the value of the pointsEvent property.
      * 
@@ -191,10 +187,6 @@ public class Query
      */
     public void setPointsEvent(PointsEvent value) {
         this.pointsEvent = value;
-    }
-
-    public boolean isSetPointsEvent() {
-        return (this.pointsEvent!= null);
     }
 
     /**
@@ -221,10 +213,6 @@ public class Query
         this.pointsRound = value;
     }
 
-    public boolean isSetPointsRound() {
-        return (this.pointsRound!= null);
-    }
-
     /**
      * Gets the value of the pointsMatch property.
      * 
@@ -247,10 +235,6 @@ public class Query
      */
     public void setPointsMatch(PointsMatch value) {
         this.pointsMatch = value;
-    }
-
-    public boolean isSetPointsMatch() {
-        return (this.pointsMatch!= null);
     }
 
     /**
@@ -277,10 +261,6 @@ public class Query
         this.definitionEvent = value;
     }
 
-    public boolean isSetDefinitionEvent() {
-        return (this.definitionEvent!= null);
-    }
-
     /**
      * Gets the value of the definitionRound property.
      * 
@@ -303,10 +283,6 @@ public class Query
      */
     public void setDefinitionRound(DefinitionRound value) {
         this.definitionRound = value;
-    }
-
-    public boolean isSetDefinitionRound() {
-        return (this.definitionRound!= null);
     }
 
     /**
@@ -333,10 +309,6 @@ public class Query
         this.participant = value;
     }
 
-    public boolean isSetParticipant() {
-        return (this.participant!= null);
-    }
-
     /**
      * Gets the value of the bet property.
      * 
@@ -359,10 +331,6 @@ public class Query
      */
     public void setBet(Bet value) {
         this.bet = value;
-    }
-
-    public boolean isSetBet() {
-        return (this.bet!= null);
     }
 
     /**
@@ -389,10 +357,6 @@ public class Query
         this.tipp = value;
     }
 
-    public boolean isSetTipp() {
-        return (this.tipp!= null);
-    }
-
     /**
      * Gets the value of the discipline property.
      * 
@@ -415,10 +379,6 @@ public class Query
      */
     public void setDiscipline(Discipline value) {
         this.discipline = value;
-    }
-
-    public boolean isSetDiscipline() {
-        return (this.discipline!= null);
     }
 
     /**
@@ -445,10 +405,6 @@ public class Query
         this.event = value;
     }
 
-    public boolean isSetEvent() {
-        return (this.event!= null);
-    }
-
     /**
      * Gets the value of the round property.
      * 
@@ -471,10 +427,6 @@ public class Query
      */
     public void setRound(Round value) {
         this.round = value;
-    }
-
-    public boolean isSetRound() {
-        return (this.round!= null);
     }
 
     /**
@@ -501,10 +453,6 @@ public class Query
         this.match = value;
     }
 
-    public boolean isSetMatch() {
-        return (this.match!= null);
-    }
-
     /**
      * Gets the value of the result property.
      * 
@@ -527,10 +475,6 @@ public class Query
      */
     public void setResult(Result value) {
         this.result = value;
-    }
-
-    public boolean isSetResult() {
-        return (this.result!= null);
     }
 
     /**
@@ -557,10 +501,6 @@ public class Query
         this.visible = value;
     }
 
-    public boolean isSetVisible() {
-        return (this.visible!= null);
-    }
-
     /**
      * Gets the value of the opponent property.
      * 
@@ -583,10 +523,6 @@ public class Query
      */
     public void setOpponent(Opponent value) {
         this.opponent = value;
-    }
-
-    public boolean isSetOpponent() {
-        return (this.opponent!= null);
     }
 
     /**
@@ -613,10 +549,6 @@ public class Query
         this.dataSource = value;
     }
 
-    public boolean isSetDataSource() {
-        return (this.dataSource!= null);
-    }
-
     /**
      * Gets the value of the openliga property.
      * 
@@ -639,10 +571,6 @@ public class Query
      */
     public void setOpenliga(Openliga value) {
         this.openliga = value;
-    }
-
-    public boolean isSetOpenliga() {
-        return (this.openliga!= null);
     }
 
     /**
@@ -669,10 +597,6 @@ public class Query
         this.user = value;
     }
 
-    public boolean isSetUser() {
-        return (this.user!= null);
-    }
-
     /**
      * Gets the value of the identity property.
      * 
@@ -697,10 +621,6 @@ public class Query
         this.identity = value;
     }
 
-    public boolean isSetIdentity() {
-        return (this.identity!= null);
-    }
-
     /**
      * Gets the value of the lang property.
      * 
@@ -723,10 +643,6 @@ public class Query
      */
     public void setLang(String value) {
         this.lang = value;
-    }
-
-    public boolean isSetLang() {
-        return (this.lang!= null);
     }
 
 }

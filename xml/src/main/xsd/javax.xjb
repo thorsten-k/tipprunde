@@ -10,6 +10,11 @@
 		<jxb:serializable uid="1" />
 	</jxb:globalBindings>
 
+	<jxb:bindings schemaLocation="tr/tr.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.tipprunde.model.xml.tr"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
     <jxb:bindings schemaLocation="../xsd/tr/community.xsd" node="/xsd:schema">
         <jxb:schemaBindings>
             <jxb:package name="org.tipprunde.model.xml.community"/>
@@ -44,6 +49,11 @@
 	<jxb:bindings schemaLocation="../../../../../jeesl/xml/src/main/xsd/jeesl/symbol.xsd" node="/xsd:schema">
         <jxb:schemaBindings>
             <jxb:package name="org.jeesl.model.xml.io.graphic"/>
+        </jxb:schemaBindings>
+    </jxb:bindings>
+    <jxb:bindings schemaLocation="../../../../../jeesl/xml/src/main/xsd/jeesl/io/mail.xsd" node="/xsd:schema">
+        <jxb:schemaBindings>
+            <jxb:package name="org.jeesl.model.xml.io.mail"/>
         </jxb:schemaBindings>
     </jxb:bindings>
 	<jxb:bindings schemaLocation="../../../../../jeesl/xml/src/main/xsd/jeesl/status.xsd" node="/xsd:schema">

@@ -65,8 +65,4 @@ public class Report
         this.tg = value;
     }
 
-    public boolean isSetTg() {
-        return (this.tg!= null);
-    }
-
 }

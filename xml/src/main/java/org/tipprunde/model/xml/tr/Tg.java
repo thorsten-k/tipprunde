@@ -9,7 +9,6 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-
 import org.jeesl.model.xml.io.mail.Link;
 import org.tipprunde.model.xml.community.Community;
 import org.tipprunde.model.xml.community.DefinitionRound;
@@ -124,14 +123,6 @@ public class Tg
         return this.community;
     }
 
-    public boolean isSetCommunity() {
-        return ((this.community!= null)&&(!this.community.isEmpty()));
-    }
-
-    public void unsetCommunity() {
-        this.community = null;
-    }
-
     /**
      * Gets the value of the tipps property.
      * 
@@ -159,14 +150,6 @@ public class Tg
             tipps = new ArrayList<Tipps>();
         }
         return this.tipps;
-    }
-
-    public boolean isSetTipps() {
-        return ((this.tipps!= null)&&(!this.tipps.isEmpty()));
-    }
-
-    public void unsetTipps() {
-        this.tipps = null;
     }
 
     /**
@@ -198,14 +181,6 @@ public class Tg
         return this.definitionRound;
     }
 
-    public boolean isSetDefinitionRound() {
-        return ((this.definitionRound!= null)&&(!this.definitionRound.isEmpty()));
-    }
-
-    public void unsetDefinitionRound() {
-        this.definitionRound = null;
-    }
-
     /**
      * Gets the value of the discipline property.
      * 
@@ -233,14 +208,6 @@ public class Tg
             discipline = new ArrayList<Discipline>();
         }
         return this.discipline;
-    }
-
-    public boolean isSetDiscipline() {
-        return ((this.discipline!= null)&&(!this.discipline.isEmpty()));
-    }
-
-    public void unsetDiscipline() {
-        this.discipline = null;
     }
 
     /**
@@ -272,14 +239,6 @@ public class Tg
         return this.event;
     }
 
-    public boolean isSetEvent() {
-        return ((this.event!= null)&&(!this.event.isEmpty()));
-    }
-
-    public void unsetEvent() {
-        this.event = null;
-    }
-
     /**
      * Gets the value of the round property.
      * 
@@ -307,14 +266,6 @@ public class Tg
             round = new ArrayList<Round>();
         }
         return this.round;
-    }
-
-    public boolean isSetRound() {
-        return ((this.round!= null)&&(!this.round.isEmpty()));
-    }
-
-    public void unsetRound() {
-        this.round = null;
     }
 
     /**
@@ -346,14 +297,6 @@ public class Tg
         return this.match;
     }
 
-    public boolean isSetMatch() {
-        return ((this.match!= null)&&(!this.match.isEmpty()));
-    }
-
-    public void unsetMatch() {
-        this.match = null;
-    }
-
     /**
      * Gets the value of the participant property.
      * 
@@ -381,14 +324,6 @@ public class Tg
             participant = new ArrayList<Participant>();
         }
         return this.participant;
-    }
-
-    public boolean isSetParticipant() {
-        return ((this.participant!= null)&&(!this.participant.isEmpty()));
-    }
-
-    public void unsetParticipant() {
-        this.participant = null;
     }
 
     /**
@@ -420,14 +355,6 @@ public class Tg
         return this.identity;
     }
 
-    public boolean isSetIdentity() {
-        return ((this.identity!= null)&&(!this.identity.isEmpty()));
-    }
-
-    public void unsetIdentity() {
-        this.identity = null;
-    }
-
     /**
      * Gets the value of the updateWorker property.
      * 
@@ -457,14 +384,6 @@ public class Tg
         return this.updateWorker;
     }
 
-    public boolean isSetUpdateWorker() {
-        return ((this.updateWorker!= null)&&(!this.updateWorker.isEmpty()));
-    }
-
-    public void unsetUpdateWorker() {
-        this.updateWorker = null;
-    }
-
     /**
      * Gets the value of the link property.
      * 
@@ -487,10 +406,6 @@ public class Tg
      */
     public void setLink(Link value) {
         this.link = value;
-    }
-
-    public boolean isSetLink() {
-        return (this.link!= null);
     }
 
 }

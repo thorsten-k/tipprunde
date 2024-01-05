@@ -30,6 +30,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link UpdateWorker }
+     * 
+     */
+    public UpdateWorker createUpdateWorker() {
+        return new UpdateWorker();
+    }
+
+    /**
      * Create an instance of {@link StatRound }
      * 
      */
@@ -51,14 +59,6 @@ public class ObjectFactory {
      */
     public StatTipp createStatTipp() {
         return new StatTipp();
-    }
-
-    /**
-     * Create an instance of {@link UpdateWorker }
-     * 
-     */
-    public UpdateWorker createUpdateWorker() {
-        return new UpdateWorker();
     }
 
 }
