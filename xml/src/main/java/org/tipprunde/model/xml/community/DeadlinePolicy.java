@@ -98,10 +98,6 @@ public class DeadlinePolicy
         this.type = value;
     }
 
-    public boolean isSetType() {
-        return (this.type!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -110,7 +106,7 @@ public class DeadlinePolicy
      *     {@link Integer }
      *     
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -122,16 +118,8 @@ public class DeadlinePolicy
      *     {@link Integer }
      *     
      */
-    public void setId(int value) {
+    public void setId(Integer value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -142,7 +130,7 @@ public class DeadlinePolicy
      *     {@link Integer }
      *     
      */
-    public int getMinutes() {
+    public Integer getMinutes() {
         return minutes;
     }
 
@@ -154,16 +142,8 @@ public class DeadlinePolicy
      *     {@link Integer }
      *     
      */
-    public void setMinutes(int value) {
+    public void setMinutes(Integer value) {
         this.minutes = value;
-    }
-
-    public boolean isSetMinutes() {
-        return (this.minutes!= null);
-    }
-
-    public void unsetMinutes() {
-        this.minutes = null;
     }
 
     /**
@@ -174,7 +154,7 @@ public class DeadlinePolicy
      *     {@link Integer }
      *     
      */
-    public int getHours() {
+    public Integer getHours() {
         return hours;
     }
 
@@ -186,16 +166,8 @@ public class DeadlinePolicy
      *     {@link Integer }
      *     
      */
-    public void setHours(int value) {
+    public void setHours(Integer value) {
         this.hours = value;
-    }
-
-    public boolean isSetHours() {
-        return (this.hours!= null);
-    }
-
-    public void unsetHours() {
-        this.hours = null;
     }
 
     /**
@@ -206,7 +178,7 @@ public class DeadlinePolicy
      *     {@link Integer }
      *     
      */
-    public int getDays() {
+    public Integer getDays() {
         return days;
     }
 
@@ -218,16 +190,8 @@ public class DeadlinePolicy
      *     {@link Integer }
      *     
      */
-    public void setDays(int value) {
+    public void setDays(Integer value) {
         this.days = value;
-    }
-
-    public boolean isSetDays() {
-        return (this.days!= null);
-    }
-
-    public void unsetDays() {
-        this.days = null;
     }
 
     /**
@@ -238,7 +202,7 @@ public class DeadlinePolicy
      *     {@link Integer }
      *     
      */
-    public int getWeeks() {
+    public Integer getWeeks() {
         return weeks;
     }
 
@@ -250,16 +214,8 @@ public class DeadlinePolicy
      *     {@link Integer }
      *     
      */
-    public void setWeeks(int value) {
+    public void setWeeks(Integer value) {
         this.weeks = value;
-    }
-
-    public boolean isSetWeeks() {
-        return (this.weeks!= null);
-    }
-
-    public void unsetWeeks() {
-        this.weeks = null;
     }
 
 
@@ -325,10 +281,6 @@ public class DeadlinePolicy
             this.name = value;
         }
 
-        public boolean isSetName() {
-            return (this.name!= null);
-        }
-
         /**
          * Gets the value of the code property.
          * 
@@ -351,10 +303,6 @@ public class DeadlinePolicy
          */
         public void setCode(String value) {
             this.code = value;
-        }
-
-        public boolean isSetCode() {
-            return (this.code!= null);
         }
 
     }

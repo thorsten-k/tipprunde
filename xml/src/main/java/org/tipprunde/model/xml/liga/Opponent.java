@@ -8,7 +8,6 @@ import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-
 import org.jeesl.model.xml.io.locale.status.Type;
 
 
@@ -87,10 +86,6 @@ public class Opponent
         this.dataSource = value;
     }
 
-    public boolean isSetDataSource() {
-        return (this.dataSource!= null);
-    }
-
     /**
      * Gets the value of the type property.
      * 
@@ -115,10 +110,6 @@ public class Opponent
         this.type = value;
     }
 
-    public boolean isSetType() {
-        return (this.type!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -127,7 +118,7 @@ public class Opponent
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -139,16 +130,8 @@ public class Opponent
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -175,10 +158,6 @@ public class Opponent
         this.name = value;
     }
 
-    public boolean isSetName() {
-        return (this.name!= null);
-    }
-
     /**
      * Gets the value of the nameLegal property.
      * 
@@ -201,10 +180,6 @@ public class Opponent
      */
     public void setNameLegal(String value) {
         this.nameLegal = value;
-    }
-
-    public boolean isSetNameLegal() {
-        return (this.nameLegal!= null);
     }
 
     /**
@@ -231,10 +206,6 @@ public class Opponent
         this.name3 = value;
     }
 
-    public boolean isSetName3() {
-        return (this.name3 != null);
-    }
-
     /**
      * Gets the value of the icon property.
      * 
@@ -257,10 +228,6 @@ public class Opponent
      */
     public void setIcon(String value) {
         this.icon = value;
-    }
-
-    public boolean isSetIcon() {
-        return (this.icon!= null);
     }
 
 }

@@ -92,10 +92,6 @@ public class Community
         this.participants = value;
     }
 
-    public boolean isSetParticipants() {
-        return (this.participants!= null);
-    }
-
     /**
      * Gets the value of the subscription property.
      * 
@@ -118,10 +114,6 @@ public class Community
      */
     public void setSubscription(Subscription value) {
         this.subscription = value;
-    }
-
-    public boolean isSetSubscription() {
-        return (this.subscription!= null);
     }
 
     /**
@@ -148,10 +140,6 @@ public class Community
         this.rules = value;
     }
 
-    public boolean isSetRules() {
-        return (this.rules!= null);
-    }
-
     /**
      * Gets the value of the definitionEvent property.
      * 
@@ -174,10 +162,6 @@ public class Community
      */
     public void setDefinitionEvent(DefinitionEvent value) {
         this.definitionEvent = value;
-    }
-
-    public boolean isSetDefinitionEvent() {
-        return (this.definitionEvent!= null);
     }
 
     /**
@@ -204,10 +188,6 @@ public class Community
         this.urls = value;
     }
 
-    public boolean isSetUrls() {
-        return (this.urls!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -232,14 +212,6 @@ public class Community
         this.id = value;
     }
 
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
-    }
-
     /**
      * Gets the value of the name property.
      * 
@@ -262,10 +234,6 @@ public class Community
      */
     public void setName(String value) {
         this.name = value;
-    }
-
-    public boolean isSetName() {
-        return (this.name!= null);
     }
 
 }

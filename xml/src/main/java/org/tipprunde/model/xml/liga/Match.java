@@ -101,10 +101,6 @@ public class Match
         this.rounds = value;
     }
 
-    public boolean isSetRounds() {
-        return (this.rounds!= null);
-    }
-
     /**
      * Gets the value of the dataSource property.
      * 
@@ -127,10 +123,6 @@ public class Match
      */
     public void setDataSource(DataSource value) {
         this.dataSource = value;
-    }
-
-    public boolean isSetDataSource() {
-        return (this.dataSource!= null);
     }
 
     /**
@@ -157,10 +149,6 @@ public class Match
         this.location = value;
     }
 
-    public boolean isSetLocation() {
-        return (this.location!= null);
-    }
-
     /**
      * Gets the value of the result property.
      * 
@@ -183,10 +171,6 @@ public class Match
      */
     public void setResult(Result value) {
         this.result = value;
-    }
-
-    public boolean isSetResult() {
-        return (this.result!= null);
     }
 
     /**
@@ -213,10 +197,6 @@ public class Match
         this.left = value;
     }
 
-    public boolean isSetLeft() {
-        return (this.left!= null);
-    }
-
     /**
      * Gets the value of the right property.
      * 
@@ -241,10 +221,6 @@ public class Match
         this.right = value;
     }
 
-    public boolean isSetRight() {
-        return (this.right!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -253,7 +229,7 @@ public class Match
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -265,16 +241,8 @@ public class Match
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -285,7 +253,7 @@ public class Match
      *     {@link Boolean }
      *     
      */
-    public boolean isFinished() {
+    public Boolean isFinished() {
         return finished;
     }
 
@@ -297,16 +265,8 @@ public class Match
      *     {@link Boolean }
      *     
      */
-    public void setFinished(boolean value) {
+    public void setFinished(Boolean value) {
         this.finished = value;
-    }
-
-    public boolean isSetFinished() {
-        return (this.finished!= null);
-    }
-
-    public void unsetFinished() {
-        this.finished = null;
     }
 
     /**
@@ -317,7 +277,7 @@ public class Match
      *     {@link Boolean }
      *     
      */
-    public boolean isOngoing() {
+    public Boolean isOngoing() {
         return ongoing;
     }
 
@@ -329,16 +289,8 @@ public class Match
      *     {@link Boolean }
      *     
      */
-    public void setOngoing(boolean value) {
+    public void setOngoing(Boolean value) {
         this.ongoing = value;
-    }
-
-    public boolean isSetOngoing() {
-        return (this.ongoing!= null);
-    }
-
-    public void unsetOngoing() {
-        this.ongoing = null;
     }
 
     /**
@@ -363,10 +315,6 @@ public class Match
      */
     public void setKickOff(XMLGregorianCalendar value) {
         this.kickOff = value;
-    }
-
-    public boolean isSetKickOff() {
-        return (this.kickOff!= null);
     }
 
 }

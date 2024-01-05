@@ -82,10 +82,6 @@ public class PointsEvent
         this.event = value;
     }
 
-    public boolean isSetEvent() {
-        return (this.event!= null);
-    }
-
     /**
      * Gets the value of the pointsRound property.
      * 
@@ -115,14 +111,6 @@ public class PointsEvent
         return this.pointsRound;
     }
 
-    public boolean isSetPointsRound() {
-        return ((this.pointsRound!= null)&&(!this.pointsRound.isEmpty()));
-    }
-
-    public void unsetPointsRound() {
-        this.pointsRound = null;
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -131,7 +119,7 @@ public class PointsEvent
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -143,16 +131,8 @@ public class PointsEvent
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -163,7 +143,7 @@ public class PointsEvent
      *     {@link Integer }
      *     
      */
-    public int getScore() {
+    public Integer getScore() {
         return score;
     }
 
@@ -175,16 +155,8 @@ public class PointsEvent
      *     {@link Integer }
      *     
      */
-    public void setScore(int value) {
+    public void setScore(Integer value) {
         this.score = value;
-    }
-
-    public boolean isSetScore() {
-        return (this.score!= null);
-    }
-
-    public void unsetScore() {
-        this.score = null;
     }
 
     /**
@@ -195,7 +167,7 @@ public class PointsEvent
      *     {@link Integer }
      *     
      */
-    public int getRank() {
+    public Integer getRank() {
         return rank;
     }
 
@@ -207,16 +179,8 @@ public class PointsEvent
      *     {@link Integer }
      *     
      */
-    public void setRank(int value) {
+    public void setRank(Integer value) {
         this.rank = value;
-    }
-
-    public boolean isSetRank() {
-        return (this.rank!= null);
-    }
-
-    public void unsetRank() {
-        this.rank = null;
     }
 
 }

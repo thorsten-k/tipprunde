@@ -90,10 +90,6 @@ public class Identity
         this.idFacebook = value;
     }
 
-    public boolean isSetIdFacebook() {
-        return (this.idFacebook!= null);
-    }
-
     /**
      * Gets the value of the idPassword property.
      * 
@@ -116,10 +112,6 @@ public class Identity
      */
     public void setIdPassword(IdPassword value) {
         this.idPassword = value;
-    }
-
-    public boolean isSetIdPassword() {
-        return (this.idPassword!= null);
     }
 
     /**
@@ -146,10 +138,6 @@ public class Identity
         this.idEnterprise = value;
     }
 
-    public boolean isSetIdEnterprise() {
-        return (this.idEnterprise!= null);
-    }
-
     /**
      * Gets the value of the user property.
      * 
@@ -174,10 +162,6 @@ public class Identity
         this.user = value;
     }
 
-    public boolean isSetUser() {
-        return (this.user!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -186,7 +170,7 @@ public class Identity
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -198,16 +182,8 @@ public class Identity
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -218,7 +194,7 @@ public class Identity
      *     {@link Boolean }
      *     
      */
-    public boolean isPreferred() {
+    public Boolean isPreferred() {
         return preferred;
     }
 
@@ -230,16 +206,8 @@ public class Identity
      *     {@link Boolean }
      *     
      */
-    public void setPreferred(boolean value) {
+    public void setPreferred(Boolean value) {
         this.preferred = value;
-    }
-
-    public boolean isSetPreferred() {
-        return (this.preferred!= null);
-    }
-
-    public void unsetPreferred() {
-        this.preferred = null;
     }
 
     /**
@@ -266,10 +234,6 @@ public class Identity
         this.email = value;
     }
 
-    public boolean isSetEmail() {
-        return (this.email!= null);
-    }
-
     /**
      * Gets the value of the emailVerified property.
      * 
@@ -278,7 +242,7 @@ public class Identity
      *     {@link Boolean }
      *     
      */
-    public boolean isEmailVerified() {
+    public Boolean isEmailVerified() {
         return emailVerified;
     }
 
@@ -290,16 +254,8 @@ public class Identity
      *     {@link Boolean }
      *     
      */
-    public void setEmailVerified(boolean value) {
+    public void setEmailVerified(Boolean value) {
         this.emailVerified = value;
-    }
-
-    public boolean isSetEmailVerified() {
-        return (this.emailVerified!= null);
-    }
-
-    public void unsetEmailVerified() {
-        this.emailVerified = null;
     }
 
 }

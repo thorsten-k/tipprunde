@@ -89,10 +89,6 @@ public class Round
         this.events = value;
     }
 
-    public boolean isSetEvents() {
-        return (this.events!= null);
-    }
-
     /**
      * Gets the value of the dataSource property.
      * 
@@ -117,10 +113,6 @@ public class Round
         this.dataSource = value;
     }
 
-    public boolean isSetDataSource() {
-        return (this.dataSource!= null);
-    }
-
     /**
      * Gets the value of the visible property.
      * 
@@ -143,10 +135,6 @@ public class Round
      */
     public void setVisible(Visible value) {
         this.visible = value;
-    }
-
-    public boolean isSetVisible() {
-        return (this.visible!= null);
     }
 
     /**
@@ -178,14 +166,6 @@ public class Round
         return this.match;
     }
 
-    public boolean isSetMatch() {
-        return ((this.match!= null)&&(!this.match.isEmpty()));
-    }
-
-    public void unsetMatch() {
-        this.match = null;
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -194,7 +174,7 @@ public class Round
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -206,16 +186,8 @@ public class Round
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -242,10 +214,6 @@ public class Round
         this.name = value;
     }
 
-    public boolean isSetName() {
-        return (this.name!= null);
-    }
-
     /**
      * Gets the value of the nr property.
      * 
@@ -254,7 +222,7 @@ public class Round
      *     {@link Integer }
      *     
      */
-    public int getNr() {
+    public Integer getNr() {
         return nr;
     }
 
@@ -266,16 +234,8 @@ public class Round
      *     {@link Integer }
      *     
      */
-    public void setNr(int value) {
+    public void setNr(Integer value) {
         this.nr = value;
-    }
-
-    public boolean isSetNr() {
-        return (this.nr!= null);
-    }
-
-    public void unsetNr() {
-        this.nr = null;
     }
 
 }

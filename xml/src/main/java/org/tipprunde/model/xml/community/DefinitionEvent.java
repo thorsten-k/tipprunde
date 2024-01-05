@@ -84,10 +84,6 @@ public class DefinitionEvent
         this.deadlinePolicy = value;
     }
 
-    public boolean isSetDeadlinePolicy() {
-        return (this.deadlinePolicy!= null);
-    }
-
     /**
      * Gets the value of the community property.
      * 
@@ -112,10 +108,6 @@ public class DefinitionEvent
         this.community = value;
     }
 
-    public boolean isSetCommunity() {
-        return (this.community!= null);
-    }
-
     /**
      * Gets the value of the event property.
      * 
@@ -138,10 +130,6 @@ public class DefinitionEvent
      */
     public void setEvent(Event value) {
         this.event = value;
-    }
-
-    public boolean isSetEvent() {
-        return (this.event!= null);
     }
 
     /**
@@ -173,14 +161,6 @@ public class DefinitionEvent
         return this.definitionRound;
     }
 
-    public boolean isSetDefinitionRound() {
-        return ((this.definitionRound!= null)&&(!this.definitionRound.isEmpty()));
-    }
-
-    public void unsetDefinitionRound() {
-        this.definitionRound = null;
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -189,7 +169,7 @@ public class DefinitionEvent
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -201,16 +181,8 @@ public class DefinitionEvent
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
 }

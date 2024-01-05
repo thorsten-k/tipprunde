@@ -61,8 +61,4 @@ public class IdPassword
         this.password = value;
     }
 
-    public boolean isSetPassword() {
-        return (this.password!= null);
-    }
-
 }

@@ -2,6 +2,7 @@
 package org.tipprunde.model.xml.community;
 
 import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -101,10 +102,6 @@ public class Tipp
         this.identity = value;
     }
 
-    public boolean isSetIdentity() {
-        return (this.identity!= null);
-    }
-
     /**
      * Gets the value of the match property.
      * 
@@ -127,10 +124,6 @@ public class Tipp
      */
     public void setMatch(Match value) {
         this.match = value;
-    }
-
-    public boolean isSetMatch() {
-        return (this.match!= null);
     }
 
     /**
@@ -157,10 +150,6 @@ public class Tipp
         this.status = value;
     }
 
-    public boolean isSetStatus() {
-        return (this.status!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -185,14 +174,6 @@ public class Tipp
         this.id = value;
     }
 
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
-    }
-
     /**
      * Gets the value of the left property.
      * 
@@ -201,7 +182,7 @@ public class Tipp
      *     {@link Integer }
      *     
      */
-    public int getLeft() {
+    public Integer getLeft() {
         return left;
     }
 
@@ -213,16 +194,8 @@ public class Tipp
      *     {@link Integer }
      *     
      */
-    public void setLeft(int value) {
+    public void setLeft(Integer value) {
         this.left = value;
-    }
-
-    public boolean isSetLeft() {
-        return (this.left!= null);
-    }
-
-    public void unsetLeft() {
-        this.left = null;
     }
 
     /**
@@ -233,7 +206,7 @@ public class Tipp
      *     {@link Integer }
      *     
      */
-    public int getRight() {
+    public Integer getRight() {
         return right;
     }
 
@@ -245,16 +218,8 @@ public class Tipp
      *     {@link Integer }
      *     
      */
-    public void setRight(int value) {
+    public void setRight(Integer value) {
         this.right = value;
-    }
-
-    public boolean isSetRight() {
-        return (this.right!= null);
-    }
-
-    public void unsetRight() {
-        this.right = null;
     }
 
     /**
@@ -281,10 +246,6 @@ public class Tipp
         this.record = value;
     }
 
-    public boolean isSetRecord() {
-        return (this.record!= null);
-    }
-
     /**
      * Gets the value of the deadline property.
      * 
@@ -309,10 +270,6 @@ public class Tipp
         this.deadline = value;
     }
 
-    public boolean isSetDeadline() {
-        return (this.deadline!= null);
-    }
-
     /**
      * Gets the value of the sync property.
      * 
@@ -335,10 +292,6 @@ public class Tipp
      */
     public void setSync(String value) {
         this.sync = value;
-    }
-
-    public boolean isSetSync() {
-        return (this.sync!= null);
     }
 
 }

@@ -72,12 +72,4 @@ public class Tipps
         return this.tipp;
     }
 
-    public boolean isSetTipp() {
-        return ((this.tipp!= null)&&(!this.tipp.isEmpty()));
-    }
-
-    public void unsetTipp() {
-        this.tipp = null;
-    }
-
 }

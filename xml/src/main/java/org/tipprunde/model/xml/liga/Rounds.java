@@ -72,12 +72,4 @@ public class Rounds
         return this.round;
     }
 
-    public boolean isSetRound() {
-        return ((this.round!= null)&&(!this.round.isEmpty()));
-    }
-
-    public void unsetRound() {
-        this.round = null;
-    }
-
 }

@@ -82,10 +82,6 @@ public class PointsMatch
         this.pointsRound = value;
     }
 
-    public boolean isSetPointsRound() {
-        return (this.pointsRound!= null);
-    }
-
     /**
      * Gets the value of the tipp property.
      * 
@@ -115,14 +111,6 @@ public class PointsMatch
         return this.tipp;
     }
 
-    public boolean isSetTipp() {
-        return ((this.tipp!= null)&&(!this.tipp.isEmpty()));
-    }
-
-    public void unsetTipp() {
-        this.tipp = null;
-    }
-
     /**
      * Gets the value of the scoreDetails property.
      * 
@@ -147,10 +135,6 @@ public class PointsMatch
         this.scoreDetails = value;
     }
 
-    public boolean isSetScoreDetails() {
-        return (this.scoreDetails!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -159,7 +143,7 @@ public class PointsMatch
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -171,16 +155,8 @@ public class PointsMatch
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -191,7 +167,7 @@ public class PointsMatch
      *     {@link Integer }
      *     
      */
-    public int getScore() {
+    public Integer getScore() {
         return score;
     }
 
@@ -203,16 +179,8 @@ public class PointsMatch
      *     {@link Integer }
      *     
      */
-    public void setScore(int value) {
+    public void setScore(Integer value) {
         this.score = value;
-    }
-
-    public boolean isSetScore() {
-        return (this.score!= null);
-    }
-
-    public void unsetScore() {
-        this.score = null;
     }
 
 }

@@ -72,12 +72,4 @@ public class Events
         return this.event;
     }
 
-    public boolean isSetEvent() {
-        return ((this.event!= null)&&(!this.event.isEmpty()));
-    }
-
-    public void unsetEvent() {
-        this.event = null;
-    }
-
 }

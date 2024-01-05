@@ -51,7 +51,7 @@ public class Result
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -63,16 +63,8 @@ public class Result
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -83,7 +75,7 @@ public class Result
      *     {@link Integer }
      *     
      */
-    public int getScoreLeft() {
+    public Integer getScoreLeft() {
         return scoreLeft;
     }
 
@@ -95,16 +87,8 @@ public class Result
      *     {@link Integer }
      *     
      */
-    public void setScoreLeft(int value) {
+    public void setScoreLeft(Integer value) {
         this.scoreLeft = value;
-    }
-
-    public boolean isSetScoreLeft() {
-        return (this.scoreLeft!= null);
-    }
-
-    public void unsetScoreLeft() {
-        this.scoreLeft = null;
     }
 
     /**
@@ -115,7 +99,7 @@ public class Result
      *     {@link Integer }
      *     
      */
-    public int getScoreRight() {
+    public Integer getScoreRight() {
         return scoreRight;
     }
 
@@ -127,16 +111,8 @@ public class Result
      *     {@link Integer }
      *     
      */
-    public void setScoreRight(int value) {
+    public void setScoreRight(Integer value) {
         this.scoreRight = value;
-    }
-
-    public boolean isSetScoreRight() {
-        return (this.scoreRight!= null);
-    }
-
-    public void unsetScoreRight() {
-        this.scoreRight = null;
     }
 
 }

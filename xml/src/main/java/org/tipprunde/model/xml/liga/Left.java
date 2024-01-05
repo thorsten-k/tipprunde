@@ -65,8 +65,4 @@ public class Left
         this.opponent = value;
     }
 
-    public boolean isSetOpponent() {
-        return (this.opponent!= null);
-    }
-
 }

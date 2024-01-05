@@ -72,12 +72,4 @@ public class Disciplines
         return this.discipline;
     }
 
-    public boolean isSetDiscipline() {
-        return ((this.discipline!= null)&&(!this.discipline.isEmpty()));
-    }
-
-    public void unsetDiscipline() {
-        this.discipline = null;
-    }
-
 }

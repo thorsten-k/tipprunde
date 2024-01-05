@@ -73,10 +73,6 @@ public class UpdateWorker
         this.updatePolicy = value;
     }
 
-    public boolean isSetUpdatePolicy() {
-        return (this.updatePolicy!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -85,7 +81,7 @@ public class UpdateWorker
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -97,16 +93,8 @@ public class UpdateWorker
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -131,10 +119,6 @@ public class UpdateWorker
      */
     public void setName(String value) {
         this.name = value;
-    }
-
-    public boolean isSetName() {
-        return (this.name!= null);
     }
 
 }

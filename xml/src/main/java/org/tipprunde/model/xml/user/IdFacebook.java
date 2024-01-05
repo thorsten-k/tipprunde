@@ -73,10 +73,6 @@ public class IdFacebook
         this.fbId = value;
     }
 
-    public boolean isSetFbId() {
-        return (this.fbId!= null);
-    }
-
     /**
      * Gets the value of the appAuhtCode property.
      * 
@@ -99,10 +95,6 @@ public class IdFacebook
      */
     public void setAppAuhtCode(String value) {
         this.appAuhtCode = value;
-    }
-
-    public boolean isSetAppAuhtCode() {
-        return (this.appAuhtCode!= null);
     }
 
     /**
@@ -129,10 +121,6 @@ public class IdFacebook
         this.accessToken = value;
     }
 
-    public boolean isSetAccessToken() {
-        return (this.accessToken!= null);
-    }
-
     /**
      * Gets the value of the expiresToken property.
      * 
@@ -155,10 +143,6 @@ public class IdFacebook
      */
     public void setExpiresToken(XMLGregorianCalendar value) {
         this.expiresToken = value;
-    }
-
-    public boolean isSetExpiresToken() {
-        return (this.expiresToken!= null);
     }
 
 }

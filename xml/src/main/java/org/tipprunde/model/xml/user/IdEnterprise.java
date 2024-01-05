@@ -61,8 +61,4 @@ public class IdEnterprise
         this.company = value;
     }
 
-    public boolean isSetCompany() {
-        return (this.company!= null);
-    }
-
 }

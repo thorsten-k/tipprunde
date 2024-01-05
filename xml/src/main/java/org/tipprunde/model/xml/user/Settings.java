@@ -79,14 +79,6 @@ public class Settings
         return this.notification;
     }
 
-    public boolean isSetNotification() {
-        return ((this.notification!= null)&&(!this.notification.isEmpty()));
-    }
-
-    public void unsetNotification() {
-        this.notification = null;
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -95,7 +87,7 @@ public class Settings
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -107,16 +99,8 @@ public class Settings
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -141,10 +125,6 @@ public class Settings
      */
     public void setLang(String value) {
         this.lang = value;
-    }
-
-    public boolean isSetLang() {
-        return (this.lang!= null);
     }
 
 }

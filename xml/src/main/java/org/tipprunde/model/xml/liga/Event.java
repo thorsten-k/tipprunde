@@ -84,10 +84,6 @@ public class Event
         this.discipline = value;
     }
 
-    public boolean isSetDiscipline() {
-        return (this.discipline!= null);
-    }
-
     /**
      * Gets the value of the dataSource property.
      * 
@@ -110,10 +106,6 @@ public class Event
      */
     public void setDataSource(DataSource value) {
         this.dataSource = value;
-    }
-
-    public boolean isSetDataSource() {
-        return (this.dataSource!= null);
     }
 
     /**
@@ -140,10 +132,6 @@ public class Event
         this.visible = value;
     }
 
-    public boolean isSetVisible() {
-        return (this.visible!= null);
-    }
-
     /**
      * Gets the value of the rounds property.
      * 
@@ -168,10 +156,6 @@ public class Event
         this.rounds = value;
     }
 
-    public boolean isSetRounds() {
-        return (this.rounds!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -180,7 +164,7 @@ public class Event
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -192,16 +176,8 @@ public class Event
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -226,10 +202,6 @@ public class Event
      */
     public void setName(String value) {
         this.name = value;
-    }
-
-    public boolean isSetName() {
-        return (this.name!= null);
     }
 
 }

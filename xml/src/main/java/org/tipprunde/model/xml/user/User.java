@@ -91,14 +91,6 @@ public class User
         return this.identity;
     }
 
-    public boolean isSetIdentity() {
-        return ((this.identity!= null)&&(!this.identity.isEmpty()));
-    }
-
-    public void unsetIdentity() {
-        this.identity = null;
-    }
-
     /**
      * Gets the value of the community property.
      * 
@@ -128,14 +120,6 @@ public class User
         return this.community;
     }
 
-    public boolean isSetCommunity() {
-        return ((this.community!= null)&&(!this.community.isEmpty()));
-    }
-
-    public void unsetCommunity() {
-        this.community = null;
-    }
-
     /**
      * Gets the value of the settings property.
      * 
@@ -160,10 +144,6 @@ public class User
         this.settings = value;
     }
 
-    public boolean isSetSettings() {
-        return (this.settings!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -172,7 +152,7 @@ public class User
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -184,16 +164,8 @@ public class User
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -220,10 +192,6 @@ public class User
         this.firstName = value;
     }
 
-    public boolean isSetFirstName() {
-        return (this.firstName!= null);
-    }
-
     /**
      * Gets the value of the lastName property.
      * 
@@ -246,10 +214,6 @@ public class User
      */
     public void setLastName(String value) {
         this.lastName = value;
-    }
-
-    public boolean isSetLastName() {
-        return (this.lastName!= null);
     }
 
 }

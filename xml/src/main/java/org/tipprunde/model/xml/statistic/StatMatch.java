@@ -72,10 +72,6 @@ public class StatMatch
         this.match = value;
     }
 
-    public boolean isSetMatch() {
-        return (this.match!= null);
-    }
-
     /**
      * Gets the value of the statTipp property.
      * 
@@ -103,14 +99,6 @@ public class StatMatch
             statTipp = new ArrayList<StatTipp>();
         }
         return this.statTipp;
-    }
-
-    public boolean isSetStatTipp() {
-        return ((this.statTipp!= null)&&(!this.statTipp.isEmpty()));
-    }
-
-    public void unsetStatTipp() {
-        this.statTipp = null;
     }
 
 }

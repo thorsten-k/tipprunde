@@ -72,12 +72,4 @@ public class Opponents
         return this.opponent;
     }
 
-    public boolean isSetOpponent() {
-        return ((this.opponent!= null)&&(!this.opponent.isEmpty()));
-    }
-
-    public void unsetOpponent() {
-        this.opponent = null;
-    }
-
 }

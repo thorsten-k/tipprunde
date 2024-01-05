@@ -75,10 +75,6 @@ public class Location
         this.dataSource = value;
     }
 
-    public boolean isSetDataSource() {
-        return (this.dataSource!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -87,7 +83,7 @@ public class Location
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -99,16 +95,8 @@ public class Location
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -135,10 +123,6 @@ public class Location
         this.city = value;
     }
 
-    public boolean isSetCity() {
-        return (this.city!= null);
-    }
-
     /**
      * Gets the value of the stadium property.
      * 
@@ -161,10 +145,6 @@ public class Location
      */
     public void setStadium(String value) {
         this.stadium = value;
-    }
-
-    public boolean isSetStadium() {
-        return (this.stadium!= null);
     }
 
 }

@@ -72,10 +72,6 @@ public class StatRound
         this.round = value;
     }
 
-    public boolean isSetRound() {
-        return (this.round!= null);
-    }
-
     /**
      * Gets the value of the statMatch property.
      * 
@@ -103,14 +99,6 @@ public class StatRound
             statMatch = new ArrayList<StatMatch>();
         }
         return this.statMatch;
-    }
-
-    public boolean isSetStatMatch() {
-        return ((this.statMatch!= null)&&(!this.statMatch.isEmpty()));
-    }
-
-    public void unsetStatMatch() {
-        this.statMatch = null;
     }
 
 }

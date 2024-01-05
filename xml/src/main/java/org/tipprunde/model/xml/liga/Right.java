@@ -65,8 +65,4 @@ public class Right
         this.opponent = value;
     }
 
-    public boolean isSetOpponent() {
-        return (this.opponent!= null);
-    }
-
 }

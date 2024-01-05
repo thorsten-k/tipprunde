@@ -86,10 +86,6 @@ public class PointsRound
         this.pointsEvent = value;
     }
 
-    public boolean isSetPointsEvent() {
-        return (this.pointsEvent!= null);
-    }
-
     /**
      * Gets the value of the round property.
      * 
@@ -112,10 +108,6 @@ public class PointsRound
      */
     public void setRound(Round value) {
         this.round = value;
-    }
-
-    public boolean isSetRound() {
-        return (this.round!= null);
     }
 
     /**
@@ -147,14 +139,6 @@ public class PointsRound
         return this.pointsMatch;
     }
 
-    public boolean isSetPointsMatch() {
-        return ((this.pointsMatch!= null)&&(!this.pointsMatch.isEmpty()));
-    }
-
-    public void unsetPointsMatch() {
-        this.pointsMatch = null;
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -163,7 +147,7 @@ public class PointsRound
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -175,16 +159,8 @@ public class PointsRound
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -195,7 +171,7 @@ public class PointsRound
      *     {@link Integer }
      *     
      */
-    public int getScore() {
+    public Integer getScore() {
         return score;
     }
 
@@ -207,16 +183,8 @@ public class PointsRound
      *     {@link Integer }
      *     
      */
-    public void setScore(int value) {
+    public void setScore(Integer value) {
         this.score = value;
-    }
-
-    public boolean isSetScore() {
-        return (this.score!= null);
-    }
-
-    public void unsetScore() {
-        this.score = null;
     }
 
     /**
@@ -227,7 +195,7 @@ public class PointsRound
      *     {@link Integer }
      *     
      */
-    public int getRank() {
+    public Integer getRank() {
         return rank;
     }
 
@@ -239,16 +207,8 @@ public class PointsRound
      *     {@link Integer }
      *     
      */
-    public void setRank(int value) {
+    public void setRank(Integer value) {
         this.rank = value;
-    }
-
-    public boolean isSetRank() {
-        return (this.rank!= null);
-    }
-
-    public void unsetRank() {
-        this.rank = null;
     }
 
 }

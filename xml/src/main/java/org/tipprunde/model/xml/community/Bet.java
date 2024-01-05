@@ -10,7 +10,6 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
-
 import org.jeesl.model.xml.io.cms.text.Remark;
 
 
@@ -99,10 +98,6 @@ public class Bet
         this.participant = value;
     }
 
-    public boolean isSetParticipant() {
-        return (this.participant!= null);
-    }
-
     /**
      * Gets the value of the remark property.
      * 
@@ -127,10 +122,6 @@ public class Bet
         this.remark = value;
     }
 
-    public boolean isSetRemark() {
-        return (this.remark!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -139,7 +130,7 @@ public class Bet
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -151,16 +142,8 @@ public class Bet
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -187,10 +170,6 @@ public class Bet
         this.record = value;
     }
 
-    public boolean isSetRecord() {
-        return (this.record!= null);
-    }
-
     /**
      * Gets the value of the carryover property.
      * 
@@ -199,7 +178,7 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public double getCarryover() {
+    public Double getCarryover() {
         return carryover;
     }
 
@@ -211,16 +190,8 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public void setCarryover(double value) {
+    public void setCarryover(Double value) {
         this.carryover = value;
-    }
-
-    public boolean isSetCarryover() {
-        return (this.carryover!= null);
-    }
-
-    public void unsetCarryover() {
-        this.carryover = null;
     }
 
     /**
@@ -231,7 +202,7 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public double getFee() {
+    public Double getFee() {
         return fee;
     }
 
@@ -243,16 +214,8 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public void setFee(double value) {
+    public void setFee(Double value) {
         this.fee = value;
-    }
-
-    public boolean isSetFee() {
-        return (this.fee!= null);
-    }
-
-    public void unsetFee() {
-        this.fee = null;
     }
 
     /**
@@ -263,7 +226,7 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public double getPaid() {
+    public Double getPaid() {
         return paid;
     }
 
@@ -275,16 +238,8 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public void setPaid(double value) {
+    public void setPaid(Double value) {
         this.paid = value;
-    }
-
-    public boolean isSetPaid() {
-        return (this.paid!= null);
-    }
-
-    public void unsetPaid() {
-        this.paid = null;
     }
 
     /**
@@ -295,7 +250,7 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public double getWin() {
+    public Double getWin() {
         return win;
     }
 
@@ -307,16 +262,8 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public void setWin(double value) {
+    public void setWin(Double value) {
         this.win = value;
-    }
-
-    public boolean isSetWin() {
-        return (this.win!= null);
-    }
-
-    public void unsetWin() {
-        this.win = null;
     }
 
     /**
@@ -327,7 +274,7 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public double getOut() {
+    public Double getOut() {
         return out;
     }
 
@@ -339,16 +286,8 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public void setOut(double value) {
+    public void setOut(Double value) {
         this.out = value;
-    }
-
-    public boolean isSetOut() {
-        return (this.out!= null);
-    }
-
-    public void unsetOut() {
-        this.out = null;
     }
 
     /**
@@ -359,7 +298,7 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public double getBalance() {
+    public Double getBalance() {
         return balance;
     }
 
@@ -371,16 +310,8 @@ public class Bet
      *     {@link Double }
      *     
      */
-    public void setBalance(double value) {
+    public void setBalance(Double value) {
         this.balance = value;
-    }
-
-    public boolean isSetBalance() {
-        return (this.balance!= null);
-    }
-
-    public void unsetBalance() {
-        this.balance = null;
     }
 
 }

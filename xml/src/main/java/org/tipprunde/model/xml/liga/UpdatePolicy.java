@@ -70,7 +70,7 @@ public class UpdatePolicy
      *     {@link Integer }
      *     
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -82,16 +82,8 @@ public class UpdatePolicy
      *     {@link Integer }
      *     
      */
-    public void setId(int value) {
+    public void setId(Integer value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -118,10 +110,6 @@ public class UpdatePolicy
         this.type = value;
     }
 
-    public boolean isSetType() {
-        return (this.type!= null);
-    }
-
     /**
      * Gets the value of the updateLast property.
      * 
@@ -144,10 +132,6 @@ public class UpdatePolicy
      */
     public void setUpdateLast(XMLGregorianCalendar value) {
         this.updateLast = value;
-    }
-
-    public boolean isSetUpdateLast() {
-        return (this.updateLast!= null);
     }
 
     /**
@@ -174,10 +158,6 @@ public class UpdatePolicy
         this.updateNext = value;
     }
 
-    public boolean isSetUpdateNext() {
-        return (this.updateNext!= null);
-    }
-
     /**
      * Gets the value of the updateQueue property.
      * 
@@ -200,10 +180,6 @@ public class UpdatePolicy
      */
     public void setUpdateQueue(XMLGregorianCalendar value) {
         this.updateQueue = value;
-    }
-
-    public boolean isSetUpdateQueue() {
-        return (this.updateQueue!= null);
     }
 
 }

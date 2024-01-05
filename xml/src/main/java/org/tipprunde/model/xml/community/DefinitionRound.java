@@ -2,6 +2,7 @@
 package org.tipprunde.model.xml.community;
 
 import java.io.Serializable;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
@@ -82,10 +83,6 @@ public class DefinitionRound
         this.definitionEvent = value;
     }
 
-    public boolean isSetDefinitionEvent() {
-        return (this.definitionEvent!= null);
-    }
-
     /**
      * Gets the value of the round property.
      * 
@@ -108,10 +105,6 @@ public class DefinitionRound
      */
     public void setRound(Round value) {
         this.round = value;
-    }
-
-    public boolean isSetRound() {
-        return (this.round!= null);
     }
 
     /**
@@ -138,14 +131,6 @@ public class DefinitionRound
         this.id = value;
     }
 
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
-    }
-
     /**
      * Gets the value of the deadline property.
      * 
@@ -168,10 +153,6 @@ public class DefinitionRound
      */
     public void setDeadline(XMLGregorianCalendar value) {
         this.deadline = value;
-    }
-
-    public boolean isSetDeadline() {
-        return (this.deadline!= null);
     }
 
 }

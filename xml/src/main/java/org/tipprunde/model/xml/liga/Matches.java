@@ -72,12 +72,4 @@ public class Matches
         return this.match;
     }
 
-    public boolean isSetMatch() {
-        return ((this.match!= null)&&(!this.match.isEmpty()));
-    }
-
-    public void unsetMatch() {
-        this.match = null;
-    }
-
 }

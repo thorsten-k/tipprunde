@@ -54,7 +54,7 @@ public class Rules
      *     {@link Integer }
      *     
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -66,16 +66,8 @@ public class Rules
      *     {@link Integer }
      *     
      */
-    public void setId(int value) {
+    public void setId(Integer value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -86,7 +78,7 @@ public class Rules
      *     {@link Integer }
      *     
      */
-    public int getExcact() {
+    public Integer getExcact() {
         return excact;
     }
 
@@ -98,16 +90,8 @@ public class Rules
      *     {@link Integer }
      *     
      */
-    public void setExcact(int value) {
+    public void setExcact(Integer value) {
         this.excact = value;
-    }
-
-    public boolean isSetExcact() {
-        return (this.excact!= null);
-    }
-
-    public void unsetExcact() {
-        this.excact = null;
     }
 
     /**
@@ -118,7 +102,7 @@ public class Rules
      *     {@link Integer }
      *     
      */
-    public int getDifference() {
+    public Integer getDifference() {
         return difference;
     }
 
@@ -130,16 +114,8 @@ public class Rules
      *     {@link Integer }
      *     
      */
-    public void setDifference(int value) {
+    public void setDifference(Integer value) {
         this.difference = value;
-    }
-
-    public boolean isSetDifference() {
-        return (this.difference!= null);
-    }
-
-    public void unsetDifference() {
-        this.difference = null;
     }
 
     /**
@@ -150,7 +126,7 @@ public class Rules
      *     {@link Integer }
      *     
      */
-    public int getTendence() {
+    public Integer getTendence() {
         return tendence;
     }
 
@@ -162,16 +138,8 @@ public class Rules
      *     {@link Integer }
      *     
      */
-    public void setTendence(int value) {
+    public void setTendence(Integer value) {
         this.tendence = value;
-    }
-
-    public boolean isSetTendence() {
-        return (this.tendence!= null);
-    }
-
-    public void unsetTendence() {
-        this.tendence = null;
     }
 
 }

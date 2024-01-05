@@ -51,7 +51,7 @@ public class ScoreDetails
      *     {@link Boolean }
      *     
      */
-    public boolean isExcact() {
+    public Boolean isExcact() {
         return excact;
     }
 
@@ -63,16 +63,8 @@ public class ScoreDetails
      *     {@link Boolean }
      *     
      */
-    public void setExcact(boolean value) {
+    public void setExcact(Boolean value) {
         this.excact = value;
-    }
-
-    public boolean isSetExcact() {
-        return (this.excact!= null);
-    }
-
-    public void unsetExcact() {
-        this.excact = null;
     }
 
     /**
@@ -83,7 +75,7 @@ public class ScoreDetails
      *     {@link Boolean }
      *     
      */
-    public boolean isDifference() {
+    public Boolean isDifference() {
         return difference;
     }
 
@@ -95,16 +87,8 @@ public class ScoreDetails
      *     {@link Boolean }
      *     
      */
-    public void setDifference(boolean value) {
+    public void setDifference(Boolean value) {
         this.difference = value;
-    }
-
-    public boolean isSetDifference() {
-        return (this.difference!= null);
-    }
-
-    public void unsetDifference() {
-        this.difference = null;
     }
 
     /**
@@ -115,7 +99,7 @@ public class ScoreDetails
      *     {@link Boolean }
      *     
      */
-    public boolean isTendence() {
+    public Boolean isTendence() {
         return tendence;
     }
 
@@ -127,16 +111,8 @@ public class ScoreDetails
      *     {@link Boolean }
      *     
      */
-    public void setTendence(boolean value) {
+    public void setTendence(Boolean value) {
         this.tendence = value;
-    }
-
-    public boolean isSetTendence() {
-        return (this.tendence!= null);
-    }
-
-    public void unsetTendence() {
-        this.tendence = null;
     }
 
 }

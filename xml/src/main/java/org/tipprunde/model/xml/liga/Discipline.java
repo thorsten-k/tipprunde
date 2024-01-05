@@ -80,10 +80,6 @@ public class Discipline
         this.dataSource = value;
     }
 
-    public boolean isSetDataSource() {
-        return (this.dataSource!= null);
-    }
-
     /**
      * Gets the value of the visible property.
      * 
@@ -106,10 +102,6 @@ public class Discipline
      */
     public void setVisible(Visible value) {
         this.visible = value;
-    }
-
-    public boolean isSetVisible() {
-        return (this.visible!= null);
     }
 
     /**
@@ -136,10 +128,6 @@ public class Discipline
         this.events = value;
     }
 
-    public boolean isSetEvents() {
-        return (this.events!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -148,7 +136,7 @@ public class Discipline
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -160,16 +148,8 @@ public class Discipline
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -194,10 +174,6 @@ public class Discipline
      */
     public void setName(String value) {
         this.name = value;
-    }
-
-    public boolean isSetName() {
-        return (this.name!= null);
     }
 
 }

@@ -80,10 +80,6 @@ public class DataSource
         this.updatePolicy = value;
     }
 
-    public boolean isSetUpdatePolicy() {
-        return (this.updatePolicy!= null);
-    }
-
     /**
      * Gets the value of the openliga property.
      * 
@@ -108,10 +104,6 @@ public class DataSource
         this.openliga = value;
     }
 
-    public boolean isSetOpenliga() {
-        return (this.openliga!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -120,7 +112,7 @@ public class DataSource
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -132,16 +124,8 @@ public class DataSource
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -166,10 +150,6 @@ public class DataSource
      */
     public void setLastChange(XMLGregorianCalendar value) {
         this.lastChange = value;
-    }
-
-    public boolean isSetLastChange() {
-        return (this.lastChange!= null);
     }
 
 }

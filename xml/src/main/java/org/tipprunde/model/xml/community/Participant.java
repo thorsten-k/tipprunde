@@ -82,10 +82,6 @@ public class Participant
         this.community = value;
     }
 
-    public boolean isSetCommunity() {
-        return (this.community!= null);
-    }
-
     /**
      * Gets the value of the identity property.
      * 
@@ -108,10 +104,6 @@ public class Participant
      */
     public void setIdentity(Identity value) {
         this.identity = value;
-    }
-
-    public boolean isSetIdentity() {
-        return (this.identity!= null);
     }
 
     /**
@@ -138,10 +130,6 @@ public class Participant
         this.bet = value;
     }
 
-    public boolean isSetBet() {
-        return (this.bet!= null);
-    }
-
     /**
      * Gets the value of the pointsEvent property.
      * 
@@ -166,10 +154,6 @@ public class Participant
         this.pointsEvent = value;
     }
 
-    public boolean isSetPointsEvent() {
-        return (this.pointsEvent!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -178,7 +162,7 @@ public class Participant
      *     {@link Long }
      *     
      */
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
@@ -190,16 +174,8 @@ public class Participant
      *     {@link Long }
      *     
      */
-    public void setId(long value) {
+    public void setId(Long value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
 }

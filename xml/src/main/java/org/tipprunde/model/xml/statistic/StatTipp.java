@@ -70,10 +70,6 @@ public class StatTipp
         this.result = value;
     }
 
-    public boolean isSetResult() {
-        return (this.result!= null);
-    }
-
     /**
      * Gets the value of the ratio property.
      * 
@@ -82,7 +78,7 @@ public class StatTipp
      *     {@link Double }
      *     
      */
-    public double getRatio() {
+    public Double getRatio() {
         return ratio;
     }
 
@@ -94,16 +90,8 @@ public class StatTipp
      *     {@link Double }
      *     
      */
-    public void setRatio(double value) {
+    public void setRatio(Double value) {
         this.ratio = value;
-    }
-
-    public boolean isSetRatio() {
-        return (this.ratio!= null);
-    }
-
-    public void unsetRatio() {
-        this.ratio = null;
     }
 
 }

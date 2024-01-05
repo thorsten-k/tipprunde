@@ -76,14 +76,6 @@ public class Participants
         return this.participant;
     }
 
-    public boolean isSetParticipant() {
-        return ((this.participant!= null)&&(!this.participant.isEmpty()));
-    }
-
-    public void unsetParticipant() {
-        this.participant = null;
-    }
-
     /**
      * Gets the value of the size property.
      * 
@@ -92,7 +84,7 @@ public class Participants
      *     {@link Integer }
      *     
      */
-    public int getSize() {
+    public Integer getSize() {
         return size;
     }
 
@@ -104,16 +96,8 @@ public class Participants
      *     {@link Integer }
      *     
      */
-    public void setSize(int value) {
+    public void setSize(Integer value) {
         this.size = value;
-    }
-
-    public boolean isSetSize() {
-        return (this.size!= null);
-    }
-
-    public void unsetSize() {
-        this.size = null;
     }
 
 }

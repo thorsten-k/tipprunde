@@ -92,10 +92,6 @@ public class Subscription
         this.type = value;
     }
 
-    public boolean isSetType() {
-        return (this.type!= null);
-    }
-
     /**
      * Gets the value of the id property.
      * 
@@ -104,7 +100,7 @@ public class Subscription
      *     {@link Integer }
      *     
      */
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
@@ -116,16 +112,8 @@ public class Subscription
      *     {@link Integer }
      *     
      */
-    public void setId(int value) {
+    public void setId(Integer value) {
         this.id = value;
-    }
-
-    public boolean isSetId() {
-        return (this.id!= null);
-    }
-
-    public void unsetId() {
-        this.id = null;
     }
 
     /**
@@ -150,10 +138,6 @@ public class Subscription
      */
     public void setDeadline(XMLGregorianCalendar value) {
         this.deadline = value;
-    }
-
-    public boolean isSetDeadline() {
-        return (this.deadline!= null);
     }
 
 
@@ -219,10 +203,6 @@ public class Subscription
             this.name = value;
         }
 
-        public boolean isSetName() {
-            return (this.name!= null);
-        }
-
         /**
          * Gets the value of the code property.
          * 
@@ -245,10 +225,6 @@ public class Subscription
          */
         public void setCode(String value) {
             this.code = value;
-        }
-
-        public boolean isSetCode() {
-            return (this.code!= null);
         }
 
     }
