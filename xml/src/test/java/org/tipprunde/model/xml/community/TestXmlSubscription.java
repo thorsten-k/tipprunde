@@ -2,11 +2,10 @@ package org.tipprunde.model.xml.community;
 
 import java.time.LocalDate;
 
+import org.exlp.util.system.DateUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.test.TrXmlTestBootstrap;
-
-import net.sf.exlp.util.DateUtil;
 
 public class TestXmlSubscription extends AbstractXmlCommunityTest<Subscription>
 {

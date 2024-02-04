@@ -1,14 +1,13 @@
 package org.tipprunde.test;
 
+import org.exlp.util.io.log.LoggerInit;
+import org.exlp.util.jx.JaxbUtil;
 import org.jeesl.test.AbstractJeeslXmlTest;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.TrNsPrefixMapper;
-
-import net.sf.exlp.util.io.LoggerInit;
-import net.sf.exlp.util.xml.JaxbUtil;
 
 @Ignore
 public class AbstractTrXmlTest <T extends Object> extends AbstractJeeslXmlTest<T>

@@ -2,12 +2,11 @@ package org.tipprunde.model.xml.liga.ds;
 
 import java.time.LocalDateTime;
 
+import org.exlp.util.system.DateUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.liga.UpdatePolicy;
 import org.tipprunde.test.TrXmlTestBootstrap;
-
-import net.sf.exlp.util.DateUtil;
 
 public class TestXmlUpdatePolicy extends AbstractXmlLigaDsTest<UpdatePolicy>
 {

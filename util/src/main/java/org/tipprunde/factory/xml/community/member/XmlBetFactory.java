@@ -2,9 +2,8 @@ package org.tipprunde.factory.xml.community.member;
 
 import java.util.Date;
 
+import org.exlp.util.system.DateUtil;
 import org.tipprunde.model.xml.community.Bet;
-
-import net.sf.exlp.util.DateUtil;
 
 public class XmlBetFactory
 {

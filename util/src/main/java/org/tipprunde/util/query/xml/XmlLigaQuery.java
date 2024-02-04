@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
 
+import org.exlp.util.system.DateUtil;
 import org.tipprunde.factory.xml.liga.event.XmlRoundsFactory;
 import org.tipprunde.factory.xml.liga.match.XmlLeftFactory;
 import org.tipprunde.factory.xml.liga.match.XmlRightFactory;
@@ -13,8 +14,6 @@ import org.tipprunde.model.xml.liga.Opponent;
 import org.tipprunde.model.xml.liga.Result;
 import org.tipprunde.model.xml.liga.Round;
 import org.tipprunde.model.xml.tr.Query;
-
-import net.sf.exlp.util.DateUtil;
 
 public class XmlLigaQuery
 {

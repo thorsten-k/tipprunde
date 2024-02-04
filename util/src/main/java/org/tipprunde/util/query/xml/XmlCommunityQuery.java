@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Hashtable;
 import java.util.Map;
 
+import org.exlp.util.system.DateUtil;
 import org.jeesl.model.xml.io.cms.text.Remark;
 import org.tipprunde.factory.xml.community.member.XmlParticipantsFactory;
 import org.tipprunde.model.xml.community.Bet;
@@ -19,8 +20,6 @@ import org.tipprunde.model.xml.liga.Round;
 import org.tipprunde.model.xml.tr.Query;
 import org.tipprunde.model.xml.user.Identity;
 import org.tipprunde.model.xml.user.User;
-
-import net.sf.exlp.util.DateUtil;
 
 public class XmlCommunityQuery
 {
