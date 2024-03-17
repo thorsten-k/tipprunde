@@ -1,6 +1,6 @@
 package org.tipprunde.test;
 
-import org.exlp.util.io.log.LoggerInit;
+import org.exlp.controller.handler.io.log.LoggerBootstrap;
 import org.exlp.util.jx.JaxbUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,9 +12,7 @@ public class TrXmlTestBootstrap
 		
 	public static void init()
 	{
-		LoggerInit loggerInit = new LoggerInit("log4j.xml");	
-		loggerInit.path("tipprunde-xml.test/config");
-		loggerInit.init();
+		LoggerBootstrap.instance("xml.log4j2.xml").path("tr/system/io/log").init();
 		JaxbUtil.setNsPrefixMapper(new TrNsPrefixMapper());
 	}
 }
