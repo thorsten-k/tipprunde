@@ -1,8 +1,11 @@
 package org.tipprunde.test;
 
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
 import org.exlp.controller.handler.io.log.LoggerBootstrap;
+import org.exlp.test.AbstractXmlTest;
 import org.exlp.util.jx.JaxbUtil;
-import org.jeesl.test.AbstractJeeslXmlTest;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.slf4j.Logger;
@@ -10,14 +13,13 @@ import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.TrNsPrefixMapper;
 
 @Ignore
-public class AbstractTrXmlTest <T extends Object> extends AbstractJeeslXmlTest<T>
+public class AbstractTrXmlTest <T extends Object> extends AbstractXmlTest<T>
 {
 	final static Logger logger = LoggerFactory.getLogger(AbstractTrXmlTest.class);	
 	
-	public AbstractTrXmlTest(){this(null,null);}
-	public AbstractTrXmlTest(Class<T> cXml,String xmlDirSuffix)
+	public AbstractTrXmlTest(Class<T> cXml,Path pSuffix)
 	{
-		super(cXml,"tipprunde-xml.test/data/xml",xmlDirSuffix);
+		super(cXml,Paths.get("tipprunde-xml.test","data","xml"),pSuffix);
 	}
 	
 	@BeforeClass

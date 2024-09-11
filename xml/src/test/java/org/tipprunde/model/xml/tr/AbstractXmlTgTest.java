@@ -1,5 +1,7 @@
 package org.tipprunde.model.xml.tr;
 
+import java.nio.file.Paths;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.test.AbstractTrXmlTest;
@@ -10,6 +12,6 @@ public abstract class AbstractXmlTgTest<T extends Object> extends AbstractTrXmlT
 	
 	public AbstractXmlTgTest(Class<T> cXml)
 	{
-		super(cXml,"tr");
+		super(cXml,Paths.get("tr"));
 	}
 }

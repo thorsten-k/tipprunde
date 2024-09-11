@@ -1,5 +1,7 @@
 package org.tipprunde.model.xml.user;
 
+import java.nio.file.Paths;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.statistic.AbstractXmlStatTest;
@@ -11,6 +13,6 @@ public abstract class AbstractXmlUserTest<T extends Object> extends AbstractTrXm
 	
 	public AbstractXmlUserTest(Class<T> cXml)
 	{
-		super(cXml,"user");
+		super(cXml,Paths.get("user"));
 	}
 }

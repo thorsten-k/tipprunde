@@ -1,5 +1,7 @@
 package org.tipprunde.model.xml.community.settings;
 
+import java.nio.file.Paths;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.statistic.AbstractXmlStatTest;
@@ -11,6 +13,6 @@ public abstract class AbstractXmlDefinitionTest<T extends Object> extends Abstra
 	
 	public AbstractXmlDefinitionTest(Class<T> cXml)
 	{
-		super(cXml,"community/settings");
+		super(cXml,Paths.get("community","settings"));
 	}
 }

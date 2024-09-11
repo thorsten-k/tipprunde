@@ -1,5 +1,7 @@
 package org.tipprunde.model.xml.liga;
 
+import java.nio.file.Paths;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.test.AbstractTrXmlTest;
@@ -10,6 +12,6 @@ public abstract class AbstractXmlLigaTest<T extends Object> extends AbstractTrXm
 	
 	public AbstractXmlLigaTest(Class<T> cXml)
 	{
-		super(cXml,"liga");
+		super(cXml,Paths.get("liga"));
 	}
 }

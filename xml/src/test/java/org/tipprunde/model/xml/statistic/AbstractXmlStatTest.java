@@ -1,5 +1,7 @@
 package org.tipprunde.model.xml.statistic;
 
+import java.nio.file.Paths;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.test.AbstractTrXmlTest;
@@ -10,6 +12,6 @@ public abstract class AbstractXmlStatTest<T extends Object> extends AbstractTrXm
 	
 	public AbstractXmlStatTest(Class<T> cXml)
 	{
-		super(cXml,"statistic");
+		super(cXml,Paths.get("statistic"));
 	}
 }

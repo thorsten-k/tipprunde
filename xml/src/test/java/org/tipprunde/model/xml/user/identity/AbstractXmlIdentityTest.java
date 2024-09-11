@@ -1,5 +1,7 @@
 package org.tipprunde.model.xml.user.identity;
 
+import java.nio.file.Paths;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.tipprunde.model.xml.statistic.AbstractXmlStatTest;
@@ -11,6 +13,6 @@ public abstract class AbstractXmlIdentityTest <T extends Object> extends Abstrac
 	
 	public AbstractXmlIdentityTest(Class<T> cXml)
 	{
-		super(cXml,"user/identity");
+		super(cXml,Paths.get("user","identity"));
 	}
 }
