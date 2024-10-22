@@ -5,12 +5,10 @@ import java.nio.file.Paths;
 
 import org.exlp.controller.handler.io.log.LoggerBootstrap;
 import org.exlp.test.AbstractXmlTest;
-import org.exlp.util.jx.JaxbUtil;
 import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.tipprunde.model.xml.TrNsPrefixMapper;
 
 @Ignore
 public class AbstractTrXmlTest <T extends Object> extends AbstractXmlTest<T>
@@ -31,6 +29,7 @@ public class AbstractTrXmlTest <T extends Object> extends AbstractXmlTest<T>
 	@BeforeClass
 	public static void initPrefixMapper()
 	{
-		JaxbUtil.setNsPrefixMapper(new TrNsPrefixMapper());
+		logger.warn("NS Prefix Mapper deactivated");
+//		JaxbUtil.setNsPrefixMapper(new TrNsPrefixMapper());
 	}
 }
