@@ -71,12 +71,6 @@
    	   		</exclusions>
    	   	</dependency>
 	
-		<!-- XML -->
-      	<dependency>
-   	   		<groupId>javax.xml.bind</groupId>
-   	   		<artifactId>jaxb-api</artifactId>
-   	   		<scope>provided</scope>
-      	</dependency>
       	<!--
       	<dependency>
 			<groupId>com.sun.xml.bind</groupId>
@@ -95,20 +89,31 @@
 			<artifactId>jdom</artifactId>
 			<scope>provided</scope>
 		</dependency> -->
+		
+		<!-- Jakarta EE-->
 		<dependency>
 			<groupId>jakarta.xml.ws</groupId>
 			<artifactId>jakarta.xml.ws-api</artifactId>
 			<version>2.3.2</version>
 			<scope>provided</scope>
 		</dependency>
+		
+		<!-- Java EE-->
+		<dependency>
+			<groupId>javax.xml.bind</groupId>
+			<artifactId>jaxb-api</artifactId>
+			<version>2.3.1</version>
+			<scope>provided</scope>
+		</dependency>
    	   
-   	   	
+   	   	<!-- Apache Commons-->
    	   	<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
 			<scope>test</scope>
 		</dependency>
 		
+		<!-- JSON -->
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
@@ -154,6 +159,13 @@
    	   		<artifactId>exlp-test</artifactId>
    	   		<scope>test</scope>
    	   	</dependency>
+		<dependency>
+			<groupId>org.glassfish.jaxb</groupId>
+			<artifactId>jaxb-runtime</artifactId>
+			<version>2.3.9</version>
+			<scope>test</scope>
+		</dependency>
+   	   	
 	</dependencies>
 	
 	<build>
